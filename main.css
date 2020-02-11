@@ -1,0 +1,108 @@
+body {
+    /* background: linear-gradient(to bottom right, #000aff, #ff8000); */
+    background-color: #231f20;
+    font-family: 'Avenir Next', Avenir, 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 30px;
+}
+
+a {
+    font-weight: 300;
+    margin: -30px;
+    margin-right: 0px;
+    margin-left: -29px;
+    padding: 0px;
+    
+    font-size: 150px; 
+    font-weight: 700; 
+    padding-top: 0px;
+}
+.button-hover {
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -ms-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+    opacity: 1;
+}
+
+.button-hover:hover {
+    opacity: 0.5;
+}
+
+.phat {
+    height = 100px;
+}
+
+.logo {
+    color: black !important;
+    position: fixed;
+    font-size: 80px;
+    right: 40px;
+    z-index: -1;
+}
+
+#tm {
+    font-weight: 100;
+    font-size: 50px;
+    
+}
+
+#y {
+    padding-left: 4px;
+    color: black;
+}
+
+.dash {
+    color: white;
+}
+
+.dash:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.dash:hover {
+    color: white;
+    text-decoration: none;
+    
+}
+
+a {
+    text-decoration: none;
+    color: #9dff00 !important;
+    
+}
+
+a:hover {
+    text-decoration: underline;
+    text-decoration-color: white;
+    color: white;
+}
+
+a:visited {
+    text-decoration: none;
+    text-decoration-color: white;
+    color: #9dff00;
+}
+
+
+@media (max-width: 768px) {
+  a {
+    font-size: 100px;
+  }
+}
+
+@media (max-width: 700px) {
+  a {
+    font-size: 60px;
+  }
+    
+  body {
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 20px;
+}    
+}
+
