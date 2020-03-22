@@ -55,8 +55,8 @@
 
   // Ball constructor
   var Ball = function(parent) {
-    var min = .1;
-    var max = 1.5;
+    var min = .1; // 1.5;
+    var max = 1.5; // 1.5;
     var maxvel = 0.3 //default: 1  
       
     this.vel = new Point(
@@ -265,10 +265,10 @@
   //var topcolour = "rgba(239, 57, 57, 0.47)"//"#035f51"
   //var botcolour = "rgba(92, 0, 21, 0.4)"//"#32003e"
     
-    var topcolour = "rgba(113, 46, 183, 0.33)"
-    var botcolour = "rgba(63, 201, 159, 0.33)" 
+    var topcolour = "rgba(255, 189, 132, 0.8)" 
+    var botcolour = "rgba(245, 118, 142, 0.2)" 
     
-    lava0 = new LavaLamp(screen.width, screen.height, 5, topcolour, botcolour);
+    lava0 = new LavaLamp(screen.width, screen.height, 7, topcolour, botcolour);
 
 
   run();
