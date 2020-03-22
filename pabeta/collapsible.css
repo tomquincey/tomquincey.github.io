@@ -1,0 +1,177 @@
+/*https://alligator.io/css/collapsible/*/
+
+.wrap-collabsible {
+  margin-bottom: 1.2rem 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 500px;
+
+  -webkit-user-select: none; /* Safari */ 
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+/Edge */
+  user-select: none; /* Standard */
+    
+    
+  border-radius: 20px;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.25), 
+  -3px -3px 6px rgba(255, 255, 255, 0.15);
+    
+  margin-bottom: 0px;
+  margin-top: 20px;
+}
+
+input[type='checkbox'] {
+  display: none;
+}
+
+.ad {
+    width: 320px;
+}
+
+.ad label{
+    font-size: 15px;
+}
+
+.ad .collapsible-content .content-inner  {
+    padding: 0px;
+    padding-bottom: 10px;
+}
+
+.ad img {
+    display: block;
+    margin: 0 auto;
+}
+
+.lvl1 {
+  width: 450px !important;
+}
+
+.lvl1 .lbl-toggle {
+  padding: 0.2rem;
+}
+
+.lvl1 {
+  margin-top: 0px;
+    
+  box-shadow: inset 3px 3px 6px rgba(0, 0, 0, 0.25), 
+  inset -3px -3px 6px rgba(255, 255, 255, 0.1);
+}
+
+.lvl1 .lbl-toggle {
+    background:  rgba(0, 0, 0, 0.05);
+}
+
+.lvl1 .collapsible-content .content-inner {
+   background: rgba(0, 0, 0, 0.1);
+}
+
+.lbl-toggle {
+  display: block;
+
+  font-weight: 400;
+  font-size: 1.2rem;
+  /* text-transform: uppercase; */
+  text-align: center;
+
+  padding: 0.3rem; /*default: 1rem*/
+
+  color: #ffffff;
+  background:  rgba(255, 255, 255, 0.05);
+
+  cursor: pointer;
+
+  border-radius: 20px; /* 7px; */
+  transition: all 0.25s cubic-bezier(0,.5,0,1);
+}
+
+.lbl-toggle:hover {
+  /* color: rgba(199, 0, 0, 0.7); */
+  background:  rgba(255, 255, 255, 0.1);
+  transition: background 0.25s ease-in-out;
+}
+
+.lbl-toggle::before {
+  content: ' ';
+  display: inline-block;
+
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid currentColor;
+  vertical-align: middle;
+  margin-right: .7rem;
+  transform: translateY(-2px);
+
+  transition: transform .2s ease-out;
+}
+
+.toggle:checked + .lbl-toggle::before {
+  transform: rotate(90deg) translateX(-3px);
+}
+
+.collapsible-content {
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.25s ease-in-out;
+    
+  text-align: left;
+    
+}
+
+.toggle:checked + .lbl-toggle + .collapsible-content {
+  max-height: 100vh;
+}
+
+.toggle:checked + .lbl-toggle {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.collapsible-content .content-inner {
+  background: rgba(255, 255, 255, 0.1);
+  border-bottom: 0px solid rgba(255, 255, 255, 0.45);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding: .5rem 1rem;
+}
+
+.togallButton {
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+     position: fixed; 
+     bottom: 10px;
+     right: 10px;
+}
+
+.togallButton label {
+    width: 40px;
+    height: 40px;
+    border-radius: 100px;
+     position: fixed; 
+     bottom: inherit;
+     right: inherit;
+}
+
+.togallButton .lbl-toggle::before {
+  content: ' ';
+  display: inline-block;
+
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 5px solid currentColor;
+  vertical-align: middle;
+  margin-right: 0rem;
+  transform: translateY(6px);
+
+  transition: transform .2s cubic-bezier(0,.5,0,1);
+}
+
+
+.togallButton .toggle:checked + .lbl-toggle::before {
+  transform: rotate(90deg) translateX(5px);
+}
+
+.togallButton .toggle:checked + .lbl-toggle {
+  border-bottom-right-radius: 100px;
+  border-bottom-left-radius: 100px;
+}
