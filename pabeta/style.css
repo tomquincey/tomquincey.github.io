@@ -8,8 +8,21 @@ body {
   /* background-image: linear-gradient(-206deg, #835EFF 0%, #FF008D 100%); */
   /* background-image: linear-gradient(-206deg, #835EFF 0%, #3100ff 100%); */
   /* background-image: linear-gradient(-206deg, #035f51 0%, #32003e 100%); */
-  background-image: linear-gradient(-206deg, rgb(255, 189, 132) 0%, #f5768e 100%) !important; 
+  background-image: linear-gradient(-206deg, #ffbd84 0%, #f5768e 100%) !important; 
   background-attachment: fixed;
+  font-weight: 200;
+}
+
+strong {
+  font-weight: 600;
+}
+
+label {
+  font-weight: 600 !important;
+}
+
+.ad label {
+  font-weight: 400 !important;
 }
 
 footer {
@@ -44,16 +57,18 @@ canvas {
   z-index: 1;
   text-align: center;
     
-  font-family: "Gilroy", "helvetica neue", sans-serif;
+  font-family: "Montserrat", "Gilroy", "helvetica neue", sans-serif;
+  font-weight: 200;
   color: white;
 }
 
 h3 {
     font-size: 30px;
-    font-weight: 500;
+    font-weight: 800;
   margin: 0px;
   color: #4d4d4d;
 }
+
 
 label {
   color: #4d4d4d !important;
