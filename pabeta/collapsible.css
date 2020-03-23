@@ -69,7 +69,7 @@ input[type='checkbox'] {
   /* text-transform: uppercase; */
   text-align: center;
 
-  padding: 0.3rem; /*default: 1rem*/
+  padding: 0.5rem; /*default: 1rem*/
 
   color: #ffffff;
   background:  rgba(255, 255, 255, 0.05);
@@ -164,10 +164,11 @@ input[type='checkbox']:checked + .lbl-toggle {
      bottom: 10px;
      right: 10px;
   transition: background .2s ease-in-out;
+  z-index: 2000;
 }
 
-.togallButton:hover {
-  background: rgba(255, 255, 255, 0.2);
+.togallButton > label:hover {
+  background: rgba(255, 255, 255, 0.4);
 }
 
 .togallButton label {

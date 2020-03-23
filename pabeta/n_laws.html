@@ -7,11 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="style.css" rel="stylesheet">
     <link href="collapsible.css" rel="stylesheet">
+    <link href="animecss/documentation.css" rel="stylesheet">
     
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script id="MathJax-script" async
           src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
   </script>
+    
 
     <title>Newton's Laws | Physics Abyss</title>
 
@@ -49,34 +51,110 @@
         <h3 style="padding-top:0px" class="maintitle">Newton's Laws of Motion</h3>
           
             <h4 class="listy">
-                <a href="#" style="champagne">← Speed vs Velocity</a>
+                <a href="#" style="champagne"><span class=arrows>&larr;</span> Speed vs Velocity</a>
               <span style="float:right;">
-        <a href="hooke.html">Hooke's Law →</a>
+        <a href="density_volume.html">Density <span class=arrows>&rarr;</span></a>
               </span> 
             </h4>
             
         <div class="summary wrap-collabsible" style="margin-top: 25px">
         <input class="toggle" type="checkbox" name="chk">
-        <h3 class="summarytitle" style="margin-bottom: 0px; font-weight:600;">Summary</h3>
+        <h3 class="summarytitle" style="margin-top: 5px;  margin-bottom: 0px; font-weight:600;">Summary</h3>
         <div style="padding: 15px; padding-top: 0px; text-align: left">
           <p>
-            Newton's laws of motion describe how an any object moves when forces act upon on it (as well as giving some insight into the nature of forces themselves).
+            Newton's 3 laws of motion describe how any object moves when forces act upon on it, as well as giving some insight into the nature of forces themselves.
               <br/>
               <br/>
               <strong>Newton's 1st Law:</strong> 
               <br/>
+            
             <span class="small-quote">"An object in motion stays in motion"</span>
-            <br/>
-            When no force is acting upon an object, it continues to move at the same speed in the same direction
+          </p>  
+            
+          <div class="demo-wrapper" style="display: flex;">
+            <div class="line">
+              <div class="small square shadow"></div>
+              <div class="small square el1"></div>
+            </div>
+            
+      <button class="play" style="position: relative; left: 80px;"><i class="fas fa-play"></i></button>
+      <!--<button class="pause">Pause</button>
+      <button class="restart"><i class="fas fa-redo-alt"></i></button> -->
+      <!--
+      <input class="progress" step=".001" type="range" min="0" max="100" value="0"><span class="timelabel">time</span> -->
+          </div>
+
+
+          <p>  
+            When no force is acting upon an object, it continues to move at the same speed, in the same direction.
               <br/>
               <br/>
               <strong>Newton's 2nd Law:</strong>
-              <br/> The acceleration of an object is calculated from the net force acting upon it using \[F = ma\]
-              where \(m\) is the mass of the object
+          </p>
+            
+
+          <div class="demo-wrapper">
+            <div class="line" style="display: flex;">
+              <div class="small square shadow"></div>
+              
+              <div style="display: flex; position: relative; bottom: 0px; right: 35px;" class="el2">
+                
+              <div class="small el2l" style="font-size: 20px; position: relative; bottom: 2px; right: 17px;">\(\textbf{F}\)</div>
+                
+              <div class="small el2l" style="font-size: 25px; position: relative; bottom: 6px; right: 12px;">&larr;</div>
+                
+              <div class="small square"></div>
+                
+              <div class="small el2r" style="font-size: 25px; position: relative; bottom: 6px; left: 7px; ">&rarr;</div>
+                
+              <div class="small el2r" style="font-size: 20px; position: relative; bottom: 2px; right: -15px;">\(\textbf{F}\)</div>
+                
+                </div>
+              
+              <button class="play2" style="position: relative; left: 210px;"><i class="fas fa-play"></i></button>
+            </div>
+            
+          </div>
+          
+          <p> The acceleration \(\textbf{a}\) of an object is calculated from the net force \(\textbf{F}\) acting upon it using: \[\textbf{F} = m\textbf{a}\]
+              where \(m\) is the mass of the object.
               <br/>
               <br/>
               <strong>Newton's 3rd Law:</strong>
-              <br/> ("For every action there is an equal and opposite reaction")
+              <br/> <span class="small-quote"> "For every action there is an equal and opposite reaction" </span>
+          </p>
+          <div class="demo-wrapper">
+            <div class="line" style="display: flex;">
+              <div class="small square shadow"></div>
+              
+              <div style="display: flex; position: relative; bottom: 0px; right: 35px;" class="el3L">
+                
+                <div class="small el3l" style="font-size: 20px; position: relative; bottom: 2px; right: 20px;">\(\textbf{F}_{1}\)</div>
+
+                <div class="small el3l" style="font-size: 25px; position: relative; bottom: 6px; right: 12px;">&larr;</div>
+                
+                <div class="small square"></div>
+                
+              </div>
+              
+              <div style="display: flex; position: relative; bottom: 0px; right: 35px;" class="el3R">
+                
+                <div class="small square"></div>
+                
+                <div class="small el3r" style="font-size: 25px; position: relative; bottom: 6px; left: 7px; ">&rarr;</div>
+
+                <div class="small el3r" style="font-size: 20px; position: relative; bottom: 2px; right: -15px;">\(\textbf{F}_{2}\)</div>
+                
+              </div>
+              
+              <button class="play3" style="position: relative; left: 180px;"><i class="fas fa-play"></i></button>
+            </div>
+            
+          </div>
+          
+            <p>
+            \[\textbf{F}_{1} = \textbf{F}_{2}\]
+            For any force that exists, at all times there must be a corresponding force of the same strength in the opposite direction.
           </p>
         </div>
         </div>  
@@ -92,7 +170,7 @@
             Okay right here goes okay so 
           </p>
           
-          <div class="lvl1 wrap-collabsible" style="margin-top: 40px">
+          <div class="lvl1 wrap-collabsible">
             <input id="1a" class="toggle" type="checkbox" name="chk">
             <label for="1a" class="lbl-toggle" name="chk">What actually <i>is</i> a force?</label>
             <div class="collapsible-content">
@@ -107,7 +185,7 @@
             </div>
           
           <p>
-            Newton's 2nd law is only useful if you actually have another law telling you what \(F\) is! 
+            Newton's 2nd law is only useful if you actually have another law telling you what \(\textbf{F}\) is! 
           </p>
           
         </div>
@@ -124,15 +202,17 @@
   When \(a \ne 0\), there are two solutions to \(ax^2 + bx + c = 0\):
   \[x = {-b \pm \sqrt{b^2-4ac} \over 2a}.\]
               </p>
+          
               
             <div class="lvl1 wrap-collabsible" style="margin-top: 40px">
             <input id="0a" class="toggle" type="checkbox" name="chk">
-            <label for="0a" class="lbl-toggle" name="chk">What does inertia mean?</label>
+            <label for="0a" class="lbl-toggle" name="chk">What actually <i>is</i> inertia?</label>
             <div class="collapsible-content">
             <div class="content-inner">
               <p>
                   Despite being a scary 3-syllabled Latin word, interia is a concept you are very familiar with. It simply means the desire of something to continue doing what it's doing.
-                  Familiar examples include the desire to go back to sleep in the morning, the unwillingness of the kids these days (TM) to get off their phones, etc.
+                <br/>
+                  Familiar examples include the desire to go back to sleep in the morning, the unwillingness of the people these days™ to get off their phones, etc.
               </p>
             </div>
             </div>
@@ -151,7 +231,8 @@
         <div class="collapsible-content">
         <div class="content-inner">
           <p>
-            You may have noticed that, when F is zero, then a is zero; no acceleration (i.e. no change in velocity) means velcity stays the same when force is zero, so Newton's 1st law is actually included in the 2nd law! 
+            \[\textbf{F} = m\textbf{a}\]
+            You may have noticed that when \(\textbf{F} = 0\), then \(\textbf{a} = 0\). <br/> No acceleration means velocity stays the same, so Newton's 1st law is actually included in the 2nd law! 
           </p>
         </div>
         </div>
@@ -163,7 +244,7 @@
         <div class="collapsible-content">
         <div class="content-inner">
           <p>
-            This turns out to be a consequence of the Law of Conservation of Momentum, which is the most important law of all physics (in my opinion at least).
+            This turns out to be a consequence of the Law of <a href="#">Conservation of Momentum</a>, which is the most important law of all physics.
           </p>
         </div>
         </div>
@@ -187,14 +268,14 @@
           
           
             <h4 class="listy">
-                <a href="#" style="champagne">← Speed vs Velocity</a>
+                <a href="#" style="champagne"><span class=arrows>←</span> Speed vs Velocity</a>
               <span style="float:right;">
-        <a href="hooke.html">Hooke's Law →</a>
+        <a href="hooke.html">Hooke's Law <span class=arrows>→</span></a>
               </span> 
             </h4>
 
             
-        <footer>© 2020 Physics Abyss  
+        <footer>© 2020 Physics Abyss • 
             <a href="#">about</a> • 
             <a href="#">contact</a> • 
             <a href="#">privacy policy</a>
@@ -206,8 +287,190 @@
         
         
     </div>
+    
+    
+    
+    
       
-      <script src="script.js"></script>
+    
+    <script src="anime.min.js"></script>
+    <script>
+var controlsProgressEl = document.querySelector('.progress');
+      
+      var animation = anime({
+        targets: '.el1',
+        translateX: [
+          {value: 250, duration: 2500},
+          {value: 0, duration: 10,}
+        ],
+        opacity: [
+          {value: 0, duration: 0, easing: 'easeOutQuad'},
+          {value: 1, duration: 500, easing: 'easeOutQuad'},
+          {value: 0, delay: 1500, duration: 500, easing: 'easeOutQuad'}
+        ],
+        direction: 'normal',
+        loop: false,
+        easing: 'linear',
+        autoplay: false,
+      });
+      
+      var animation2 = anime({
+        targets: '.el2',
+        translateX: [
+        { value: 125, duration: 500, delay: 0, easing: 'linear'},
+        { value: 250, duration: 1000, delay: 0, easing: 'easeOutQuad'},
+        { value: 250, duration: 500, delay: 0, easing: 'linear'},
+        { value: 150, duration: 800, delay: 0, easing: 'easeInQuad'},
+        { value: 0, duration: 1500, delay: 0, easing: 'easeOutQuad'},
+        ],
+        opacity: [
+          {value: 0, duration: 0, easing: 'easeOutQuad'},
+          {value: 1, duration: 300, easing: 'easeOutQuad'},
+          {value: 0, delay: 4000, duration: 300, easing: 'easeOutQuad'}
+        ],
+        direction: 'normal',
+        loop: false,
+        autoplay: false,
+      });
+      
+      var animation2l = anime({
+        targets: '.el2l',
+        opacity: [
+        { value: 0, duration: 0, delay: 0, easing: 'linear'},
+        { value: 0, duration: 500, delay: 0, easing: 'linear'},
+        { value: 1.0, duration: 500, delay: 0, easing: 'linear'},
+        { value: 0, duration: 500, delay: 0, easing: 'linear'},
+        { value: 0, duration: 500, delay: 0, easing: 'linear'},
+        { value: 1.0, duration: 400, delay: 0, easing: 'linear'},
+        { value: 0, duration: 400, delay: 0, easing: 'linear'},
+        ],
+        direction: 'normal',
+        loop: false,
+        autoplay: false,
+      });
+      
+      var animation2r = anime({
+        targets: '.el2r',
+        opacity: [
+        { value: 0, duration: 0, delay: 0, easing: 'linear'},
+        { value: 0, duration: 3000, delay: 0, easing: 'linear'},
+        { value: 1.0, duration: 550, delay: 0, easing: 'linear'},
+        { value: 0, duration: 750, delay: 0, easing: 'linear'},
+        ],
+        direction: 'normal',
+        loop: false,
+        autoplay: false,
+      });
+      
+      var animation3L = anime({
+        targets: '.el3L',
+        translateX: [
+        { value: 40, duration: 300, delay: 0, easing: 'linear'},
+        { value: 110, duration: 1000, delay: 0, easing: 'easeOutQuad'},
+        { value: 40, duration: 1000, delay: 0, easing: 'easeInQuad'},
+        { value: 0, duration: 300, delay: 0, easing: 'linear'},
+        ],
+        opacity: [
+          {value: 0, duration: 0, easing: 'easeOutQuad'},
+          {value: 1, duration: 300, easing: 'easeOutQuad'},
+          {value: 0, delay: 2000, duration: 300, easing: 'easeOutQuad'}
+        ],
+        direction: 'normal',
+        loop: false,
+        autoplay: false,
+      });
+      
+      var animation3R = anime({
+        targets: '.el3R',
+        translateX: [
+        { value: 250, duration: 0, delay: 0, easing: 'linear'},
+        { value: 210, duration: 300, delay: 0, easing: 'linear'},
+        { value: 140, duration: 1000, delay: 0, easing: 'easeOutQuad'},
+        { value: 210, duration: 1000, delay: 0, easing: 'easeInQuad'},
+        { value: 250, duration: 300, delay: 0, easing: 'linear'},
+        ],
+        opacity: [
+          {value: 0, duration: 0, easing: 'easeOutQuad'},
+          {value: 1, duration: 300, easing: 'easeOutQuad'},
+          {value: 0, delay: 2000, duration: 300, easing: 'easeOutQuad'}
+        ],
+        direction: 'normal',
+        loop: false,
+        autoplay: false,
+      });
+      
+      
+      
+      var animation3l = anime({
+        targets: '.el3l',
+        opacity: [
+        { value: 0, duration: 0, delay: 0, easing: 'linear'},
+        { value: 0, duration: 300, delay: 0, easing: 'linear'},
+        { value: 1.0, duration:  750, delay: 0, easing: 'linear'},
+        { value: 1.0, duration: 750, delay: 0, easing: 'linear'},
+        { value: 0, duration: 500, delay: 0, easing: 'linear'},
+        ],
+        direction: 'normal',
+        loop: false,
+        autoplay: false,
+      });
+      
+      
+      var animation3r = anime({
+        targets: '.el3r',
+        opacity: [
+        { value: 0, duration: 0, delay: 0, easing: 'linear'},
+        { value: 0, duration: 300, delay: 0, easing: 'linear'},
+        { value: 1.0, duration:  750, delay: 0, easing: 'linear'},
+        { value: 1.0, duration: 750, delay: 0, easing: 'linear'},
+        { value: 0, duration: 500, delay: 0, easing: 'linear'},
+        ],
+        direction: 'normal',
+        loop: false,
+        autoplay: false,
+      });
+      
+      
+function FirstLawAnim() {
+  animation.restart();
+}
+      
+function SecondLawAnim() {
+  animation2.restart();
+  animation2l.restart();
+  animation2r.restart();
+}
+     
+function ThirdLawAnim() {
+  animation3L.restart();
+  animation3R.restart();
+  animation3l.restart();
+  animation3r.restart();
+}
+     
+document.querySelector('.play').onclick = FirstLawAnim;
+/* document.querySelector('.pause').onclick = animation.pause; 
+document.querySelector('.restart').onclick = animation.restart;*/
+      
+document.querySelector('.play2').onclick = SecondLawAnim;
+/* document.querySelector('.pause').onclick = animation.pause; 
+document.querySelector('.restart2').onclick = animation2.restart;*/
+
+document.querySelector('.play3').onclick = ThirdLawAnim;
+      
+controlsProgressEl.addEventListener('input', function() {
+  animation.seek(animation.duration * (controlsProgressEl.value / 100));
+});
+    </script>
+    
+    
+    
+    <script src="https://kit.fontawesome.com/e98bb3c350.js" crossorigin="anonymous"></script>
+    <script>
+    var topcolour = "rgba(255, 189, 132, 0.8)" 
+    var botcolour = "rgba(245, 118, 142, 0.3)" 
+    </script>
+      <script src="bubbles.js"></script>
       <script>function toggle(source) {
   checkboxes = document.getElementsByName('chk');
   for(var i=0, n=checkboxes.length;i<n;i++) {

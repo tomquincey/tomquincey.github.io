@@ -265,9 +265,6 @@
   //var topcolour = "rgba(239, 57, 57, 0.47)"//"#035f51"
   //var botcolour = "rgba(92, 0, 21, 0.4)"//"#32003e"
     
-    var topcolour = "rgba(255, 189, 132, 0.8)" 
-    var botcolour = "rgba(245, 118, 142, 0.3)" 
-    
     lava0 = new LavaLamp(screen.width, screen.height, 7, topcolour, botcolour);
 
 

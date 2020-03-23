@@ -56,7 +56,7 @@ canvas {
     
   font-family: "Montserrat", "Gilroy", "helvetica neue", sans-serif;
   font-weight: 200;
-  color: white;
+  color: #4d4d4d;
 }
 
 h3 {
@@ -84,6 +84,11 @@ h1 {
     margin: -10px 0;
 }
 
+p {
+  margin-top: 13px;
+  margin-bottom: 10px;
+}
+
 .logo {
     width: 240px;
     padding-top:100px;
@@ -92,6 +97,11 @@ h1 {
 .small-logo {
     width: 60px;
     padding-top:20px;
+}
+
+.arrows {
+  
+  color: #4d4d4d;
 }
 
 .listy {
@@ -175,7 +185,11 @@ a:hover:after .champagne {
 }
 
 .small-quote {
-
+	position: relative;
+	text-align: center;
+  font-style: italic;
+  top: 10px;
+  margin-left: 40px; 
 }
 
 .big-quote {
@@ -193,6 +207,7 @@ blockquote {
 	text-align: center;
 	/* color: #939997; */
   margin: 0px;
+  font-style: italic;
 }
 
 blockquote::before {
@@ -215,7 +230,7 @@ blockquote::after {
 	/* position: relative; */
 	top: -0.15em;
 	right: 100%;
-	margin: 0 0.075em 0 0;
+	margin: 0 0.175em 0 0;
 	color: rgba(240, 243, 243, 0.32);
 }
 
@@ -276,3 +291,38 @@ https://stackoverflow.com/questions/48715298/fix-white-bar-below-background-imag
     }
 }
 */
+.aspect-ratio {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 51%;
+}
+
+iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0; 
+  top: 0;
+  border-radius: 10px;
+  opacity: 0.9;
+}
+
+.hytPlayerWrap {
+position:relative!important;
+padding-bottom:56.25%;
+padding-top: 0px; /* adjust if out of video black bars */
+height:0;
+overflow:hidden;
+display: block!important;
+  
+  border-radius: 10px;
+}
+
+.hytPlayerWrap iframe, .hytPlayerWrap object, .hytPlayerWrap embed {
+position:absolute;
+top:0;
+left:0;
+width: 100%!important;
+height:100%;
+}
