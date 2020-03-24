@@ -71,13 +71,13 @@
             <span class="small-quote">"An object in motion stays in motion"</span>
           </p>  
             
-          <div class="demo-wrapper" style="display: flex;">
+          <div class="demo-wrapper">
             <div class="line">
               <div class="small square shadow"></div>
               <div class="small square el1"></div>
             </div>
             
-      <button class="play" style="position: relative; left: 49px;"><i class="fas fa-play"></i></button>
+        <a class="playbutton play">►</a>
       <!--<button class="pause">Pause</button>
       <button class="restart"><i class="fas fa-redo-alt"></i></button> -->
       <!--
@@ -111,9 +111,9 @@
                 
                 </div>
               
-              <button class="play2" style="position: relative; left: 180px;"><i class="fas fa-play"></i></button>
             </div>
             
+              <a class="playbutton play2">►</a>
           </div>
           
           <p> The acceleration \(\textbf{a}\) of an object is calculated from the net force \(\textbf{F}\) acting upon it using: \[\textbf{F} = m\textbf{a}\]
@@ -147,14 +147,14 @@
                 
               </div>
               
-              <button class="play3" style="position: relative; left: 160px;"><i class="fas fa-play"></i></button>
             </div>
             
+              <a class="playbutton play3">►</a>
           </div>
           
             <p>
-            \[\textbf{F}_{1} = \textbf{F}_{2}\]
-            For any force that exists, at all times there must be a corresponding force of the same strength in the opposite direction.
+            \[\textbf{F}_{1} = - \textbf{F}_{2}\]
+            For any force that exists, there must always be a corresponding force of the same strength in the opposite direction.
           </p>
         </div>
         </div>  
@@ -295,12 +295,14 @@
     
     <script src="anime.min.js"></script>
     <script>
+      var scaler = 0.7;
+      
 var controlsProgressEl = document.querySelector('.progress');
       
       var animation = anime({
         targets: '.el1',
         translateX: [
-          {value: 250, duration: 2500},
+          {value: 250*scaler, duration: 2500},
           {value: 0, duration: 10,}
         ],
         opacity: [
@@ -317,10 +319,10 @@ var controlsProgressEl = document.querySelector('.progress');
       var animation2 = anime({
         targets: '.el2',
         translateX: [
-        { value: 125, duration: 500, delay: 0, easing: 'linear'},
-        { value: 250, duration: 1000, delay: 0, easing: 'easeOutQuad'},
-        { value: 250, duration: 500, delay: 0, easing: 'linear'},
-        { value: 150, duration: 800, delay: 0, easing: 'easeInQuad'},
+        { value: 125*scaler, duration: 500, delay: 0, easing: 'linear'},
+        { value: 250*scaler, duration: 1000, delay: 0, easing: 'easeOutQuad'},
+        { value: 250*scaler, duration: 500, delay: 0, easing: 'linear'},
+        { value: 150*scaler, duration: 800, delay: 0, easing: 'easeInQuad'},
         { value: 0, duration: 1500, delay: 0, easing: 'easeOutQuad'},
         ],
         opacity: [
@@ -354,7 +356,7 @@ var controlsProgressEl = document.querySelector('.progress');
         opacity: [
         { value: 0, duration: 0, delay: 0, easing: 'linear'},
         { value: 0, duration: 3000, delay: 0, easing: 'linear'},
-        { value: 1.0, duration: 550, delay: 0, easing: 'linear'},
+        { value: 0.4, duration: 550, delay: 0, easing: 'linear'},
         { value: 0, duration: 750, delay: 0, easing: 'linear'},
         ],
         direction: 'normal',
@@ -365,10 +367,10 @@ var controlsProgressEl = document.querySelector('.progress');
       var animation3L = anime({
         targets: '.el3L',
         translateX: [
-        { value: 40, duration: 300, delay: 0, easing: 'linear'},
-        { value: 110, duration: 1000, delay: 0, easing: 'easeOutQuad'},
-        { value: 40, duration: 1000, delay: 0, easing: 'easeInQuad'},
-        { value: 0, duration: 300, delay: 0, easing: 'linear'},
+        { value: 40*scaler, duration: 300, delay: 0, easing: 'linear'},
+        { value: 110*scaler, duration: 1000, delay: 0, easing: 'easeOutQuad'},
+        { value: 40*scaler, duration: 1000, delay: 0, easing: 'easeInQuad'},
+        { value: 0*scaler, duration: 300, delay: 0, easing: 'linear'},
         ],
         opacity: [
           {value: 0, duration: 0, easing: 'easeOutQuad'},
@@ -383,11 +385,11 @@ var controlsProgressEl = document.querySelector('.progress');
       var animation3R = anime({
         targets: '.el3R',
         translateX: [
-        { value: 250, duration: 0, delay: 0, easing: 'linear'},
-        { value: 210, duration: 300, delay: 0, easing: 'linear'},
-        { value: 140, duration: 1000, delay: 0, easing: 'easeOutQuad'},
-        { value: 210, duration: 1000, delay: 0, easing: 'easeInQuad'},
-        { value: 250, duration: 300, delay: 0, easing: 'linear'},
+        { value: 250*scaler, duration: 0, delay: 0, easing: 'linear'},
+        { value: 210*scaler, duration: 300, delay: 0, easing: 'linear'},
+        { value: 140*scaler, duration: 1000, delay: 0, easing: 'easeOutQuad'},
+        { value: 210*scaler, duration: 1000, delay: 0, easing: 'easeInQuad'},
+        { value: 250*scaler, duration: 300, delay: 0, easing: 'linear'},
         ],
         opacity: [
           {value: 0, duration: 0, easing: 'easeOutQuad'},

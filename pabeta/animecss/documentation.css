@@ -85,9 +85,14 @@ article {
   opacity: 1;
 }
 
+.demo-wrapper {
+  display: flex;
+  
+  justify-content: flex-end !important;
+}
+
 .line {
   width: 100%;
-  padding: 1px 0px;
 }
 
 .line.align-center {

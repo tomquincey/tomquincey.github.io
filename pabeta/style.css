@@ -184,9 +184,8 @@ a:hover:after .champagne {
   font-size: 25px;   
 }
 
-.small-quote {
+ .small-quote {
 	position: relative;
-	text-align: center;
   font-style: italic;
   top: 10px;
   margin-left: 40px; 
@@ -326,3 +325,27 @@ left:0;
 width: 100%!important;
 height:100%;
 }
+
+.playbutton {
+  top: -7px;
+  padding-left: 11px;
+  padding-right: 9px;
+  padding-top: 7.5px;
+  padding-bottom: 6px;
+  border: 1px solid white;
+  border-radius: 100px;
+}
+
+.playbutton:hover {
+  text-decoration: none;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.3);
+  transition: .15s ease-in-out;
+}
+
+.playbutton:after {
+  transition: none;
+  right: 0;
+  left: 100%;
+}
+
