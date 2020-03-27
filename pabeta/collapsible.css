@@ -4,12 +4,14 @@
   margin-bottom: 1.2rem 0;
   margin-left: auto;
   margin-right: auto;
-  width: 90%;
+  width: 95%; /*90%*/
 
-  -webkit-user-select: none; /* Safari */ 
-  -moz-user-select: none; /* Firefox */
-  -ms-user-select: none; /* IE10+/Edge */
-  user-select: none; /* Standard */
+  /*
+  -webkit-user-select: none; 
+  -moz-user-select: none; 
+  -ms-user-select: none;
+  user-select: none; 
+  */
     
     
   border-radius: 20px;
@@ -49,16 +51,15 @@ input[type='checkbox'] {
 
 .lvl1 {
   width: 95%; 
+  margin-top: 0px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .lvl1 .lbl-toggle {
   padding: 0.2rem;
 }
 
-.lvl1 {
-  margin-top: 0px;
-    
-}
 
 
 .lbl-toggle {
@@ -140,7 +141,7 @@ input[type='checkbox']:checked + .lbl-toggle {
 
 
 .toggle:checked + .lbl-toggle + .collapsible-content {
-  max-height: 100vh;
+  max-height: 400vh;
 }
 
 .toggle:checked + .lbl-toggle {

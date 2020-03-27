@@ -10,7 +10,7 @@ body {
   height: 100vh; /*https://stackoverflow.com/questions/24944925/background-image-jumps-when-address-bar-hides-ios-android-mobile-chrome*/
 }
 
-strong {
+strong, b {
   font-weight: 600;
 }
 
@@ -64,6 +64,13 @@ h3 {
     font-weight: 800;
   margin: 0px;
   color: #4d4d4d;
+}
+
+.pa-background {
+  background-color: red;
+  /*
+  background-image: url("favicon2.png") !important;
+  */
 }
 
 
@@ -183,7 +190,7 @@ a:hover:after .champagne {
   padding-top: 10px;
   font-size: 25px;   
 }
-
+/*
  .small-quote {
 	position: relative;
   font-style: italic;
@@ -196,51 +203,61 @@ a:hover:after .champagne {
   text-align: center;
   font-size: 20px;
 }
+*/
+.small-blockquote {
+  
+  margin-top: -5px;
+	font-size: 16px !important;
+  font-family: "Montserrat", "Gilroy", "helvetica neue", sans-serif;
+}
+
+.small-blockquote::before {
+	font-family: Baskerville, 'Baskerville Old Face', 'Hoefler Text', Garamond, 'Times New Roman', serif;
+  
+  top: 20px;
+  left: 10px;
+}
 
 
 blockquote {
 	font-family: Baskerville, 'Baskerville Old Face', 'Hoefler Text', Garamond, 'Times New Roman', serif;
 	font-size: 2.2em;
-	line-height: .5;
+	line-height: 0.5;
 	position: relative;
 	text-align: center;
 	/* color: #939997; */
   margin: 0px;
   font-style: italic;
+  top: -25px;
+  left: -20px;
+  margin-bottom: -20px;
 }
 
 blockquote::before {
 	content: '\201C';
-	font-size: 2.2em;
+	font-size: 3.9em;
 	font-style: italic;
 	line-height: 1;
-	/* position: absolute; */
-	top: -0.3em;
-	right: 100%;
+  position: relative;
+	top: 30px;
+  left: 20px;
 	margin: 0 0.075em 0 0;
 	color: rgba(240, 243, 243, 0.32);
+  z-index: -1000;
 }
 
-blockquote::after {
-	content: '\201D';
-	font-size: 2.2em;
-	font-style: italic;
-	line-height: 1;
-	/* position: relative; */
-	top: -0.15em;
-	right: 100%;
-	margin: 0 0.175em 0 0;
-	color: rgba(240, 243, 243, 0.32);
-}
 
 blockquote span {
-	font-size: 0.5em;
+	font-size: 0.65em;
 	white-space: nowrap;
+  position: relative;
+	top: -10px;
+  left: 50px;
 	/* color: #cbcece;*/
 }
 
 blockquote {
-  font-size: 1.45em;
+  font-size: 1.5em;
 }
 
 canvas {
@@ -327,13 +344,21 @@ height:100%;
 }
 
 .playbutton {
-  top: -7px;
-  padding-left: 11px;
-  padding-right: 9px;
-  padding-top: 7.5px;
-  padding-bottom: 6px;
+  display: inline-block;
+  /*Circle*/
+  /*
+  top: -3.5px;
+  padding-left: 8.5px;
+  padding-right: 7px;
+  padding-top: 6.85px;
+  padding-bottom: 7px;
+  border-radius: 50%;
+  */
+  top: -4.5px;
+  padding: 7px;
+  padding-left: 8px;
+  padding-right: 8px;
   border: 1px solid white;
-  border-radius: 100px;
 }
 
 .playbutton:hover {
@@ -347,5 +372,11 @@ height:100%;
   transition: none;
   right: 0;
   left: 100%;
+}
+
+.playicon {
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-left: 12px solid white;
 }
 
