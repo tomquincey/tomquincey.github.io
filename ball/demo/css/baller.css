@@ -17,6 +17,7 @@
 }
 .presents {
     margin-top: 10px !important; 
+    font-size: 65px !important;
 }
 
 .back-to-top, .back-to-top:hover, .back-to-top:focus, .back-to-top:active, .back-to-top:focus:active {
@@ -267,7 +268,7 @@ LIGHT GREY - #e1dada
 
 */ 
 #intropage {
-    background: url(/demo/img/europe_map_intro_washed.jpg) no-repeat center center fixed; 
+    background: url(../img/europe_map_intro_washed.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -317,7 +318,7 @@ LIGHT GREY - #e1dada
 
 
 #committeepage {
-    background: url(/demo/img/front_quad.jpg) no-repeat center center fixed; 
+    background: url(../img/front_quad.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -337,7 +338,7 @@ LIGHT GREY - #e1dada
 
 
 #contactpage {
-    background: url(/demo/img/postcards.jpg) no-repeat center center fixed; 
+    background: url(../img/postcards.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -351,7 +352,7 @@ LIGHT GREY - #e1dada
 }
 
 #ticketspage {
-    background: url(/demo/img/tickets.jpg) no-repeat center center fixed; 
+    background: url(../img/tickets.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
