@@ -1,0 +1,378 @@
+<!--
+@font-face {
+	font-family: 'codropsicons';
+	font-weight: normal;
+	font-style: normal;
+	src: url('../fonts/codropsicons/codropsicons.eot');
+	src: url('../fonts/codropsicons/codropsicons.eot?#iefix') format('embedded-opentype'), url('../fonts/codropsicons/codropsicons.woff') format('woff'), url('../fonts/codropsicons/codropsicons.ttf') format('truetype'), url('../fonts/codropsicons/codropsicons.svg#codropsicons') format('svg');
+}
+-->
+@font-face {
+	font-family: 'Edwardian Script';
+	font-weight: normal;
+	font-style: normal;
+	src: url('../fonts/edwardian_script_itc.ttf') format("truetype");
+}
+
+*,
+*:after,
+*:before {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.clearfix:before,
+.clearfix:after {
+	content: '';
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+body {
+	font-family: 'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	color: #5d5c56;
+	background: #fff;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+a {
+	text-decoration: none;
+	/*color: #A232FF;*/
+	outline: none;
+}
+/*
+a:hover,
+a:focus {
+	color: #A232FF;
+}
+*/
+
+.hidden {
+	position: absolute;
+	overflow: hidden;
+	width: 0;
+	height: 0;
+	pointer-events: none;
+}
+
+
+/* Canvas container - This is the map! */
+
+.container {
+	position: fixed;
+	z-index: -1;
+	top: 0;
+	left: 0;
+}
+
+
+/* Header 
+
+.intro {
+	font-family: Baskerville, 'Baskerville Old Face', 'Hoefler Text', Garamond, 'Times New Roman', serif;
+	font-size: 2em;
+	position: relative;
+	z-index: 1;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-align-items: center;
+	align-items: center;
+	height: 150vh;
+	margin: 0 0 3em;
+	padding: 3em;
+	text-align: center;
+	color: #fff;
+	background: #181922;
+}
+
+.intro blockquote {
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+.intro em {
+	font-size: 1.5em;
+}
+
+.intro span {
+	display: block;
+	padding: 1em 0;
+	color: #464b4b;
+} */
+
+/* Content */
+
+.content {
+	padding: 3em 0;
+}
+
+
+/* Related demos 
+
+.content--related {
+	position: relative;
+	z-index: 1;
+	padding: 10em 2em;
+	text-align: center;
+	color: #fff;
+	background: #181922;
+}
+
+.info {
+	font-size: 1.65em;
+	padding: 0 0 4em;
+}
+
+.media-item {
+	display: inline-block;
+	padding: 1em;
+	vertical-align: top;
+	-webkit-transition: color 0.3s;
+	transition: color 0.3s;
+}
+
+.media-item__img {
+	max-width: 100%;
+	opacity: 0.6;
+	-webkit-transition: opacity 0.3s;
+	transition: opacity 0.3s;
+}
+
+.media-item:hover .media-item__img,
+.media-item:focus .media-item__img {
+	opacity: 1;
+}
+
+.media-item__title {
+	font-size: 1em;
+	margin: 0;
+	padding: 0.5em;
+}
+*/
+
+/* Story */
+
+.text {
+	position: relative;
+	z-index: 1;
+	padding: 0em 3em;
+}
+
+.text section {
+	font-size: 1.25em;
+	line-height: 1.7;
+}
+
+.text section h2 {
+	font-size: 2.7em;
+	font-weight: 400;
+	margin: 0;
+	text-align: left;
+}
+
+.text section:not(:first-child) h2 { /* Created gap above each title, originally 1em */
+	padding: 1em 0 0 0;
+}
+#contactpage .text section h2 { 
+	padding: 0.5em 0 0 0;
+}
+#ticketspage .text section h2 { 
+	padding: 0.5em 0 0 0;
+}
+
+
+.title-up {
+	font-size: 0.365em;
+	font-weight: bold;
+	display: block;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	/* color: #cecec5; */
+}
+
+.title-down {
+	font-family: 'Edwardian Script', 'Edwardian Script ITC', serif, Century Gothic,"Apple Gothic",AppleGothic,"URW Gothic L","Avant Garde",Futura, sans-serif; /* Baskerville, 'Baskerville Old Face', 'Hoefler Text', Garamond, 'Times New Roman', serif; */
+	font-size: 1.80em; /*Changed from 1.35em*/
+	font-weight: 400;
+	line-height: 0.9;
+	display: block;
+	padding: 0.15em 0 0.35em;
+	color: #5f646c;
+}
+
+.text figure {
+	margin: 1em 0 2em;
+}
+
+.text figure img {
+	max-width: 100%;
+}
+
+.text figcaption {
+	font-size: 0.85em;
+	font-style: italic;
+	padding: 1em 1.5em 0;
+	text-align: center;
+	color: #5f646c;
+}
+
+.text section p {
+	font-size: 0.95em;
+	margin: 0.5em 0 1.5em;
+}
+
+.text section p.text-intro {
+	font-size: 1.3em;
+	font-style: italic;
+	line-height: 1.5;
+	margin: 0.5em 0 1.25em;
+	text-align: left;
+	color: #9d9c95;
+}
+
+.text blockquote {
+	font-family: Baskerville, 'Baskerville Old Face', 'Hoefler Text', Garamond, 'Times New Roman', serif;
+	font-size: 2em;
+	line-height: 1.5;
+	position: relative;
+	text-align: left;
+	color: #939997;
+}
+
+.text blockquote::before {
+	content: '\201C';
+	font-size: 2.5em;
+	font-style: italic;
+	line-height: 1;
+	position: absolute;
+	top: -0.15em;
+	right: 100%;
+	margin: 0 0.075em 0 0;
+	color: #f0f3f3;
+}
+
+.text blockquote span {
+	font-family: 'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 0.5em;
+	white-space: nowrap;
+	color: #939997;/*#cbcece;*/
+}
+
+.js-section {
+	width: 50%;
+	max-width: 700px;
+}
+
+.js-gallery {
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.js-gallery-content {
+	font-size: 0;
+	text-align: center;
+}
+
+.js-gallery-content img {
+	max-width: 100%;
+	margin: 10px 0;
+}
+
+@media (max-width: 860px) { /* Navbar collapses at 860px */
+    .navbar-header {
+        float: none;
+    }
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+    }
+    .navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-collapse.collapse.in {
+        display: block!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin: 7.5px -15px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    
+    /* For brand to be centred when in mobile view: */
+    .viatores {
+        position: absolute;
+        left: 50%;
+        margin-left: -60px !important; /* Might need adjusting */
+        display: block;
+    }
+    
+}
+
+@media (max-width: 880px) {
+    /*Added by Tom*/
+    #intropage img {
+    max-width: 90%;
+}
+}
+
+@media(max-width: 720px) { /* When width of screen smaller than 720px, run this */
+	.header-title {
+		font-size: 1.5em;
+	}
+	.intro {
+		font-size: 1.25em;
+		height: auto;
+		padding: 1em;
+	}
+	.text {
+		font-size: 0.85em;
+		padding: 2em;
+		text-align: justify;
+	}
+	.text section h2 {
+		font-size: 2.5em; /* Originally 1.85em */
+	}
+
+	.text blockquote {
+		font-size: 1.45em;
+	}
+	.js-section {
+		width: 100%;
+		max-width: none;
+	}
+    /*Added by Tom*/
+    .title-down {
+        font-size: 1.7em;
+        margin-top: -30px;
+    }
+    #intropage .presents {
+        padding-top: -90px;
+        line-height: 60px;
+        font-size: 1.3em;
+    }
+    #intropage .title-up {
+        font-size: 0.3em;
+    }
+    .button {
+        font-size: 15px;
+        padding: 10px 10px 10px 10px;
+    }
+    
+}

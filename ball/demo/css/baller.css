@@ -1,0 +1,393 @@
+/* Responsive Image 
+
+
+@media screen and (max-width: 720px) {
+
+.intro-img {
+    max-width: 50% !important;
+    left: 20%;
+}
+}*/
+#ticketspage .title-up {
+    margin-bottom: 15px;
+}
+
+#intropage img {
+    max-width: 60%;
+}
+.presents {
+    margin-top: 10px !important; 
+}
+
+.back-to-top, .back-to-top:hover, .back-to-top:focus, .back-to-top:active, .back-to-top:focus:active {
+    color: #5a8ca7 !important;
+    border-color: #5a8ca7 !important;
+}
+
+.title-up {
+    color: #5a8ca7 !important;
+}
+
+.title-down {
+    margin-bottom: -20px;
+    margin-top: -10px;
+    margin-left: -20px;
+}
+
+#journeypage .title-down {
+    margin-top: 0px;   
+}
+/* Basically Just Navbar Stuff */
+.bg-1 {
+    padding-bottom: 0px;
+    color: white;
+    font-family: 'French Script MT','Lato', 'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    text-align: center;
+    margin-top: 56px; /* Otherwise would be behind navbar */
+}
+
+/*
+@media screen and (max-width: 850px) {
+     Decrease header font size for small screens 
+    .bg-1 h3 {
+        font-size: 18px;
+    }
+}
+*/
+.phit { /* Thin empty space */
+    padding-top: 20px;
+}
+
+.phat { /* Wide empty space */
+    padding-top: 45px;
+}
+
+.phat2 { /* Wider empty space */
+    padding-top: 70px;
+}
+
+
+/* LOOKS */
+.navbar {
+    padding-top: 7px;
+    padding-bottom: 8px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 13px;
+    letter-spacing: 3px; /*4px;*/
+    background-color: #512837;
+    
+    /* border-bottom: solid white #b2b2b2 1px; */
+    
+    -webkit-box-shadow: 0px 10px 75px -10px rgba(0,0,0,0.6);
+    -moz-box-shadow: -0px 10px 75px -10px rgba(0,0,0,0.6);
+    box-shadow: 0px 10px 75px -10px rgba(0,0,0,0.6);
+}
+
+.navbar-nav {
+    margin-right: -7px !important;  /*Gets 'buy tickets' aligned correctly*/ 
+}
+
+.navbar-nav li a {
+    color: white !important;
+    border-radius: 40px;
+}
+
+.navbar-nav > li > a:hover,
+.navbar-nav > li > a:focus {
+    color: #efe483 !important;
+}
+
+.navbar-nav > .active > a, 
+.navbar-nav > .active > a:hover, 
+.navbar-nav > .active > a:focus {
+    color: #000 !important;
+    background-color: #ededed !important;
+}
+
+.navbar-brand {
+    font-family: 'Lato', 'Avenir Next', Avenir, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #efe483 !important; /*#f1e9a3*/
+    letter-spacing: 0px;
+    font-size: 30px !important;
+    /*text-shadow: 4px 4px 0px rgba(0,0,0,0.1);*/
+    /*text-shadow: 1px 1px 0px #cbcbcb;*/
+    padding-left: 20px; 
+    /*
+    font-weight: bold; */
+}
+
+
+/* Welcome Page Title */
+.special {
+    color: #d92a8f !important;
+    padding-bottom: 0em !important;
+}
+
+/* Background image
+body {
+    background-image: url('http://www.psdgraphics.com/file/crumpled-paper.jpg') !important;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+*/
+
+/* BACK TO TOP */
+.back-to-top, .back-to-top:hover, .back-to-top:focus, .back-to-top:active, .back-to-top:focus:active {
+    border-radius: 50%; /* Need % not px to make circular */
+    border-width: 1px;
+    background-color: white;
+    cursor: pointer;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    display: none;
+    
+    padding: 11px 14px 10px 15px;
+}
+
+/* BEGIN Button */
+.button {
+  background: #f0ca50;
+    /*
+  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+  background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+  background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+  background-image: -o-linear-gradient(top, #3498db, #2980b9);
+  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+    */
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  border-width: 2px;
+  color: #fff;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  font-size: 20px;
+  
+    border: 1px solid #edb700;
+}
+
+.button:hover {
+  background: #edb700;
+    /*
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+    */
+  text-decoration: none;
+    color: white;
+}
+
+/* 'text' class when not journeypage */
+#intropage .text {
+    text-align: center;
+}
+#intropage .text section h2 {
+    text-align: center;
+}
+#intropage .text blockquote {
+    text-align: center;
+}
+#intropage .js-section {
+    width: 100%;
+    max-width: none;
+}
+
+
+#committeepage .text {
+    text-align: center;
+}
+#committeepage .text section h2 {
+    text-align: center;
+}
+#committeepage .text blockquote {
+    text-align: center;
+}
+#committeepage .js-section {
+    width: 100%;
+    max-width: none;
+}
+#committeepage .text section h2  {
+    padding: 0 0 0 0;    
+}
+#committeepage .title-up  {
+    padding: 0.2em 0 0 0;    
+}
+#committeepage .title-down  {
+    padding: 0.5em 0 0.8em 0;    
+}
+
+
+#contactpage .text {
+    text-align: center;
+}
+#contactpage .text section h2 {
+    text-align: center;
+}
+#contactpage .text blockquote {
+    text-align: center;
+}
+#contactpage .js-section {
+    width: 100%;
+    max-width: none;
+}
+
+#ticketspage .text {
+    text-align: center;
+}
+#ticketspage .text section h2 {
+    text-align: center;
+}
+#ticketspage .text blockquote {
+    text-align: center;
+}
+#ticketspage .text section p {
+    margin: 0 0 0 0;
+}
+#ticketspage .js-section {
+    width: 100%;
+    max-width: none;
+}
+
+
+
+
+/*                                  COLOUR SCHEME 
+
+YELLOW - #f1e9a3
+RED - #c86e6c
+DARK MAROON - #512837
+DARK GREY - #3d4040
+TEAL - #7f9fa3
+LIGHT GREY - #e1dada
+
+*/ 
+#intropage {
+    background: url(/demo/img/europe_map_intro_washed.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#intropage .back-to-top, .back-to-top:hover, .back-to-top:focus, .back-to-top:active, .back-to-top:focus:active {
+    color: #ff0031;
+    border-color: #ff0031;
+}/*
+#intropage .navbar {
+    border-top: solid #ff0031 1px;
+}*/ 
+#intropage .title-up {
+    color: #c86e6c !important;
+}
+#intropage .bg-1 {
+    background-color: #800020;
+}
+#intropage {
+    color: #00f !important;
+}
+
+
+
+#journeypage .back-to-top, .back-to-top:hover, .back-to-top:focus, .back-to-top:active, .back-to-top:focus:active {
+    color: #2d87ff;
+    border-color: #2d87ff;
+}/*
+#journeypage .navbar {
+    border-top: solid #2d87ff 1px;
+}*/ 
+
+#journeypage .title-up {
+    color: #512837;
+}
+#journeypage h3 {
+    color: #edc338; /*Sam #c86e6c*/
+}
+#journeypage .title-down {
+    font-size: 2em;
+}
+/* #journeypage a, a:hover, a:focus, a:active {
+    color: #9132ff;
+} */
+
+
+
+#committeepage {
+    background: url(/demo/img/front_quad.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+#committeepage .back-to-top, .back-to-top:hover, .back-to-top:focus, .back-to-top:active, .back-to-top:focus:active {
+    color: #d92a8f;
+    border-color: #d92a8f;
+}/*
+#committeepage .navbar {
+    border-top: solid #f1e9a3 1px;
+}*/ 
+#committeepage .title-up{
+    color: #5a8ca7;
+}
+
+
+
+#contactpage {
+    background: url(/demo/img/postcards.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}/*
+#contactpage .navbar {
+    border-top: solid #2d87ff 1px;
+}*/ 
+#contactpage .title-up {
+    color: #d92a8f;
+}
+
+#ticketspage {
+    background: url(/demo/img/tickets.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}/*
+#ticketspage .navbar {
+    border-top: solid #d92a8f 1px;
+}*/ 
+#ticketspage .title-up {
+    color: #2d87ff;
+}
+#ticketspage p a {
+    color: #5a8ca7;
+    text-decoration: none;
+}
+#ticketspage p a:hover, a:focus, a:active {
+    color: #c86e6c;
+    text-decoration: none;
+}
+
+/*
+OLD PURPLE - #A232FF
+OLD PURPLE/BLUE - #9132ff
+OLD BLUE = #5232ff
+
+RED - #ff335a
+
+OLD PINK/RED - #d6007b
+OLD LIGHT BLUE - #006dff
+
+SAM GREY- #7f9fa3
+
+
+#NB {
+    background-color: #512837;
+    color: #c86e6c !important;
+}
+*/
+
