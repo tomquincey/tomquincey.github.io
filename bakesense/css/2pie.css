@@ -1,0 +1,552 @@
+/* empty gray */
+
+.empty figcaption { /*bc 2 lines long*/
+  font-size:20px;
+  top: 85px; /*125 no arrow*/
+  left: 1px;
+}
+
+.pie0 {
+  stroke: #bbbdc0;
+  -webkit-animation-name: pie0;
+  animation-name: pie0;
+    
+    -webkit-animation: pie0 0s ease both;
+    animation: pie0 0s ease both;
+}
+
+@-webkit-keyframes pie0 {
+  50%,100% {stroke-dasharray: 100,0,0,0;}
+}
+@keyframes pie0 {
+  50%,100% {stroke-dasharray: 100,0,0,0;}
+}
+
+
+
+
+/*
+ pie percentage made by stroke-dasharray.
+ stroke-dasharray format is...
+
+ keyframe 100% : 0 offset this-percentage rest
+
+ I added keyframe 50% for infinite presentation.
+*/
+
+/* 1st pie is 40% */
+@-webkit-keyframes pie1 {
+  50%,100% {stroke-dasharray: 40,60,0,0;}
+}
+@keyframes pie1 {
+  50%,100% {stroke-dasharray: 40,60,0,0;}
+}
+/* 2nd pie is 30% */
+@-webkit-keyframes pie2 {
+  50%,100% {stroke-dasharray: 0,40,30,30;}
+}
+@keyframes pie2 {
+  50%,100% {stroke-dasharray: 0,40,30,30;}
+}
+/* 3rd pie is 20% */
+@-webkit-keyframes pie3 {
+  50%,100% {stroke-dasharray: 0,70,20,10;}
+}
+@keyframes pie3 {
+  50%,100% {stroke-dasharray: 0,70,20,10;}
+}
+/* 4th pie is 10% */
+@-webkit-keyframes pie4 {
+  50%,100% {stroke-dasharray: 0,90,10,0;}
+}
+@keyframes pie4 {
+  50%,100% {stroke-dasharray: 0,90,10,0;}
+}
+
+
+
+
+
+
+.pie1-cake {
+  stroke: #ed2a7b;
+  -webkit-animation-name: pie1-cake;
+  animation-name: pie1-cake;
+}
+.pie2-cake {
+  stroke: #fcf27c;
+  -webkit-animation-name: pie2-cake;
+  animation-name: pie2-cake;
+}
+.pie3-cake {
+  stroke: #fff;
+  -webkit-animation-name: pie3-cake;
+  animation-name: pie3-cake;
+}
+.pie4-cake {
+  stroke: #44c6ee;
+  -webkit-animation-name: pie4-cake;
+  animation-name: pie4-cake;
+}
+
+/* 1st pie is 60% */
+
+/* stroke-dasharray: [what % is about to be used], [what % is left], 0, 0; */
+
+@-webkit-keyframes pie1-cake {
+  50%,100% {stroke-dasharray: 25,75,0,0;}
+}
+@keyframes pie1-cake {
+  50%,100% {stroke-dasharray: 25,75,0,0;}
+}
+/* 2nd pie is 10% */
+
+/* stroke-dasharray: 0, [what %s been used], [what % is about to be used], [what % is left]; */
+
+@-webkit-keyframes pie2-cake {
+  50%,100% {stroke-dasharray: 0,25,25,50;}
+}
+@keyframes pie2-cake {
+  50%,100% {stroke-dasharray: 0,25,25,50;}
+}
+/* 3rd pie is 5% */
+@-webkit-keyframes pie3-cake {
+  50%,100% {stroke-dasharray: 0,50,25,25;}
+}
+@keyframes pie3-cake {
+  50%,100% {stroke-dasharray: 0,50,25,25;}
+}
+/* 4th pie is 25% */
+@-webkit-keyframes pie4-cake {
+  50%,100% {stroke-dasharray: 0,75,25,0;}
+}
+@keyframes pie4-cake {
+  50%,100% {stroke-dasharray: 0,75,25,0;}
+}
+
+
+
+
+
+.pie1-brownie {
+  stroke: #ed2a7b;
+  -webkit-animation-name: pie1-brownie;
+  animation-name: pie1-brownie;
+}
+.pie2-brownie {
+  stroke: #fcf27c;
+  -webkit-animation-name: pie2-brownie;
+  animation-name: pie2-brownie;
+}
+.pie3-brownie {
+  stroke: #fff;
+  -webkit-animation-name: pie3-brownie;
+  animation-name: pie3-brownie;
+}
+.pie4-brownie {
+  stroke: #44c6ee;
+  -webkit-animation-name: pie4-brownie;
+  animation-name: pie4-brownie;
+}
+
+/* 1st pie is 60% */
+
+/* stroke-dasharray: [what % is about to be used], [what % is left], 0, 0; */
+
+@-webkit-keyframes pie1-brownie {
+  50%,100% {stroke-dasharray: 30,70,0,0;}
+}
+@keyframes pie1-brownie {
+  50%,100% {stroke-dasharray: 30,70,0,0;}
+}
+/* 2nd pie is 10% */
+
+/* stroke-dasharray: 0, [what %s been used], [what % is about to be used], [what % is left]; */
+
+@-webkit-keyframes pie2-brownie {
+  50%,100% {stroke-dasharray: 0,30,10,60;}
+}
+@keyframes pie2-brownie {
+  50%,100% {stroke-dasharray: 0,30,10,60;}
+}
+/* 3rd pie is 5% */
+@-webkit-keyframes pie3-brownie {
+  50%,100% {stroke-dasharray: 0,40,50,10;}
+}
+@keyframes pie3-brownie {
+  50%,100% {stroke-dasharray: 0,40,50,10;}
+}
+/* 4th pie is 25% */
+@-webkit-keyframes pie4-brownie {
+  50%,100% {stroke-dasharray: 0,90,10,0;}
+}
+@keyframes pie4-brownie {
+  50%,100% {stroke-dasharray: 0,90,10,0;}
+}
+
+
+
+
+
+.pie1-souls {
+  stroke: #ed2a7b;
+  -webkit-animation-name: pie1-souls;
+  animation-name: pie1-souls;
+}
+.pie2-souls {
+  stroke: #fcf27c;
+  -webkit-animation-name: pie2-souls;
+  animation-name: pie2-souls;
+}
+.pie3-souls {
+  stroke: #fff;
+  -webkit-animation-name: pie3-souls;
+  animation-name: pie3-souls;
+}
+.pie4-souls {
+  stroke: #44c6ee;
+  -webkit-animation-name: pie4-souls;
+  animation-name: pie4-souls;
+}
+
+/* 1st pie is 60% */
+
+/* stroke-dasharray: [what % is about to be used], [what % is left], 0, 0; */
+
+@-webkit-keyframes pie1-souls {
+  50%,100% {stroke-dasharray: 30,70,0,0;}
+}
+@keyframes pie1-souls {
+  50%,100% {stroke-dasharray: 30,70,0,0;}
+}
+/* 2nd pie is 10% */
+
+/* stroke-dasharray: 0, [what %s been used], [what % is about to be used], [what % is left]; */
+
+@-webkit-keyframes pie2-souls {
+  50%,100% {stroke-dasharray: 0,30,10,60;}
+}
+@keyframes pie2-souls {
+  50%,100% {stroke-dasharray: 0,30,10,60;}
+}
+/* 3rd pie is 5% */
+@-webkit-keyframes pie3-souls {
+  50%,100% {stroke-dasharray: 0,40,50,10;}
+}
+@keyframes pie3-souls {
+  50%,100% {stroke-dasharray: 0,40,50,10;}
+}
+/* 4th pie is 25% */
+@-webkit-keyframes pie4-souls {
+  50%,100% {stroke-dasharray: 0,90,10,0;}
+}
+@keyframes pie4-souls {
+  50%,100% {stroke-dasharray: 0,90,10,0;}
+}
+
+
+
+
+
+
+.pie1-bis {
+  stroke: #ed2a7b;
+  -webkit-animation-name: pie1-bis;
+  animation-name: pie1-bis;
+}
+.pie2-bis {
+  stroke: #fcf27c;
+  -webkit-animation-name: pie2-bis;
+  animation-name: pie2-bis;
+}
+.pie3-bis {
+  stroke: #fff;
+  -webkit-animation-name: pie3-bis;
+  animation-name: pie3-bis;
+}
+
+/* 1st pie is 60% 3:2:1 */ 
+
+/* stroke-dasharray: [what % is about to be used], [what % is left], 0, 0; */
+
+@-webkit-keyframes pie1-bis {
+  50%,100% {stroke-dasharray: 50,50,0,0;}
+}
+@keyframes pie1-bis {
+  50%,100% {stroke-dasharray: 50,50,0,0;}
+}
+/* 2nd pie is 10% */
+
+/* stroke-dasharray: 0, [what %s been used], [what % is about to be used], [what % is left]; */
+
+@-webkit-keyframes pie2-bis {
+  50%,100% {stroke-dasharray: 0,50,33.3,16.7;}
+}
+@keyframes pie2-bis {
+  50%,100% {stroke-dasharray: 0,50,33.3,16.7;}
+}
+/* 3rd pie is 5% */
+@-webkit-keyframes pie3-bis {
+  50%,100% {stroke-dasharray: 0,83.3,16.7,0;}
+}
+@keyframes pie3-bis {
+  50%,100% {stroke-dasharray: 0,83.3,16.7,0;}
+}
+
+
+
+
+
+
+.pie1-cookies {
+  stroke: #ed2a7b;
+  -webkit-animation-name: pie1-cookies;
+  animation-name: pie1-cookies;
+}
+.pie2-cookies {
+  stroke: #fcf27c;
+  -webkit-animation-name: pie2-cookies;
+  animation-name: pie2-cookies;
+}
+.pie3-cookies {
+  stroke: #fff;
+  -webkit-animation-name: pie3-cookies;
+  animation-name: pie3-cookies;
+}
+
+/* 1st pie is 60% 3:2:1 */ 
+
+/* stroke-dasharray: [what % is about to be used], [what % is left], 0, 0; */
+
+@-webkit-keyframes pie1-cookies {
+  50%,100% {stroke-dasharray: 46.1,53.9,0,0;}
+}
+@keyframes pie1-cookies {
+  50%,100% {stroke-dasharray: 46.1,53.9,0,0;}
+}
+/* 2nd pie is 10% */
+
+/* stroke-dasharray: 0, [what %s been used], [what % is about to be used], [what % is left]; */
+
+@-webkit-keyframes pie2-cookies {
+  50%,100% {stroke-dasharray: 0,46.1,30.8,23.1;}
+}
+@keyframes pie2-cookies {
+  50%,100% {stroke-dasharray: 0,46.1,30.8,23.1;}
+}
+/* 3rd pie is 5% */
+@-webkit-keyframes pie3-cookies {
+  50%,100% {stroke-dasharray: 0,76.9,23.1,0;}
+}
+@keyframes pie3-cookies {
+  50%,100% {stroke-dasharray: 0,76.9,23.1,0;}
+}
+
+
+
+
+
+
+
+
+.pie1-scone {
+  stroke: #ed2a7b;
+  -webkit-animation-name: pie1-scone;
+  animation-name: pie1-scone;
+}
+.pie2-scone {
+  stroke: #fcf27c;
+  -webkit-animation-name: pie2-scone;
+  animation-name: pie2-scone;
+}
+.pie3-scone {
+  stroke: #fff;
+  -webkit-animation-name: pie3-scone;
+  animation-name: pie3-scone;
+}
+
+/* 1st pie is 60% 3:2:1 */ 
+
+/* stroke-dasharray: [what % is about to be used], [what % is left], 0, 0; */
+
+@-webkit-keyframes pie1-scone {
+  50%,100% {stroke-dasharray: 20,53.9,0,0;}
+}
+@keyframes pie1-scone {
+  50%,100% {stroke-dasharray: 20,53.9,0,0;}
+}
+/* 2nd pie is 10% */
+
+/* stroke-dasharray: 0, [what %s been used], [what % is about to be used], [what % is left]; */
+
+@-webkit-keyframes pie2-scone {
+  50%,100% {stroke-dasharray: 0,46.1,20,23.1;}
+}
+@keyframes pie2-scone {
+  50%,100% {stroke-dasharray: 0,46.1,20,23.1;}
+}
+/* 3rd pie is 5% */
+@-webkit-keyframes pie3-scone {
+  50%,100% {stroke-dasharray: 0,20,23.1,0;}
+}
+@keyframes pie3-scone {
+  50%,100% {stroke-dasharray: 0,20,23.1,0;}
+}
+
+
+
+
+
+
+
+
+
+.pie1-panc {
+  stroke: #ed2a7b;
+  -webkit-animation-name: pie1-panc;
+  animation-name: pie1-panc;
+}
+
+.pie3-panc {
+  stroke: #fcf27c;
+}
+
+.pie4-panc {
+  stroke: #44c6ee;
+  -webkit-animation-name: pie4-panc;
+  animation-name: pie4-panc;
+}
+.pie5-panc {
+  stroke: #333;
+  -webkit-animation-name: pie5-panc;
+  animation-name: pie5-panc;
+}
+
+/* 1st pie is 60% 3:2:1 */ 
+
+/* stroke-dasharray: [what % is about to be used], [what % is left], 0, 0; */
+
+@-webkit-keyframes pie1-panc {
+  50%,100% {stroke-dasharray: 24.2,75.8,0,0;}
+}
+@keyframes pie1-panc {
+  50%,100% {stroke-dasharray: 24.2,75.8,0,0;}
+}
+/* stroke-dasharray: 0, [what %s been used], [what % is about to be used], [what % is left]; */
+
+@-webkit-keyframes pie4-panc {
+  50%,100% {stroke-dasharray: 0,24.2,12.1,63.7;}
+}
+@keyframes pie4-panc {
+  50%,100% {stroke-dasharray: 0,24.2,12.1,63.7;}
+}
+@-webkit-keyframes pie5-panc {
+  50%,100% {stroke-dasharray: 0,36.3,63.7,0;}
+}
+@keyframes pie5-panc {
+  50%,100% {stroke-dasharray: 0,36.3,63.7,0;}
+}
+
+
+
+
+
+.pie1-sponge {
+  stroke: #ed2a7b;
+  -webkit-animation-name: pie1-sponge;
+  animation-name: pie1-sponge;
+}
+.pie3-sponge {
+  stroke: #fff;
+  -webkit-animation-name: pie3-sponge;
+  animation-name: pie3-sponge;
+}
+.pie4-sponge {
+  stroke: #44c6ee;
+  -webkit-animation-name: pie4-sponge;
+  animation-name: pie4-sponge;
+}
+
+/* 1st pie is 60% 3:2:1 */ 
+
+/* stroke-dasharray: [what % is about to be used], [what % is left], 0, 0; */
+
+@-webkit-keyframes pie1-sponge {
+  50%,100% {stroke-dasharray: 37.5,62.5,0,0;}
+}
+@keyframes pie1-sponge {
+  50%,100% {stroke-dasharray: 37.5,62.5,0,0;}
+}
+/* stroke-dasharray: 0, [what %s been used], [what % is about to be used], [what % is left]; */
+
+@-webkit-keyframes pie3-sponge {
+  50%,100% {stroke-dasharray: 0,37.5,37.5,25;}
+}
+@keyframes pie3-sponge {
+  50%,100% {stroke-dasharray: 0,37.5,37.5,25;}
+}
+@-webkit-keyframes pie4-sponge {
+  50%,100% {stroke-dasharray: 0,75,25,0;}
+}
+@keyframes pie4-sponge {
+  50%,100% {stroke-dasharray: 0,75,25,0;}
+}
+
+
+
+
+
+
+
+.pie3-icing {
+  stroke: #fff;
+  -webkit-animation-name: pie3-icing;
+  animation-name: pie3-icing;
+}
+.pie4-icing {
+  stroke: #c1f0ff;
+  -webkit-animation-name: pie4-icing;
+  animation-name: pie4-icing;
+}
+
+@-webkit-keyframes pie3-icing {
+  50%,100% {stroke-dasharray: 50,50,0,0;}
+}
+@keyframes pie3-icing {
+  50%,100% {stroke-dasharray: 50,50,0,0;}
+}
+@-webkit-keyframes pie4-icing {
+  50%,100% {stroke-dasharray: 0,50,50,0;}
+}
+@keyframes pie4-icing {
+  50%,100% {stroke-dasharray: 0,50,50,0;}
+}
+
+
+
+
+
+
+.pie2-bicing {
+  stroke: #fcf27c;
+  -webkit-animation-name: pie2-bicing;
+  animation-name: pie2-bicing;
+}
+.pie3-bicing {
+  stroke: #fff;
+  -webkit-animation-name: pie3-bicing;
+  animation-name: pie3-bicing;
+}
+
+@-webkit-keyframes pie2-bicing {
+  50%,100% {stroke-dasharray: 33.3,66.7,0,0;}
+}
+@keyframes pie2-bicing {
+  50%,100% {stroke-dasharray: 33.3,66.7,0,0;}
+}
+@-webkit-keyframes pie3-bicing {
+  50%,100% {stroke-dasharray: 0,33.3,66.7,0;}
+}
+@keyframes pie3-bicing {
+  50%,100% {stroke-dasharray: 0,33.3,66.7,0;}
+}

@@ -1,0 +1,215 @@
+/* Valve red: #f74843;*/
+/* pink: #ed2a7b;*/
+
+.thicc {
+    font-weight: 600;
+}
+
+body {
+    margin: 0px;
+    font-weight: 400; /*"normal"*/ /*!important?*/
+    font-family: 'Nunito', "avenir next", "avenir", 'Nunito',  sans-serif;
+    background-color: #e8e8e6;
+    color: #333;
+}
+
+p {
+    font-size: 18px;
+}
+
+#top-panel {
+    background: #e6e7e8;
+    background: -moz-linear-gradient(top, #e6e7e8 0%, #bbbdc0 100%);
+    background: -webkit-linear-gradient(top, #e6e7e8 0%,#bbbdc0 100%);
+    background: linear-gradient(to bottom, #e6e7e8 0%,#bbbdc0 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e6e7e8', endColorstr='#bbbdc0',GradientType=0 );
+    
+    color: white;
+    font-weight: 300 !important;
+    
+    border-bottom: 1px solid white;
+}
+
+#about-page #top-panel {
+    background: #44c6ee !important;
+    border-bottom: 1px solid #c8f2ff;
+}
+
+#blog-page #top-panel {
+    background: #ed2a7b !important;
+}
+
+#faq-page #top-panel {
+    background: #ffee1f !important;
+}
+
+.rectangle {
+  transform: scale(40, 4);
+}
+
+#blog-page .rectangle {
+  fill: #ed2a7b;
+}
+
+#about-page .rectangle {
+  fill: #00b4eb;
+}
+
+.not-main .tb, .not-main .logo {
+    color: white !important;
+    left: 10px !important;
+}
+
+.not-main #top-bar a { /*thinner top bar*/
+    height: 10px !important;
+    padding-top: 0px !important;
+}
+.not-main .triple {
+    padding-top: 2px !important;
+}
+
+.logo {
+    color: #ed2a7b;
+}
+
+#top-bar {
+    color: #ed2a7b; /* pink */
+}
+
+h1, h2, h3, h4 {
+    color: #ed2a7b; /* pink */
+    font-weight: 400 !important;
+}
+
+h1 {
+    font-weight: 600 !important;
+}
+
+#about-page h1, #about-page h2, #about-page h3, #about-page h4  {
+    color: #00b4eb; /*slightly easier to read blue*/
+}
+
+#circle-flour .circle--inner {
+    background: #ed2a7b;
+}
+
+#circle-butter .circle--inner {
+    background: #fcf27c; /* yellow */
+}
+
+#circle-sugar .circle--inner {
+    background: white;
+}
+
+#circle-eggs .circle--inner {
+    background: #44c6ee; /* blue */
+}
+/*
+#circle-eggs .circle--outer {
+  border: 6px solid #44c6ee !important;
+}*/
+
+a {
+    text-decoration: none;
+    color: #44c6ee; 
+}
+a:checked {
+    text-decoration: none;
+}
+
+.not-me {
+    position: relative;
+    height: auto;
+    width: 45%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+    float: right;
+    
+    top: -150px;
+    border: 20px solid white;
+    margin: 20px;
+    
+    z-index: -1;
+}
+
+
+         @-webkit-keyframes fadeIn {
+            0% {opacity: 0;}
+            100% {opacity: 1;}
+         }
+         
+         @keyframes fadeIn {
+            0% {opacity: 0;}
+            100% {opacity: 1;}
+         }
+         
+        figcaption, .flickity-page-dots, .flickity-prev-next-button {
+            -webkit-animation: fadeIn 0.7s;
+            animation: fadeIn 0.7s; 
+        }
+
+        #bs-page .tb {
+            -webkit-animation: fadeIn 2s;
+            animation: fadeIn 2s; 
+
+        }
+
+        @-webkit-keyframes fadeIn-moveUp {
+            from {bottom:0px; opacity: 0;}
+            to {bottom:200px; opacity: 1;}
+        }
+
+        @keyframes fadeIn-moveUp {
+            from {bottom:0px; opacity: 0;}
+            to {bottom:200px; opacity: 1;}
+        }
+
+.up-arrow {
+    -webkit-animation: fadeIn-moveUp 0.7s;
+            animation: fadeIn-moveUp 0.7s; 
+}
+
+
+.footer {
+    padding-top: 40px; /*
+    text-align: center;
+    color: #ccc; */
+    position: fixed;
+    bottom: 0;
+}
+
+h1 {
+    padding-top: 50px;
+}
+
+.little-image {
+    width: 400px; 
+    border: 2px solid #ed2a7b;
+}
+
+li {
+    font-size: 17px;
+    padding-bottom: 10px;
+}
+
+.recipe-info {
+    font-style: italic !important;
+}
+
+.two-line {
+    top: 120px; 
+    font-size: 20px;
+}
+
+.gear {
+    top: 40px !important;
+}
+
+#thicc-line {
+    width:100px; 
+    height: 5px; 
+    margin-top: 40px;
+}

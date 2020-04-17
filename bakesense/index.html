@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>Bakesense.</title>
+	<meta name="description" content=""/>
+	<meta name="keywords" content="list, of, words" />
+	<meta name="theme-color" content="#ed2a7b"/>
+    <link rel="shortcut icon" href="favs/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favs/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="stylesheet" type="text/css" href="css/flickity.css" />
+    <link rel="stylesheet" type="text/css" href="css/tech.css" /> 
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/sidenav.css" />
+    <link rel="stylesheet" type="text/css" href="css/gooey.css" />
+    <link rel="stylesheet" type="text/css" href="css/pie.css" />
+    <link rel="stylesheet" type="text/css" href="css/2pie.css" />
+    <link rel="stylesheet" type="text/css" href="css/pie-load.css" />
+    <link rel="stylesheet" type="text/css" href="css/mobile.css" />
+    <link rel="stylesheet" type="text/css" href="css/rangeslider.css" />
+    
+    
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    
+    <!--Fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Nunito:200,400, 400i,700' rel='stylesheet'>
+	<!--[if IE]>
+	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-125637778-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-125637778-1');
+    </script>
+
+</head>
+    
+<body onload="mixer()">
+    
+    <div id="mySidenav" class="sidenav sidenavleft">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html"><u><span class="thicc">bake</span>sense.</u></a>
+          <a href="about.html">about</a>
+          <!-- <a href="blog.html">blog</a>
+          <a href="faq.html">faq</a>
+          <a href="contact.html">contact</a> -->
+          <a style="font-weight: 300; padding-bottom: 15px;">share:</a>
+        <span><a href="https://www.facebook.com/sharer/sharer.php?u=bakesense.net" class="fab fa-facebook-f" style="display:inline;"></a><a href="https://twitter.com/home?status=This%20website%20is%20peng%3A%20bakesense.net" class="fab fa-twitter"  style="display:inline;"></a></span>
+        <div class="footer"> 
+        <span><p>all <span class="thicc">b</span>s. content is © bakesense.net 2019</p></span>
+        </div>
+    </div>
+    
+    <div id="top-panel">
+        
+    <span id="top-bar">
+        
+        <span class="tb triple" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+        
+        <a href="index.html" class="tb"><h2 class="logo"> <span class="thicc">bake</span>sense.</h2></a>
+        <!--  -->
+    </span>  
+    
+        <br>
+        
+        <!--
+    <span class="boxes">
+        
+        <div class="flour-box">
+            <p style="display:inline">flour</p>
+            <input type="checkbox" name="flour" id="flour" onclick="mixer()">
+            <label style="display:inline" for="flour"></label>
+        </div>
+        <div class="butter-box">
+            <p style="display:inline">butter</p>
+            <input type="checkbox" name="butter" id="butter" onclick="mixer()">
+            <label style="display:inline"  for="butter"></label> 
+        </div>
+        <div class="sugar-box">
+            <p style="display:inline">sugar</p>
+            <input type="checkbox" name="sugar" id="sugar" onclick="mixer()">
+            <label style="display:inline"  for="sugar"></label> 
+        </div>
+        <div class="egg-box">
+            <p style="display:inline">eggs</p>
+            <input type="checkbox" name="eggs" id="eggs" onclick="mixer()">   
+            <label style="display:inline"  for="eggs"></label> 
+        </div>
+           
+    </span>
+     -->
+    
+      
+        <label>
+  <input type="checkbox"  name="flour"  class="c-refresh" id="flour" onclick="mixer()"/>
+  <div class="circle" id="circle-flour">
+    <div class="circle--inner circle--inner__1" ></div>
+    <div class="circle--inner circle--inner__2" ></div>
+    <div class="circle--inner circle--inner__3" ></div>
+    <div class="circle--inner circle--inner__4" ></div>
+    <div class="circle--inner circle--inner__5" ></div>
+    <div class="circle--outer" ></div>
+  </div>
+  <svg>
+    <defs>
+      <filter id="gooey">
+        <feGaussianBlur
+          in="SourceGraphic"
+          result="blur"
+          stdDeviation="3"
+        />
+        <feColorMatrix
+          in="blur"
+          mode="matrix"
+          values="
+            1 0 0 0 0
+            0 1 0 0 0
+            0 0 1 0 0
+            0 0 0 18 -7
+          "
+          result="gooey"
+        />
+        <feBlend
+          in2="gooey"
+          in="SourceGraphic"
+          result="mix"
+        />
+      </filter>
+    </defs>
+  </svg>
+            <p class="under-button">flour</p>
+        </label>
+        
+        <label>
+  <input type="checkbox"  name="butter" class="c-refresh" id="butter" onclick="mixer()"/>
+  <div class="circle" id="circle-butter">
+    <div class="circle--inner circle--inner__1" ></div>
+    <div class="circle--inner circle--inner__2" ></div>
+    <div class="circle--inner circle--inner__3" ></div>
+    <div class="circle--inner circle--inner__4" ></div>
+    <div class="circle--inner circle--inner__5" ></div>
+    <div class="circle--outer" ></div>
+  </div>
+  <svg>
+    <defs>
+      <filter id="gooey">
+        <feGaussianBlur
+          in="SourceGraphic"
+          result="blur"
+          stdDeviation="3"
+        />
+        <feColorMatrix
+          in="blur"
+          mode="matrix"
+          values="
+            1 0 0 0 0
+            0 1 0 0 0
+            0 0 1 0 0
+            0 0 0 18 -7
+          "
+          result="gooey"
+        />
+        <feBlend
+          in2="gooey"
+          in="SourceGraphic"
+          result="mix"
+        />
+      </filter>
+    </defs>
+  </svg>
+            <p class="under-button">butter</p>
+        </label>
+        
+        <label>
+  <input type="checkbox"  name="sugar" class="c-refresh" id="sugar" onclick="mixer()"/>
+  <div class="circle"  id="circle-sugar">
+    <div class="circle--inner circle--inner__1" ></div>
+    <div class="circle--inner circle--inner__2" ></div>
+    <div class="circle--inner circle--inner__3" ></div>
+    <div class="circle--inner circle--inner__4" ></div>
+    <div class="circle--inner circle--inner__5" ></div>
+    <div class="circle--outer" ></div>
+  </div>
+  <svg>
+    <defs>
+      <filter id="gooey">
+        <feGaussianBlur
+          in="SourceGraphic"
+          result="blur"
+          stdDeviation="3"
+        />
+        <feColorMatrix
+          in="blur"
+          mode="matrix"
+          values="
+            1 0 0 0 0
+            0 1 0 0 0
+            0 0 1 0 0
+            0 0 0 18 -7
+          "
+          result="gooey"
+        />
+        <feBlend
+          in2="gooey"
+          in="SourceGraphic"
+          result="mix"
+        />
+      </filter>
+    </defs>
+  </svg>
+            <p class="under-button">sugar</p>
+        </label>
+        
+        <label>
+  <input type="checkbox"  name="eggs" id="eggs" onclick="mixer()" class="c-refresh"/>
+  <div class="circle"  id="circle-eggs">
+    <div class="circle--inner circle--inner__1" ></div>
+    <div class="circle--inner circle--inner__2" ></div>
+    <div class="circle--inner circle--inner__3" ></div>
+    <div class="circle--inner circle--inner__4" ></div>
+    <div class="circle--inner circle--inner__5" ></div>
+    <div class="circle--outer" ></div>
+  </div>
+  <svg>
+    <defs>
+      <filter id="gooey">
+        <feGaussianBlur
+          in="SourceGraphic"
+          result="blur"
+          stdDeviation="3"
+        />
+        <feColorMatrix
+          in="blur"
+          mode="matrix"
+          values="
+            1 0 0 0 0
+            0 1 0 0 0
+            0 0 1 0 0
+            0 0 0 18 -7
+          "
+          result="gooey"
+        />
+        <feBlend
+          in2="gooey"
+          in="SourceGraphic"
+          result="mix"
+        />
+      </filter>
+    </defs>
+  </svg>
+            <p class="under-button">eggs</p>
+        </label>
+        
+        
+    </div>
+      
+    
+    
+    <div id="main-panel"> 
+        
+        
+                <!-- content -->
+                <div id="content">
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                <div id="empty-text" class="empty" style="display:none">
+                    
+                    <figure>
+                        <figcaption><span class="up-arrow">&uarr;</span><br><i>
+choose your <br> ingredients</i></figcaption>
+                        <svg class="svg-pie" viewBox="0 0 63.6619772368 63.6619772368">
+                            <circle class="pie0" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+                            <circle class="fix" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+                        </svg>
+                    </figure> 
+                    
+                </div> 
+                    
+                <div id="f-text" class="empty" style="display:none">
+                    
+                    <figure>
+                        <figcaption><span class="up-arrow">&uarr;</span><br><i>
+choose more <br> ingredients</i></figcaption>
+                        <svg class="svg-pie" viewBox="0 0 63.6619772368 63.6619772368">
+                            <circle class="pie0" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+                            <circle class="fix" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+                        </svg>
+                    </figure> 
+                    
+                </div> 
+                
+                <div id="s-text" style="display:none">
+                    
+                    <figure>
+                        <figcaption>Icing</figcaption>
+                        <svg class="svg-pie" viewBox="0 0 63.6619772368 63.6619772368">
+                            <circle class="pie0" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+                            <circle class="pie3-icing" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+                            <circle class="pie4-icing" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+                            <circle class="pie5-icing" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+                        </svg>
+                    </figure> 
+                    
+                </div> 
+                
+                <div id="b-text" class="empty" style="display:none">
+                    
+                    <figure>
+                        <figcaption><span class="up-arrow">&uarr;</span><br><i>
+choose more <br> ingredients</i></figcaption>
+                        <svg class="svg-pie" viewBox="0 0 63.6619772368 63.6619772368">
+                            <circle class="pie0" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+                            <circle class="fix" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+                        </svg>
+                    </figure> 
+                    
+                </div> 
+                    
+                    
+                    
+                <div id="e-text"  class="empty" style="display:none">
+                    
+                    <figure>
+                        <figcaption><span class="up-arrow">&uarr;</span><br><i>
+choose more <br> ingredients</i></figcaption>
+                        <svg class="svg-pie" viewBox="0 0 63.6619772368 63.6619772368">
+                            <circle class="pie0" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+                            <circle class="fix" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+                        </svg>
+                    </figure> 
+                    
+                </div> 
+                
+                <div id="fs-text"  class="empty" style="display:none">
+                    
+                     <figure>
+                        <figcaption><span class="up-arrow">&uarr;</span><br><i>
+choose more <br> ingredients</i></figcaption>
+                        <svg class="svg-pie" viewBox="0 0 63.6619772368 63.6619772368">
+                            <circle class="pie0" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+                            <circle class="fix" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+                        </svg>
+                    </figure> 
+                    
+                </div> 
+                
+                <div id="fb-text"  class="empty" style="display:none">
+                    
+                    <figure>
+                        <figcaption><span class="up-arrow">&uarr;</span><br><i>
+choose more <br> ingredients</i></figcaption>
+                        <svg class="svg-pie" viewBox="0 0 63.6619772368 63.6619772368">
+                            <circle class="pie0" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+                            <circle class="fix" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+                        </svg>
+                    </figure> 
+                    
+                </div> 
+                    
+                    
+                <div id="fe-text"  class="empty" style="display:none">    
+                <figure>
+                        <figcaption><span class="up-arrow">&uarr;</span><br><i>
+choose more <br> ingredients <br> </i></figcaption>
+                        <svg class="svg-pie" viewBox="0 0 63.6619772368 63.6619772368">
+                            <circle class="pie0" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+                            <circle class="fix" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+                        </svg>
+                </figure> 
+                    </div>
+                
+                <div id="sb-text" style="display:none">
+                    
+                    <figure>
+                        <figcaption>Butter Icing</figcaption>
+                        <svg class="svg-pie" viewBox="0 0 63.6619772368 63.6619772368">
+                            <circle class="pie0" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+                            <circle class="pie2-bicing" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+                            <circle class="pie3-bicing" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+                            <circle class="fix" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+                        </svg>
+                    </figure> 
+                    
+                </div> 
+                
+                <div id="se-text"  class="empty" style="display:none">
+                    
+                    <figure>
+                        <figcaption style="top: 120px;"><i>a grim <br> combination</i></figcaption>
+                        <svg class="svg-pie" viewBox="0 0 63.6619772368 63.6619772368">
+                            <circle class="pie0" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+                            <circle class="fix" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+                        </svg>
+                    </figure> 
+                    
+                </div>
+                    
+                <div id="be-text"  class="empty" style="display:none">
+                    
+                    <figure>
+                        <figcaption style="top: 120px;"><i>a nasty <br> combination</i></figcaption>
+                        <svg class="svg-pie" viewBox="0 0 63.6619772368 63.6619772368">
+                            <circle class="pie0" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+                            <circle class="fix" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+                        </svg>
+                    </figure> 
+                    
+                </div> 
+                
+                
+                <div id="fsb-text" style="display:none">
+                    
+                <div class="carousel" id="carousel_1" data-flickity='{"wrapAround": true}'>
+  
+  <div class="carousel-cell">
+        <figure>
+                <figcaption>Cookies 🍪</figcaption>
+                    <svg class="svg-pie" viewBox="0 0 63.6619772368 63.6619772368">
+                        <circle class="pie0" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+                        <circle class="pie1-cookies" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+                        <circle class="pie2-cookies" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+                        <circle class="pie3-cookies" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+                        <circle class="pie4-cookies" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+                    </svg>
+        </figure> 
+        
+                    <div class="words">
+                    <h2>How to bake cookies:</h2>
+                
+                    <p class="recipe-info"><i class="fas fa-cookie-bite" style="padding-right: 5px;"></i> Makes 18 <br/> <i class="far fa-clock" style="padding-right: 5px;"></i>10 mins preparation, 8-10 mins baking</p>
+                    
+                        <ol>
+                        <li>Heat oven to <b>180 <sup>o</sup>C</b> (350 <sup>o</sup>F, gas mark 4) &amp; prepare 2 baking trays</li>
+                        <li> Beat <b> 
+                            <span class="oz_text"><span class="oz">4</span> oz </span> 
+	                        <span class="g_text" style="display:none"><span class="grams"></span> g </span> 
+                        butter</b>, and cream together with <b>
+                            <span class="oz_text"><span class="oz">3</span> oz </span> 
+	                        <span class="g_text" style="display:none"><span class="grams"></span> g </span>     
+                        (soft) brown sugar</b> until light and fluffy</li>
+                        <li>Stir in <b>
+                            <span class="oz_text"><span class="oz">6</span> oz </span> 
+	                        <span class="g_text" style="display:none"><span class="grams"></span> g </span> 
+                        self-raising flour</b>, <b>2 tbsp golden syrup</b>, <b>2 tbsp milk</b> and <b>any other desired ingredients</b> (e.g. chocolate, fudge, raisins if you're trying to convince yourself you're being healthy)</li>
+                        <li><i>Aggresively</i> throw balls of dough onto the trays (or alternatively, drop onto tray with a spoon). The dough doesn't need to be flat on the tray because it will be melted flat in the oven.</li>
+                        <li>Bake for <b>8-10 mins</b>.</li>
+                        </ol>
+                        
+                    <h2>Tips:</h2>
+                        
+                        <ul><li>Use <b>large chunks of chocolate</b> (a square or two from a bar) instead of chocolate chips; it tastes much better</li>
+                        <li>Generally using brown sugar instead of caster sugar tastes better, but caster sugar is always fine instead if you run out</li>
+                        </ul>
+        
+                        
+                    </div>
+        </div>
+                    
+        <div class="carousel-cell">
+                    <figure>
+                        <figcaption>Shortbread</figcaption>
+                        <svg class="svg-pie" viewBox="0 0 63.6619772368 63.6619772368">
+                            <circle class="pie0" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+                            <circle class="pie1-bis" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+                            <circle class="pie2-bis" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+                            <circle class="pie3-bis" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+                            <circle class="fix" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+                        </svg>
+                    </figure> 
+                    
+                    <div class="words">
+                    <h2>How to bake shortbread:</h2>
+                
+                    <p class="recipe-info"><i class="fas fa-cookie-bite" style="padding-right: 5px;"></i> Makes 16 <br/> <i class="far fa-clock" style="padding-right: 5px;"></i>  20-25 mins baking</p>
+                    
+                        <ol>
+                        <li>Heat oven to <b>160 <sup>o</sup>C</b> (325 <sup>o</sup>F, gas mark 3)</li>
+                        <li>Mix <b>9 oz plain flour</b> and <b>3 oz caster sugar</b>, then rub in <b>6 oz butter</b>.</li>
+                        <li>Knead well to form a smooth paste</li>
+                        <li>Roll into a rectangle, cut into fingers &amp; decorate with a fork</li>
+                        <li>Place on tray &amp; bake for <b>20-25 minutes</b>.</li>
+                        </ol>
+                        
+                    <h2>If you're feeling even more unhealthy</h2>
+                        <li>You can add some icing or butter icing <a href="#top-panel">(I'll leave you figure out how ^)</a> </li>
+                        
+                    </div>
+                    
+        </div>
+                    
+                                
+        <div class="carousel-cell">
+                    <figure>
+                        <figcaption style="position: relative; top: 115px;">Fruit <br> Crumble</figcaption>
+                            <svg class="svg-pie" viewBox="0 0 63.6619772368 63.6619772368">
+                                <circle class="pie0" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+                                <circle class="pie1-crumble" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+                                <circle class="pie2-crumble" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+                                <circle class="pie3-crumble" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+                                <!-- pie5 isn't normally there; this is just to avoid glitch with inner circle -->
+                                <circle class=fix cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+                            </svg>
+                    </figure>    
+                    
+                    
+                    <div class="words">
+                    <h2>How to bake crumble:</h2>
+                
+                    <p class="recipe-info"><i class="fas fa-cookie-bite" style="padding-right: 5px;"></i> Serves 4 <br/> <i class="far fa-clock" style="padding-right: 5px;"></i> 30 mins baking</p>
+                        
+                    <ol>
+                        <li>Heat oven to <b>190 <sup>o</sup>C</b> (375 <sup>o</sup>F, gas mark 5)</li>
+                        <li>Place <b>12 oz fresh fruit</b> in large overproof dish</li>
+                        <li>In a mixing bowl, rub <b>2 oz butter</b> with <b>4 oz self-raising flour</b> until it forms small crumbs</li>
+                        <li>Mix well with <b>2 oz sugar</b></li>
+                        <li>Spread over fruit and bake for <b>30 minutes</b>, until fruit is cooked and top is golden.</li>
+                    </ol>
+                        
+                    <h2>Why not try?</h2>
+                        <ul>
+                            <li>Adding oats</li>
+                            <li>Pear and apple is a good combo</li>
+                            <li>Rhubarb crumble</li>
+                        </ul>
+                    
+                    <h2>Some food for thought</h2>
+                        <p>"Said I'll be a minute, of course I was an hour <br> Never disturb a baker when he's mixing up the flour" - <a href="www.youtube.com/watch?v=dziLJsZWGF4">Skepta</a></p>
+                        
+                    </div>
+        </div>
+                    
+                     <div class="carousel-cell">
+                    <figure>
+                        <figcaption>Scones</figcaption>
+                            <svg class="svg-pie" viewBox="0 0 63.6619772368 63.6619772368">
+                                <circle class="pie0" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+                                <circle class="pie1-scone" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+                                <circle class="pie2-scone" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+                                <circle class="pie3-scone" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+                                <!-- pie5 isn't normally there; this is just to avoid glitch with inner circle -->
+                                <circle class=fix cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+                            </svg>
+                    </figure>    
+                    
+                    
+                    <div class="words">
+                    <h2>How to bake scones:</h2>
+                
+                    <p class="recipe-info"><i class="fas fa-cookie-bite" style="padding-right: 5px;"></i> Makes 8 <br/> <i class="far fa-clock" style="padding-right: 5px;"></i>10 mins baking</p>
+                        
+                    <ol>
+                        <li>Heat oven to <b>220 <sup>o</sup>C</b> (425 <sup>o</sup>F, gas mark 7)</li>
+                        <li>Mix <b>8 oz self-raising flour</b> with a pinch of <b>salt</b>, rub in <b>2 oz margarine</b> and stir in <b>1 oz caster sugar</b> and <b>2 oz currents/sultanas/raisins</b> if desired. </li>
+                        <li>Separately, beat <b>1 medium egg</b>, and add enough <b>milk</b> to bring to <b>150ml</b> of liquid. Add most of this to the mix (a little is left for brushing the tops of the scones later).</li>
+                        <li>Knead lightly of floured surface, roll out to 1cm in thickness, cut out with scone-cutter.</li>
+                        <li>Repeat Step 4 with remaining dough, until out of dough</li>
+                        <li>Brush tops with remaining egg-milk mixture</li>
+                        <li>Place on baking tray &amp; bake for about <b>10 minutes</b>.</li>
+                    </ol>
+                        
+                    <h2>What now ?</h2>
+                    <ul>
+                        <li>Cut the scones in half (horizonally, not vertically) and add jam &amp; clotted cream in the middle.</li>
+                    </ul>
+                        <!--
+                    <h2>3 things you didn't know about scones (no. 2 will traumatise you!)</h2>   
+                        
+                    <ol>
+                        <li>? </li>  
+                        <li>? </li>  
+                        <li>According to arthurian legend, they are the fastest food in the world </li>    
+                    </ol>    
+                        
+                    <p>So do you add your jam or cream first? Please don't contact me <a href=#>@bakesense</a> because if I'm honest I couldn't care less</p>
+                        -->
+                    </div>
+        </div>
+                <!--
+  <div class="carousel-cell">
+      <figure>
+                        <figcaption>Gingerbread (normal vs grasmere) </figcaption>
+                            <svg class="svg-pie" viewBox="0 0 63.6619772368 63.6619772368">
+                                <circle class="pie0" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+                                <circle class="pie1-ging" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+                                <circle class="pie2-ging" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+                                <circle class="pie3-ging" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+                                <circle class="pie4-ging" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+                                <circle class="pie5" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+                            </svg>
+                    </figure>    </div> -->
+        </div>
+                    
+                    
+                </div>
+                
+                <div id="fse-text" style="display:none">
+                    
+                <figure>
+                        <figcaption class="position: relative; top: 50px;">Sponge <br> Cake</figcaption>
+                        <svg class="svg-pie" viewBox="0 0 63.6619772368 63.6619772368">
+                            <circle class="pie0" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+                            <circle class="pie1-sponge" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+                            <circle class="pie3-sponge" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+                            <circle class="pie4-sponge" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+                            <circle class="pie5-sponge" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+                        </svg>
+                </figure> 
+                    <div class="words">
+                </div>
+                </div>
+                <div id="fbe-text"  id="fe-text" style="display:none">
+                    
+                    <figure>
+                    <figcaption>Pancakes</figcaption>
+                        <svg class="svg-pie" viewBox="0 0 63.6619772368 63.6619772368">
+                            <circle class="pie0" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+                            <circle class="pie1-sponge" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+                            <circle class="pie3-sponge" style="
+  stroke: #fcf27c;" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+                            <circle class="pie4-sponge" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+                            <circle class="pie5-sponge" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+                        </svg>
+                    </figure>  
+                </div>
+                
+                <div id="sbe-text"  class="empty" style="display:none">
+                    
+                    <figure>
+                        <figcaption style="top: 120px;"><i>a grim <br> combination</i></figcaption>
+                        <svg class="svg-pie" viewBox="0 0 63.6619772368 63.6619772368">
+                            <circle class="pie0" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+                            <circle class="fix" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+                        </svg>
+                    </figure> 
+                    
+                </div> 
+                
+                <div id="fsbe-text" style="display:none">
+                    
+                       
+                    <div class="carousel" id="carousel_2" data-flickity='{"wrapAround": true}'>
+  
+  <div class="carousel-cell">
+      <figure>
+                        <figcaption>Cake 🍰</figcaption>
+                            <svg class="svg-pie" viewBox="0 0 63.6619772368 63.6619772368">
+                                <circle class="pie0" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+                                <circle class="pie1-cake" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+                                <circle class="pie2-cake" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+                                <circle class="pie3-cake" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+                                <circle class="pie4-cake" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+                                <!-- pie5 isn't normally there; this is just to avoid glitch with inner circle -->
+                                <circle class="pie5" cx="31.8309886184" cy="31.8309886184" r="15.9154943092"/>
+                            </svg>
+                    </figure>   
+                    
+                    <div class="words">
+                    <h2>How to bake a basic cake: (aka. a victoria sandwich)</h2>
+                
+                    <p class="recipe-info"><i class="fas fa-cookie-bite" style="padding-right: 5px;"></i> Serves 8 <br/> <i class="far fa-clock" style="padding-right: 5px;"></i>  40-45 mins baking</p>
+                    
+                        <ol>
+                            <li>Heat oven to <b>180 <sup>o</sup>C</b> (350 <sup>o</sup>F, gas mark 4) &amp; prepare an 18cm sandwich tin (i.e. circular tin). </li>
+                            <li>Cream <b>4 oz sugar</b> and <b>4 oz butter</b> in a bowl until fluffy and nearly white</li>
+                            <li>Add <b>2 (beaten) eggs</b> to the bowl with <b>1 tbsp milk</b>, whisk.</li>
+                            <li>Pour into tin (line with greaseproof paper if it isn't non-stick). Bake for <b>40-45 mins</b>.</li>
+                        </ol>
+                        
+                        
+                    <h2>Less boring cakes:</h2>
+                        <li><b>Chocolate cake:</b> Add in <b>500g cocoa powder with </b> step 3 </li>
+                        
+                        
+                    <h2>How to tell when cake is finished:</h2>    
+                    
+                        <p>Skewer the cake with something thin (e.g. a fork, a chopstick) - if there is cake mix left on after this has been removed, the cake isn't ready yet.</p> 
+                        <p>With cakes, don't open the oven too early or the cake will collapse and be ruined :( </p>
+                        
+                    </div>
+                </div>
+                    
+        
+                </div>     
+        
+                    </div>
+        </div>
+    
+    
+    </div>
+
+    
+    
+    
+    <script src="js/flickity.pkgd.min.js"></script>
+    <script src="js/flick_reveal.js"></script>
+    <script src="js/jaller.js"></script>
+    <script src="js/mixer.js"></script>
+    <script src="js/sidenav.js"></script>
+    
+</body>
+</html>

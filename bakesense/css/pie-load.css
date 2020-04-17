@@ -1,0 +1,26 @@
+.load circle {
+  fill: #E6E7E8; /*rgba(0,0,0,0);*/
+  stroke-width: 15; /*31.8309886184;*/
+  stroke-dasharray: 0,0,0,100;
+  stroke-dashoffset: 25;
+  -webkit-animation: pie1-no 100s linear both; /*3s, 6s below*/
+  animation: pie1-no 100s linear both;
+}
+
+.pie1-load {
+  stroke: #ed2a7b;
+  -webkit-animation-name: pie1-load;
+  animation-name: pie1-load;
+}
+
+/* 1st pie is 60% 3:2:1 */ 
+
+/* stroke-dasharray: [what % is about to be used], [what % is left], 0, 0; */
+
+@-webkit-keyframes pie1-load {
+  50%,100% {stroke-dasharray: 0,0,20,0;}
+}
+@keyframes pie1-load {
+  50%,100% {stroke-dasharray: 0,0,20,0;}
+}
+/* stroke-dasharray: 0, [what %s been used], [what % is about to be used], [what % is left]; */
