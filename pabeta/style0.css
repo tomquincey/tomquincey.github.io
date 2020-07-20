@@ -1,0 +1,777 @@
+html{
+     overflow-y: auto; 
+}
+
+body {
+  margin: 0;
+  /* background-image: linear-gradient(-206deg, #00d895  0%, #001c69 100%); */
+  /* background-image: linear-gradient(-206deg, #835EFF 0%, #FF008D 100%); */
+  /* background-image: linear-gradient(-206deg, #835EFF 0%, #3100ff 100%); */
+  /* background-image: linear-gradient(-206deg, #035f51 0%, #32003e 100%); */
+  background: #f7f7f7 !important; 
+  background-attachment: fixed;
+  font-weight: 400;
+  height: 100vh; /*https://stackoverflow.com/questions/24944925/background-image-jumps-when-address-bar-hides-ios-android-mobile-chrome*/
+  z-index: 1000 !important;
+  
+}
+::selection {
+  background: rgba(254, 188, 45, 0.5); /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: rgba(254, 188, 45, 0.5); /* Gecko Browsers */
+}
+strong, b {
+  font-weight: 600;
+}
+
+label {
+  font-weight: 600 !important;
+}
+
+.ad label {
+  font-weight: 400 !important;
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: 1.5rem;
+  font-size: 15px;
+  color: white;
+  padding-top: 15px;
+  padding-bottom: 30px;
+  text-align: center;
+  
+  background-color: #00004c;
+  opacity: 1;
+}
+
+footer a {
+  color: white;
+}
+
+.wrap {
+  overflow: hidden;
+  /* height: 100vh; */
+  
+}
+
+canvas {
+  width: 100%;
+  height: 100%;
+}
+
+.text {
+    
+  width: 100%;
+  height: 100%;
+  position: absolute; /* absolute, v important for z-index stuff*/
+  /* z-index: 1; */
+    
+  font-family: "Montserrat", "Gilroy", "helvetica neue", sans-serif; /*"Source Sans Pro", */
+  font-weight: 400;
+  color: #00004c;
+  
+  text-align: center;
+}
+
+h3 {
+    font-size: 30px;
+    font-weight: 800;
+  margin: 0px;
+  color: #00004c;
+}
+
+.pa-background {
+  background-color: red;
+  /*
+  background-image: url("favicon2.png") !important;
+  */
+}
+
+
+label {
+  color: #00004c !important;
+}
+
+h2 {
+    font-size: 80px;
+    padding-top:  30px;
+    
+    font-weight: 100;
+}
+
+h1 {
+    font-size: 150px;
+    
+    margin: -10px 0;
+}
+
+p {
+  margin-top: 13px;
+  margin-bottom: 10px;
+}
+
+.logo {
+    width: 240px;
+    padding-top:100px;
+}
+
+.small-logo {
+  
+    width: 60px;
+    padding-top:20px;
+  
+    right: 30px;
+}
+
+.small-menu {
+    width: 40px;
+    position: relative;
+    left: 30px;
+    top: 37px;
+    float:left;
+}
+
+.BLANCK {
+    width: 40px;
+    position: relative;
+    right: 30px;
+    top: 37px;
+    float:right;
+}
+
+.arrows {
+  
+  color: #00004c;
+}
+
+.listy{
+    text-align: left;
+    font-weight: 300;
+    padding-left: 5%;
+    padding-right: 5%;
+    
+    background-color: rgba(255, 255, 255, 0.1);
+    padding-top:3px;
+  
+    padding-bottom: 0px;
+    margin-bottom: -7px; /* when using previous awa next */
+}
+
+.listy-footer {
+    text-align: left;
+    font-weight: 300;
+    padding-left: 5%;
+    padding-right: 5%;
+    
+    background-color: rgba(255, 255, 255, 0.1);
+    padding-top: 0px;
+    padding-bottom: 20px;
+  
+    margin-bottom: 0px; /* so confetti reaches bottom */
+  
+}
+
+h4 .listy {
+    width: 80%;
+}
+
+h4 .listy-footer {
+    width: 80%;
+}
+
+.chevron {
+    cursor: default;
+}
+
+p {
+  font-size: 18px;
+}
+
+fakea:hover { /* So doesn't underline (like it does with a) */
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: #00004c;
+  position: relative;
+  
+  /*So no highlight on phones*/
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+a:after {
+  border-top: .2em solid #febc2d;
+  content: "";
+  position: absolute;
+  right: 100%;
+  bottom: -0.2em;
+  left: 0;
+  transition: right .4s cubic-bezier(0,.5,0,1);
+}
+
+a:hover:after {
+  right: 0;
+}
+
+
+a:after .champagne { /* (underline right to left) !! Doesn't work ! */
+  left: 100% !important;
+  right: 0 !important;
+  transition: left .4s cubic-bezier(0,.5,0,1) !important;
+}
+
+a:hover:after .champagne {
+  left: 0 !important;
+}
+
+.summary {
+  /*background-color: ;#f3f3f6; abl grey*/ 
+  /* border: 7px solid #00004c !important; */
+  border-radius: 0px !important;
+  border-top-left-radius: 0px !important;
+  /* position: relative;
+  z-index: -10 !important; */
+  
+  opacity: 1;
+}
+
+
+
+.shadoww{
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  
+  box-shadow: 0px 5px 15px #888888;
+
+}
+
+.quiz {
+  background-color: white; /*#f3f3f6; abl grey*/ 
+  border: 7px solid #00004c !important;
+  border-radius: 0px !important;
+  border-top-left-radius: 0px !important;
+  width: 350px !important;
+  height: 500px;
+  margin-top: -60px !important;
+  
+  z-index: 100;
+}
+
+.summary-title {
+  margin-top: -2px;
+  font-size: 25px;   
+  text-align: left; 
+  padding-left: 15px;  
+}
+
+.quiz-title {
+  margin-top: -15px;
+  font-size: 25px;   
+  text-align: left; 
+  margin-left: 17px;  /* Put • in centre */
+}
+.summary-title-2 {
+  margin-top: -49px;
+  font-size: 22px;   
+  text-align: left; 
+  padding-left: 15px;  
+}
+
+.summary-title-2-ad {
+  margin-top: -43px;
+  font-size: 22px;   
+  text-align: left; 
+  padding-left: 15px;  
+  color: #777 !important;
+}
+
+.ad .vertical, .ad .horizontal {
+  background-color: #777 !important;
+}
+
+.summary-title-2-right {
+  margin-top: -41px;
+  font-size: 45px;   
+  text-align: right; 
+  padding-right: 10px;  
+  text-shadow:
+   -3px -3px 0 #fff,  
+    3px -3px 0 #fff,
+    -3px 3px 0 #fff,
+     3px 3px 0 #fff; 
+}
+
+.summary-title-2-plusminus {
+  margin-top: -37px;
+  float: right; 
+  padding-right: 14px;  
+}
+
+.togall .summary-title-2-plusminus {
+  margin-top: -37px;
+  float: right; 
+  padding-right: 14px;  
+  
+}
+
+.calc-icon {
+  margin-top: -430px;
+  margin-right: -16px;
+  float: right; 
+  padding-right: 0px;  
+}
+
+.skip-icon {
+  margin-top: -5px;
+  margin-left: -32px;
+  float: left; 
+  padding-right: 0px;  
+}
+
+.quiz .summary-title-2-plusminus {
+  margin-top: -5px;
+  margin-right: -30px; 
+}
+
+.ad .summary-title-2-plusminus {
+  margin-top: -33px;
+  padding-right: 14px;  
+}
+/*
+ .small-quote {
+	position: relative;
+  font-style: italic;
+  top: 10px;
+  margin-left: 40px; 
+}
+
+.big-quote {
+  font-family: serif;
+  text-align: center;
+  font-size: 20px;
+}
+*/
+.small-blockquote {
+  
+  margin-top: -5px;
+	font-size: 18px !important;
+  font-family: "Montserrat", "Gilroy", "helvetica neue", sans-serif;
+}
+
+.small-blockquote::before {
+	font-family: Baskerville, 'Baskerville Old Face', 'Hoefler Text', Garamond, 'Times New Roman', serif;
+  
+  top: 20px;
+  left: 10px;
+}
+
+
+blockquote {
+	font-family: Baskerville, 'Baskerville Old Face', 'Hoefler Text', Garamond, 'Times New Roman', serif;
+	font-size: 2.2em;
+	line-height: 0.5;
+	position: relative;
+	text-align: center;
+	/* color: #939997; */
+  margin: 0px;
+  font-style: italic;
+  top: -25px;
+  left: -20px;
+  margin-bottom: -20px;
+  z-index: 5 !important;
+}
+
+blockquote::before {
+	content: '\201C';
+	font-size: 3.9em;
+	font-style: italic;
+	line-height: 1;
+  position: relative;
+	top: 30px;
+  left: 20px;
+	margin: 0 0.075em 0 0;
+	color: rgba(254, 188, 45, 0.5);
+  z-index: 0 !important;
+}
+
+
+blockquote span {
+	font-size: 0.65em;
+	white-space: nowrap;
+  position: relative;
+	top: -10px;
+  left: 50px;
+	/* color: #cbcece;*/
+}
+
+blockquote {
+  font-size: 1.5em;
+}
+
+canvas {
+     -webkit-animation: fadein 1.5s ease-out;
+       -moz-animation: fadein 1.5s ease-out; 
+        -ms-animation: fadein 1.5s ease-out;
+         -o-animation: fadein 1.5s ease-out; 
+            animation: fadein 1.5s ease-out;
+}
+  
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* To fix white bar on chrome mobile
+https://stackoverflow.com/questions/48715298/fix-white-bar-below-background-image-on-android-chrome-when-scrolling-down 
+@media only screen and (max-device-width: 480px) {
+    html {
+      height: calc(100% + 60px);
+      min-height: calc(100% + 60px);
+    }
+}
+*/
+.aspect-ratio {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 51%;
+}
+
+iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0; 
+  top: 0;
+  border-radius: 10px;
+  opacity: 0.9;
+}
+
+.hytPlayerWrap {
+position:relative!important;
+padding-bottom:56.25%;
+padding-top: 0px; /* adjust if out of video black bars */
+height:0;
+overflow:hidden;
+display: block!important;
+  
+  border-radius: 10px;
+}
+
+.hytPlayerWrap iframe, .hytPlayerWrap object, .hytPlayerWrap embed {
+position:absolute;
+top:0;
+left:0;
+width: 100%!important;
+height:100%;
+}
+
+.playbutton {
+  display: inline-block;
+  /*Circle*/
+  /*
+  top: -3.5px;
+  padding-left: 8.5px;
+  padding-right: 7px;
+  padding-top: 6.85px;
+  padding-bottom: 7px;
+  border-radius: 50%;
+  */
+  top: -4.5px;
+  padding: 7px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border: 3px solid #00004c;
+  transition: .15s;
+}
+
+.playbutton:hover {
+  text-decoration: none;
+  cursor: pointer;
+  background-color: #00004c;
+}
+
+.playbutton:hover .playicon {
+  border-left-color: white;
+}
+
+.playbutton:after {
+  transition: none;
+  right: 0;
+  left: 100%;
+  border-left-color: white;
+}
+
+.playicon {
+  border-top: 7px solid transparent;
+  border-bottom: 7px solid transparent;
+  border-left: 12px solid #00004c;
+}
+
+.shadowed { /*drop shadow for arbitraryily-shaped image */
+    -webkit-filter: drop-shadow(2px 1px 20px rgba(0,0,0,0.5));
+    filter: url(#drop-shadow);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+    filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX=12, OffY=12, Color='#444')";
+}
+
+.article-title {
+  font-size: 45px; 
+  text-align: center;
+}
+
+.topic-title {
+  padding-top:50px;
+  padding-left:5%; 
+  font-size: 20px; 
+  color: #f4c248; 
+  text-align: left;
+}
+
+@media only screen and (min-width: 700px) {
+  .article-title {
+    font-size: 80px; 
+    text-align: left;
+    padding-left: 10%;
+  line-height: 90%;
+  }
+  .topic-title {
+    font-size: 30px; 
+  }
+  .topic-icon {
+    width: 43px !important;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .article-title {
+    font-size: 120px; 
+  }
+  .topic-title {
+    font-size: 40px; 
+  }
+}
+
+
+.philip {
+  width: 130px;
+  padding-right: 7px;
+  margin-left: -0px;
+}
+
+.white-bubble-title {
+  background-color: white;/* white; */
+  border-radius: 100px;
+  padding-left: 7px;
+  padding-right: 7px;
+}
+
+#bubbles {
+  position: fixed;
+  z-index: -900 !important;
+}
+
+#bubblehires {
+  position: fixed;
+  z-index: -900 !important;
+}
+
+.summary-insides {
+  padding: 15px; 
+  padding-top: 0px; 
+  text-align: left;
+
+}
+
+.faux-border-top {
+ border: 7px solid #00004c;
+  border-bottom: none;
+  height: 30px; /* 880px, Need to make it match the summary height*/
+  width: 90%;
+  position: relative;
+  z-index: -500;
+  
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%; /*90%*/
+
+  /*
+  -webkit-user-select: none; 
+  -moz-user-select: none; 
+  -ms-user-select: none;
+  user-select: none; 
+  */
+  
+}
+
+
+.faux-border-top::before {
+  content:'';
+  position: relative;
+  float: left;
+  bottom: -26px;
+  left: -7px;
+  background: #00004c;
+  height: 7px;
+  width: 7px;
+  border-radius: 50%;
+}
+
+.faux-border-top::after {
+  content:'';
+  position: relative;
+  float: right;
+  bottom: -26px;
+  left: 7px;
+  background: #00004c;
+  height: 7px;
+  width: 7px;
+  border-radius: 50%;
+}
+
+.summary-behind {
+  top: 0px;
+  left: 10px;
+  width: 140px;
+background-color: #f7f7f7;
+  color: #f7f7f7;
+
+  font-size: 25px !important;    
+  
+  position: relative;
+  z-index: -499;
+}
+
+#morebubble {
+  position: fixed;
+  z-index: -1000 !important;
+}
+
+.faux-border-middle {
+  
+ border: 7px solid #00004c;
+  border-top: none;
+  border-bottom: none;
+  height: 830px; /*Need to make it match the summary height*/
+  width: 90%;
+  position: relative;
+  z-index: -10000;
+  
+  margin-top: -10px;
+  margin-bottom: -960px; /*Need to make it match the summary height*/
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%; /*90%*/
+}
+
+
+
+.faux-border-bottom {
+ border: 7px solid #00004c;
+  border-top: none;
+  height: 30px; /* 880px, Need to make it match the summary height*/
+  width: 90%;
+  position: relative;
+  z-index: 0 !important;
+  bottom: -960px;
+  
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%; /*90%*/
+}
+
+.faux-border-bottom-2 {
+ border: 7px solid #00004c;
+  border-top: none;
+  height: 30px; /* 880px, Need to make it match the summary height*/
+  width: 90%;
+  position: relative;
+  z-index: 0 !important;
+  bottom: 30px;
+  
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%; /*90%*/
+}
+
+.faux-border-bottom::before {
+  content:'';
+  position: relative;
+  float: left;
+  bottom: 113px;
+  left: -14px;
+  background: #00004c;
+  height: 7px;
+  width: 7px;
+  border-radius: 50%;
+  z-index: 20;
+}
+.faux-border-bottom::after {
+  content:'';
+  position: relative;
+  float: right;
+  bottom: 113px;
+  left: 14px;
+  background: #00004c;
+  height: 7px;
+  width: 7px;
+  border-radius: 50%;
+  z-index: 20;
+}
+
+
+.ad {
+  position: relative;
+  z-index: 0;
+}
+
+.topic-icon {
+  width: 29px;
+  padding-right: 0px;
+  top: 2px;
+}

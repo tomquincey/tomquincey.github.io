@@ -1,0 +1,43 @@
+
+<html>
+<head>
+	
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+	
+	<title>Select/Change option</title>
+
+	<style type="text/css">
+		.red {background-color: red;}
+		.green {background-color: green;}
+		.black {background-color: black;}
+	</style>
+
+	<script type="text/javascript">
+		
+	$('#radio-label').click(function() {
+   if($('#Milk').is(':checked')) { 
+   $('#radio-label').toggleClass('green'); }
+  });
+
+	</script>
+
+</head>
+
+<body>
+
+<div class="radioPanel">
+
+	<label for="Milk" id="radio-label">Milk
+	<input type="radio" id="Milk" name="group1" value="Milk"></label>
+
+	<label for="Butter">Butter
+	<input type="radio" name="group1" value="Butter" checked></label>
+
+	<label for="Cheese">Cheese
+	<input type="radio" id="Cheese" name="group1" value="Cheese"> </label>
+                                 
+</div>
+
+</body>
+
+</html>
