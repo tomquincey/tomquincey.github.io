@@ -69,7 +69,7 @@ var Person = {
       D_height: "one",
       stars: 2,
       answer: 'B', // placeholder; all correct
-    }, /*
+    }, 
     {
       q_title: "Question Title",
       name: 'B',
@@ -96,12 +96,12 @@ var Person = {
       B_height: "one",
       C: "Answer C",
       C_height: "one",
-      D: "Answer D",
+      D: "Answer D !",
       D_height: "one",
       img: "pingu.png",
       stars: 3,
-      answer: 'All',
-    }, */
+      answer: 'D',
+    }, 
   ],   
   
   // add i_th person: 
