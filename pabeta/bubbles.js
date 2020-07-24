@@ -68,7 +68,7 @@
       parent.width * 0.2 + Math.random() * parent.width * 0.6,
       parent.height * 0.2 + Math.random() * parent.height * 0.6
     );
-    this.size = (parent.wh / 15) + ( Math.random() * (max - min) + min ) * (parent.wh / 15); // /15 is default
+    this.size = (parent.wh / 10) + ( Math.random() * (max - min) + min ) * (parent.wh / 12); // /12, 15 is default
     this.width = parent.width;
     this.height = parent.height;
   };
@@ -247,6 +247,12 @@
     );
     gradient.addColorStop(0, c0);
     gradient.addColorStop(1, c1);
+          // NEW from tom x
+    /*
+           ctx.shadowColor = '#ddd';
+           ctx.shadowBlur = 20;
+           ctx.shadowOffsetX = 0;
+           ctx.shadowOffsetY = 10; */
     return gradient;
   };
 

@@ -232,9 +232,7 @@ input[type='checkbox']:checked + .lbl-toggle {
     width: 720px;
   } 
   
-  .ad {
-    margin-top: 120px;
-  }
+  
   
   .faux-border-top {
     width: 720px;

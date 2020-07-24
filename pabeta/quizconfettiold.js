@@ -42,7 +42,7 @@ var Person = {
       q_title: "Who discovered <b><i><u>Newton's</u></i></b> Laws of Motion?",
       name: 'A',
       age: 1,
-      img: "newton.jpeg",
+      img: "Pingu_ad.jpg",
       A: "Sir Isaac Newton",
       A_height: "two",
       B: "Christopher Columbus",
@@ -53,55 +53,31 @@ var Person = {
       D_height: "three",
       stars: 1,
       answer: 'A',
-    }, 
+    },
     {
-      q_title: "Question Title",
       name: 'B',
       age: 2,
-      img: "Pingu_ad.jpg",
-      A: "Answer A",
-      A_height: "one",
-      B: "Answer B !",
-      B_height: "one",
-      C: "Answer C",
-      C_height: "one",
-      D: "Answer D",
-      D_height: "one",
-      stars: 2,
-      answer: 'B', // placeholder; all correct
-    }, /*
+      img: "fake_bs_ad.png",
+      stars: 1,
+    },
     {
-      q_title: "Question Title",
-      name: 'B',
+      name: 'C',
       age: 3,
       img: "Pingu_ad.jpg",
-      A: "Answer A",
-      A_height: "one",
-      B: "Answer B",
-      B_height: "one",
-      C: "Answer C !",
-      C_height: "one",
-      D: "Answer D",
-      D_height: "one",
-      stars: 2,
-      answer: 'C',
+      stars: 1,
     },
     {
       name: 'D',
       age: 4,
+      img: "fake_bs_ad.png",
+      stars: 2,
+    },
+    {
+      name: 'E',
+      age: 5,
       img: "Pingu_ad.jpg",
-      A: "Answer A",
-      A_height: "one",
-      B: "Answer B",
-      B_height: "one",
-      C: "Answer C",
-      C_height: "one",
-      D: "Answer D",
-      D_height: "one",
-      img: "pingu.png",
       stars: 3,
-      answer: 'All',
-    }, */
+    } 
   ],   
   
   // add i_th person: 
@@ -110,25 +86,21 @@ var Person = {
     
     /* so can select each option*/
     $('.childA').click(function(){
-        $('.childA').addClass('activeA').siblings().removeClass('activeB activeC activeD');   
-        App.yesButton.addClass('activeConfirmButton');   
+        $('.childA').addClass('activeA').siblings().removeClass('activeB activeC activeD');       
     });
     $('.childB').click(function(){
         $('.childB').addClass('activeB').siblings().removeClass('activeA activeC activeD');       
-        App.yesButton.addClass('activeConfirmButton');   
     });
     $('.childC').click(function(){
         $('.childC').addClass('activeC').siblings().removeClass('activeA activeB activeD');       
-        App.yesButton.addClass('activeConfirmButton');   
     });
     $('.childD').click(function(){
         $('.childD').addClass('activeD').siblings().removeClass('activeA activeB activeC');       
-        App.yesButton.addClass('activeConfirmButton');   
     });
     
     var person_i = this.people[i];
     this.wrap.append(
-      "<div class='person'><h3 class='quiz-title'><span class='white-bubble-title-quiz'>" + person_i.age + ".</span><span><img src='question_stars_" + person_i.stars + ".svg' class='question_stars_" + person_i.stars + "'></span></h3><div style='padding: 25px; padding-top: 20px; text-align: left; height: 290px;'>"+person_i.q_title+"</div><form><img src='"+person_i.img+"' style='width: 100%; height: 180px; position: absolute; top: 118px; left: 0px;'><div class='parent'><label class='child childA "+person_i.A_height+"-line' for='question-1-answers-A'>" + person_i.A + "<input type='radio' id='question-1-answers-A' name='question-1-answers'  value='A' /></label><label class='child childB "+person_i.B_height+"-line' for='question-1-answers-B'>" + person_i.B + "<input type='radio' id='question-1-answers-B' name='question-1-answers'  value='B' /></label><label class='child childC "+person_i.C_height+"-line' for='question-1-answers-C'>" + person_i.C + "<input type='radio' id='question-1-answers-C' name='question-1-answers'  value='C' /></label><label class='child childD "+person_i.D_height+"-line' for='question-1-answers-D'>" + person_i.D + "<input type='radio' id='question-1-answers-D' name='question-1-answers'  value='D' /></label></div></form></div>");
+      "<div class='person'><h3 class='quiz-title'><span class='white-bubble-title-quiz'>" + person_i.age + ".</span><span><img src='question_stars_" + person_i.stars + ".svg' class='question_stars_" + person_i.stars + "'></span></h3><div style='padding: 25px; padding-top: 20px; text-align: left; height: 290px;'>"+person_i.q_title+"</div><form><div class='parent'><label class='child childA "+person_i.A_height+"-line' for='question-1-answers-A'>" + person_i.A + "<input type='radio' id='question-1-answers-A' name='question-1-answers'  value='A' /></label><label class='child childB "+person_i.B_height+"-line' for='question-1-answers-B'>" + person_i.B + "<input type='radio' id='question-1-answers-B' name='question-1-answers'  value='B' /></label><label class='child childC "+person_i.C_height+"-line' for='question-1-answers-C'>" + person_i.C + "<input type='radio' id='question-1-answers-C' name='question-1-answers'  value='C' /></label><label class='child childD "+person_i.D_height+"-line' for='question-1-answers-D'>" + person_i.D + "<input type='radio' id='question-1-answers-D' name='question-1-answers'  value='D' /></label></div></form></div>");
   }
   
   
@@ -359,35 +331,12 @@ function makeConfetti() {
 
 
 
-function doFinalAnim() {
-    if (!this.blocked) {
-      this.blocked = true;           
-      $('.person').eq(0).addClass('animateNoFinal').one(animationEndEvent, function() {
-        //$(this).remove();
-        self.blocked = false;
-      });
-    }      
-};
-
-function resetFinalAnim() {
-  $('.person').eq(0).removeClass('animateNoFinal');
-};
-
-
-
-function resetQuizTitle() {
-  var quiz_title = document.getElementById("quiz-title-2");
-  quiz_title.classList.add("fadeout");
-};
-
-
-
 
 
 var App = {
   
   yesButton: $('.button.yes .trigger'),
-  skipButton: $('.button.no .trigger'),
+  noButton: $('.button.no .trigger'),
   restartButton: $('.restart'), // new (tom)
   // submitButton: $('.submit'), // new (tom)
   blocked: false,
@@ -397,15 +346,7 @@ var App = {
     
     if (liked == false) {
       Person.add(current_q);
-      
-      if (question_list.length > 1) { // so can't skip when there's only one Q left
-        setTimeout(selectSkip, 1200);
-      }
-    } else {
-      if (question_list.length > 2) { // so can't skip when there's only one Q left
-        setTimeout(selectSkip, 1200);
-      }
-    }
+    } 
     
     if (!this.blocked) {
       this.blocked = true;           
@@ -413,71 +354,9 @@ var App = {
         $(this).remove();
         self.blocked = false;
       });
-    } 
-  },
-  
-  likeFinal: function(liked){
-    var self = this;
-    doFinalAnim();
-    setTimeout(resetFinalAnim, 1350); //resets just after animation ends
-  },
-  
-  skip: function(current_q){
-    var animate = 'animateSkip';
-    var self = this;
-    Person.add(current_q);
-    if (!this.blocked) {
-      this.blocked = true;           
-      $('.person').eq(0).addClass(animate).one(animationEndEvent, function() {
-        $(this).remove();
-        self.blocked = false;
-      });
-    } 
-  } 
+    }
+  }
 };
-
-
-
-
-
-function selectSkip() {
-  App.skipButton.addClass('activeSkipButton');
-};
-
-function resetSkip() {
-  App.skipButton.removeClass('activeSkipButton');
-};
-
-function selectRadio() {
-  // clicking radio button changes class (& undos all others) to make it active
-  $('.childA').click(function(){
-      $('.childA').addClass('activeA').siblings().removeClass('activeB activeC activeD');       
-      App.yesButton.addClass('activeConfirmButton');
-  });
-  $('.childB').click(function(){
-      $('.childB').addClass('activeB').siblings().removeClass('activeA activeC activeD');     
-      App.yesButton.addClass('activeConfirmButton');  
-  });
-  $('.childC').click(function(){
-      $('.childC').addClass('activeC').siblings().removeClass('activeA activeB activeD');   
-      App.yesButton.addClass('activeConfirmButton');    
-  });
-  $('.childD').click(function(){
-      $('.childD').addClass('activeD').siblings().removeClass('activeA activeB activeC');   
-      App.yesButton.addClass('activeConfirmButton');    
-  });
-};
-
-function resetRadio() {
-  // reset all radio buttons 
-  $('.childA').siblings().removeClass('activeA activeB activeC activeD');
-  $('.childB').siblings().removeClass('activeA activeB activeC activeD');
-  $('.childC').siblings().removeClass('activeA activeB activeC activeD');
-  $('.childD').siblings().removeClass('activeA activeB activeC activeD');
-  // reset confirm button
-  App.yesButton.removeClass('activeConfirmButton');
-};
-
 
 
 // find whether quiz_complete exists (i.e. if page has been accessed before)
@@ -517,98 +396,67 @@ if (quiz_complete == 'true') {
 
 };
 
-
+  
 App.yesButton.on('mousedown', function() {
+  App.like(true, 0);
+  question_list.shift();
   
-  resetSkip();
-  //setTimeout(selectSkip, 900);
+  /* reset which is active*/
+  $('.childA').siblings().removeClass('activeA activeB activeC activeD');
+  $('.childB').siblings().removeClass('activeA activeB activeC activeD');
+  $('.childC').siblings().removeClass('activeA activeB activeC activeD');
+  $('.childD').siblings().removeClass('activeA activeB activeC activeD');
+  /*
+  if (storageAvailable('sessionStorage')) { // Uses above script, "if there is storage available, then:"
+    sessionStorage.setItem('stored_question_list', JSON.stringify(question_list));
+  } */
   
-  
-  if (App.yesButton.hasClass('activeConfirmButton')) { // so can't click when nothing is selected
-    resetQuizTitle();
+  if (question_list.length == 1) {
+    // need this so final question is selectable (for some reason)
     
-    var user_answer = 'N';  
-
-    if ($(".activeA")[0]){ // If answer A is selected
-      user_answer = 'A';
-    } else if  ($(".activeB")[0]){
-      user_answer = 'B';  
-    } else if  ($(".activeC")[0]){
-      user_answer = 'C';  
-    } else if  ($(".activeD")[0]){
-      user_answer = 'D';
-    };
-
-    var current_q = question_list[0];
-
-    // compare confirmed user answer to actual question answer
-    if (user_answer == Person.people[current_q].answer || Person.people[current_q].answer == 'All') {
-
-      App.like(true, 0);
-      question_list.shift();
-
-      resetRadio();
-      /*
-      if (storageAvailable('sessionStorage')) { // Uses above script, "if there is storage available, then:"
-        sessionStorage.setItem('stored_question_list', JSON.stringify(question_list));
-      } */
-
-      if (question_list.length == 1) {
-        // need this so final question is selectable (for some reason)
-        selectRadio();
-      }
-
-      if (question_list.length == 0) { // if all questions complete
-
-
-        setTimeout(makeConfetti, 300); // delay 300ms, then make confetti
-        question_list.push(9); // so can't repeatedly press button for more confetti
-        question_list.push(9);
-        question_list.push(9);
-        if (storageAvailable('sessionStorage')) { // Uses above script, "if there is storage available, then:"
-          sessionStorage.setItem('quiz_complete', 'true');
-        }
-
-        element.classList.add("fadeout");
-        element2.classList.add("fadein");
-      }
-    } else { // answer is wrong, put question to back
-      resetRadio();
-      // current_q = question_list[0];
-      var current_q = question_list[0];
-      
-      if (question_list.length > 1) { // so can't skip when there's only one Q left
-        question_list.push(question_list.shift()); //put start at end
-        App.like(false, current_q);
-      } else {
-        App.likeFinal(true, current_q);
-             
-      }
+    $('.childA').click(function(){
+        $('.childA').addClass('activeA').siblings().removeClass('activeB activeC activeD');       
+    });
+    $('.childB').click(function(){
+        $('.childB').addClass('activeB').siblings().removeClass('activeA activeC activeD');       
+    });
+    $('.childC').click(function(){
+        $('.childC').addClass('activeC').siblings().removeClass('activeA activeB activeD');       
+    });
+    $('.childD').click(function(){
+        $('.childD').addClass('activeD').siblings().removeClass('activeA activeB activeC');       
+    });
+  }
+  
+  if (question_list.length == 0) { // if all questions complete
+  
+    
+    setTimeout(makeConfetti, 300); // delay 300ms, then make confetti
+    question_list.push(9); // so can't repeatedly press button for more confetti
+    question_list.push(9);
+    question_list.push(9);
+    if (storageAvailable('sessionStorage')) { // Uses above script, "if there is storage available, then:"
+      sessionStorage.setItem('quiz_complete', 'true');
     }
-  } else { // so clicking 'confirm' with nothing selected doesn't turn on skip button
-    if (question_list.length > 1) {
-      selectSkip();
-    }
+
+    element.classList.add("fadeout");
+    element2.classList.add("fadein");
   }
 });
 
-App.skipButton.on('mousedown', function() {
+App.noButton.on('mousedown', function() {
   
+  /* reset which is active*/
+  $('.childA').siblings().removeClass('activeA activeB activeC activeD');
+  $('.childB').siblings().removeClass('activeA activeB activeC activeD');
+  $('.childC').siblings().removeClass('activeA activeB activeC activeD');
+  $('.childD').siblings().removeClass('activeA activeB activeC activeD');
   
-  if (App.skipButton.hasClass('activeSkipButton')) { // so can't click skip isn't possible
-    resetQuizTitle();
-    resetRadio();
-    resetSkip();
-    // current_q = question_list[0];
-    var current_q = question_list[0];
-    if (question_list.length > 1) { // so can't skip when there's only one Q left
-      setTimeout(selectSkip, 1200);
-
-      question_list.push(question_list.shift()); //put start at end
-      App.skip(current_q);
-    }
+  current_q = question_list[0];
+  if (question_list.length > 1) { // so can't skip when there's only one Q left
+    question_list.push(question_list.shift()); //put start at end
+    App.like(false, current_q);
   }
-  
 });
 
 App.restartButton.on('mousedown', function() {
@@ -627,6 +475,18 @@ $(document).ready(function() {
   Person.people.forEach(function(person){
     new Image().src = person.img; 
   });
-  //selectRadio();
-  setTimeout(selectSkip, 0);
+/*
+  $('.childA').click(function(){
+      $('.childA').addClass('activeA').siblings().removeClass('activeB activeC activeD');       
+  });
+  $('.childB').click(function(){
+      $('.childB').addClass('activeB').siblings().removeClass('activeA activeC activeD');       
+  });
+  $('.childC').click(function(){
+      $('.childC').addClass('activeC').siblings().removeClass('activeA activeB activeD');       
+  });
+  $('.childD').click(function(){
+      $('.childD').addClass('activeD').siblings().removeClass('activeA activeB activeC');       
+  }); */
+  
 });
