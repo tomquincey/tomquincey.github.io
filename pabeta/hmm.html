@@ -6,6 +6,7 @@
 	
 	<title>Select/Change option</title>
 
+  <link href="slidemenu.css" rel="stylesheet">
 	<style type="text/css">
 		.red {background-color: red;}
 		.green {background-color: green;}
@@ -24,7 +25,26 @@
 </head>
 
 <body>
+  
+  
+  <!-- Navigation -->
+<nav id="slide-menu">
+	<ul>
+		<li class="timeline">Timeline</li>
+		<li class="events">Events</li>
+		<li class="calendar">Calendar</li>
+		<li class="sep settings">Settings</li>
+		<li class="logout">Logout</li>
+	</ul>
+</nav>
+<!-- Content panel -->
+<div id="slide-content">
+	<div class="slide-menu-trigger"></div>
+	<h1>iOS style sliding menu</h1>
+	<p>Here's an easy way to create an iOS style, side sliding menu.</p>
 
+</div>
+  
 <div class="radioPanel">
 
 	<label for="Milk" id="radio-label">Milk
@@ -37,6 +57,8 @@
 	<input type="radio" id="Cheese" name="group1" value="Cheese"> </label>
                                  
 </div>
+  
+	<script type="text/javascript" src="slidemenu.js"></script>
 
 </body>
 

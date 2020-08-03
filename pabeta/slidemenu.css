@@ -1,0 +1,209 @@
+@import url(https://fonts.googleapis.com/css?family=Oxygen:400,700);
+/* 
+  Fonts
+*/
+/*
+body {
+  margin: 0;
+  background: #556270;
+  color: #353d46;
+  font: 18px/27px 'Oxygen', sans-serif;
+}
+*/
+nav#slide-menu {
+  position: fixed;
+  top: 0;
+  right: 100px; 
+  /* transform: translateX(-100px); */
+  bottom: 0;
+  display: block;
+  float: left;
+  width: 100%;
+  max-width: 284px;
+  height: 100%;
+  -moz-transition: all 300ms;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+  background:  inherit;
+  
+  
+  opacity: 0;
+  will-change: transform;
+}
+nav#slide-menu > ul {
+  font-family: "Montserrat", "Gilroy", "helvetica neue", sans-serif;
+  display: block;
+  margin: 40px;
+  padding: 0;
+  list-style: none;
+  opacity: 0.5;
+  -moz-transition: all 300ms;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+  
+  will-change: transform;
+}
+nav#slide-menu > ul li {
+  /* color: #dfe5eb; */
+  padding: 6px 0;
+  cursor: pointer;
+}
+nav#slide-menu > ul li:hover {
+  color: #f4c248;
+}
+nav#slide-menu > ul li:before {
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  color: #f4c248;
+  margin-right: 12px;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+}
+nav#slide-menu > ul li.sep {
+  margin-top: 7px;
+  padding-top: 14px;
+  border-top: 1px solid #6b7b8d;
+}
+nav#slide-menu > ul li.username {
+  font-weight: 700;
+  font-size: 45px;
+  cursor: default !important;
+  color: #00004c !important;
+}
+nav#slide-menu > ul li.timeline:before {
+  content: '\e805';
+}
+nav#slide-menu > ul li.events:before {
+  content: '\e802';
+}
+nav#slide-menu > ul li.calendar:before {
+  content: '\e800';
+}
+nav#slide-menu > ul li.settings:before {
+  content: '\e803';
+}
+nav#slide-menu > ul li.logout:before {
+  content: '\e804';
+}
+
+
+body.slide-menu-active nav#slide-menu {
+  /*right: 0px;*/
+  transform: translateX(100px);
+  opacity: 1;
+}
+
+body.slide-menu-active nav#slide-menu ul {
+  /*right: 0px;*/
+  transform: translateX(0px);
+  opacity: 1;
+}
+
+/*
+  Content
+*/
+div#slide-content {
+  position: fixed;
+  /top: 0; 
+  /*right: 0px;*/
+  transform: translateX(0px);
+  width: 100%;
+  height: 100%; 
+  /*  padding: 60px; */
+  background: inherit; 
+  overflow: scroll; 
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-box-shadow: 0px 0 30px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 0 30px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0 30px rgba(0, 0, 0, 0.75);
+  -moz-transition: all 300ms;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+  
+  
+  will-change: transform;
+}
+div#slide-content div.slide-menu-trigger {
+  position: absolute; 
+  background: url("PA_star_border_2_user_2.svg") no-repeat;
+  top: 18px;
+  right: 15px;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  border-radius: 0px;
+  -moz-transition: all 300ms;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+  
+  z-index: 999;
+  will-change: transform;
+}
+div#slide-content div.slide-menu-trigger:before {
+  content: 'Tom';
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  transform: translateX(5px) translateY(55px);
+  font-family: "Montserrat", "Gilroy", "helvetica neue", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-variant: normal;
+  text-align: center;
+  text-transform: none;
+}
+div#slide-content div.slide-menu-trigger:hover {
+  transform: scale(0.9);
+}
+div#slide-content div.slide-menu-trigger:hover:before {
+  color: #f4c248;
+}
+
+body.slide-menu-active div#slide-content {
+  /*right: 284px;*/
+  transform: translateX(-284px);
+  /*border-radius: 7px 0 0 7px;*/
+  border-radius: 20px;
+  border-right: 0px solid #bfbdbd;
+  opacity: 1;
+  
+  filter: blur(1px);
+  -webkit-filter: blur(1px); 
+}
+
+body.slide-menu-active div#slide-content .slide-menu-trigger {
+  /* right: 294px; not needed, since changed position from fixed to absolute */
+}
+
+.user-nav-items {
+  position: absolute;
+  bottom: -90px; 
+  left: 40px; 
+  font-size: 18px; 
+  text-align: center; 
+  color: #00004c; 
+  line-height: 30px;
+}
+
+.stars-menu {
+  position: relative !important;
+  width: 220px !important;
+  left: -0px !important;
+  padding-bottom: 10px;
+  
+  transition: all 300ms;
+  cursor: pointer;
+  will-change: transform;
+}
+
+.stars-menu:hover {
+  transform: translateX(5px);
+}

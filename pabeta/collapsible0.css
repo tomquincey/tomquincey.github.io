@@ -53,7 +53,7 @@ input[type='checkbox'] {
 }
 
 .lvl1 {
-  width: 95%; 
+  width: 98%; 
   margin-top: 0px;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -171,6 +171,10 @@ input[type='checkbox']:checked + .lbl-toggle {
   max-height: 400vh;
 }
 
+.toggle:checked + .lbl-toggle + .images-over-border {
+  overflow: visible;
+}
+
 .toggle:checked + .lbl-toggle {
 
   border-bottom: 0px solid #00004c; 
@@ -253,7 +257,7 @@ input[type='checkbox']:checked + .lbl-toggle {
     padding-right: 50% - 360px;
   }
   .lvl1 {
-    width: 650px;
+    width: 690px;
   }
   .logo {
     width: 400px;

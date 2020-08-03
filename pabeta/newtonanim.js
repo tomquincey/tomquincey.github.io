@@ -3,6 +3,44 @@
       
 var controlsProgressEl = document.querySelector('.progress');
       
+      var animationPlayButton1 = anime({
+        targets: '.pb1',
+        opacity: [
+          {value: 1, duration: 0, easing: 'easeOutQuad'},
+          {value: 0, duration: 150, easing: 'easeOutQuad'},
+          {value: 1, delay: 2450, duration: 300, easing: 'easeOutQuad'}
+        ],
+        direction: 'normal',
+        loop: false,
+        easing: 'linear',
+        autoplay: false,
+      });
+      var animationPlayButton2 = anime({
+        targets: '.pb2',
+        opacity: [
+          {value: 1, duration: 0, easing: 'easeOutQuad'},
+          {value: 0, duration: 150, easing: 'easeOutQuad'},
+          {value: 1, delay: 4450, duration: 300, easing: 'easeOutQuad'}
+        ],
+        direction: 'normal',
+        loop: false,
+        easing: 'linear',
+        autoplay: false,
+      });
+      var animationPlayButton3 = anime({
+        targets: '.pb3',
+        opacity: [
+          {value: 1, duration: 0, easing: 'easeOutQuad'},
+          {value: 0, duration: 150, easing: 'easeOutQuad'},
+          {value: 1, delay: 2550, duration: 300, easing: 'easeOutQuad'}
+        ],
+        direction: 'normal',
+        loop: false,
+        easing: 'linear',
+        autoplay: false,
+      });
+
+
       var animation = anime({
         targets: '.el1',
         translateX: [
@@ -139,12 +177,14 @@ var controlsProgressEl = document.querySelector('.progress');
       
 function FirstLawAnim() {
   animation.restart();
+  animationPlayButton1.restart();
 }
       
 function SecondLawAnim() {
   animation2.restart();
   animation2l.restart();
   animation2r.restart();
+  animationPlayButton2.restart();
 }
      
 function ThirdLawAnim() {
@@ -152,6 +192,7 @@ function ThirdLawAnim() {
   animation3R.restart();
   animation3l.restart();
   animation3r.restart();
+  animationPlayButton3.restart();
 }
      
 document.querySelector('.play').onclick = FirstLawAnim;

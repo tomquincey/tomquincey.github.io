@@ -21,6 +21,7 @@
     <link href="animecss/documentation.css" rel="stylesheet">
     <link href="overlay0.css" rel="stylesheet">
     <link href="quiz.css" rel="stylesheet">
+    <link href="slidemenu.css" rel="stylesheet">
     
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script id="MathJax-script" async
@@ -47,6 +48,28 @@
   </head>
 
   <body id="page-top" class="bodyclass">
+    
+    
+      <!-- Navigation -->
+    <nav id="slide-menu">
+      <ul>
+        <li class="username">Tom</li>
+        <br>
+        <img src="user_button_stars.svg" class="stars-menu">
+        <img src="user_button_constellations.svg" class="stars-menu">
+        <img src="user_button_badges.svg" class="stars-menu" style="top: -8px;">
+        <br>
+        
+        <div class="user-nav-items">
+        <li>User Settings <br> </li> 
+        <li>Logout</li>
+        </div>
+      </ul>
+    </nav>
+    <!-- Content panel -->
+    <div id="slide-content">
+      <div class="slide-menu-trigger"></div>
+
       
       
     <div class="wrap">
@@ -78,21 +101,24 @@
           
            <!-- <p><b>Map</b></p> -->
           <p></p>
-        <img src="PA-map-open-raster.png" style="width: 320px;">  
+        <img src="PA-map-open-raster.png" style="width: 280px;">  
           
           <!-- <p><b>Meta</b></p> -->
           <p></p>
           <a href="#" style="color:white">Store</a> <br>
           <a href="#" style="color:white">About</a> <br>
           <a href="#" style="color:white">Contact</a> <br>
-          <a href="#" style="color:white">Designing the Abyss</a>
+          <!-- <a href="#" style="color:white">Designing the Abyss</a> -->
         </div>
       </div>
       
+      
+      <!-- When not logged in: -->
+      <!-- 
       <div class="menuright">
       <a href="#">Log In</a> • <br> <a href="#">Sign Up</a>
       </div>
-        
+        -->
             
         <div class="text">
             <a href="index.html">
@@ -120,12 +146,16 @@
             -->
           
           <h3 class="topic-title"><a href="#" style="color: #f4c248;"><span><img src="PA-Foundations-Icon.svg" class="topic-icon"></span> Fundamentals</a></h3>
-          <h3 class="article-title"><span style="display: inline-block;">What is</span> <span style="display: inline-block;">Science?</span></h3>
+          <h3 class="article-title"><span style="display: inline-block;">Newton's Laws</span> <span style="display: inline-block;">of Motion</span></h3>
           
             <h4 class="listy">
-                <a href="#" style="champagne"><span class=arrows>&larr;</span> Previous </a>
+                <a href="#" style="champagne"><span><img src="PA-right-arrow.svg" class="left-arrow"></span> Previous </a>
+              <!--
               <span style="float:right;">
-        <a href="density_volume.html">Next • What is Physics? <span class=arrows>&rarr;</span></a>
+        <a href="density_volume.html"><span style="color: white; z-index: 9999;">Next • What is Physics? </span><span><img src="PA-right-arrow.svg" style="position: relative; top: -85px;"></span></a>
+              </span> -->
+              <span style="float:right;">
+        <a href="density_volume.html">Next • What is Physics? <span><img src="PA-right-arrow.svg" class="right-arrow"></span></a>
               </span> 
             </h4>
             
@@ -141,7 +171,7 @@
            <!-- <div class="faux-border-bottom"></div> -->
           
           
-        <div class="summary wrap-collabsible" style="margin-top: 55px">
+        <div class="summary wrap-collabsible" style="margin-top: 55px;">
         <input class="toggle" type="checkbox" name="chk">
          <!--  <h3 class="summary-behind">Summary</h3> -->
         <h3 class="summary-title"><span class="white-bubble-title">Summary</span></h3>
@@ -151,7 +181,9 @@
             Newton's three laws of motion describe how any object moves when forces act upon on it, as well as giving some insight into the nature of forces themselves.
               <br/>
               <br/>
-              <strong>Newton's 1st Law:</strong> 
+              <span class="boxy">Newton's 1st Law:</span><span class="triangg"></span>
+            
+            
               <br/>
             </p>
             <blockquote class="small-blockquote">An object in motion stays in motion</blockquote>
@@ -159,11 +191,11 @@
             
           <div class="demo-wrapper">
             <div class="line">
-              <img src="logo_square_white_transparent.png" class="small shadow" style="height: 30px; width: 30px; position: relative; float: left; top:-4.5px; filter: brightness(0) saturate(100%) invert(73%) sepia(5%) saturate(6702%) hue-rotate(348deg) brightness(111%) contrast(99%);">
-              <img src="logo_square_white_transparent.png" class="small el1" style="height: 30px; width: 30px; position: relative; float: left; left: -30px; top:-4.5px; filter: brightness(0) saturate(100%) invert(73%) sepia(5%) saturate(6702%) hue-rotate(348deg) brightness(111%) contrast(99%);">
+              <img src="logo_square_white_transparent.png" class="small shadow recolour" style="height: 30px; width: 30px; position: relative; float: left; top:-4.5px;">
+              <img src="logo_square_white_transparent.png" class="small el1 recolour" style="height: 30px; width: 30px; position: relative; float: left; left: -30px; top:-4.5px;">
             </div>
             
-        <a class="playbutton play"><div class="playicon"></div></a>
+        <a class="playbutton pb1 play"><div class="playicon"></div></a>
       <!--<button class="pause">Pause</button>
       <button class="restart"><i class="fas fa-redo-alt"></i></button> -->
       <!--
@@ -175,13 +207,13 @@
             When no force is acting upon an object, it continues to move at the same speed, in the same direction.
               <br/>
               <br/>
-              <strong>Newton's 2nd Law:</strong>
+            <span class="boxy">Newton's 2nd Law:</span>
           </p>
             
 
           <div class="demo-wrapper">
             <div class="line" style="display: flex;">
-              <img src="logo_square_white_transparent.png" class="small shadow custom" style="height: 30px; width: 30px; position: relative; float: left; top:-4.5px;  filter: brightness(0) saturate(100%) invert(73%) sepia(5%) saturate(6702%) hue-rotate(348deg) brightness(111%) contrast(99%);">
+              <img src="logo_square_white_transparent.png" class="small shadow custom recolour" style="height: 30px; width: 30px; position: relative; float: left; top:-4.5px;">
               
               <div style="display: flex; position: relative; bottom: 0px; right: 35px;" class="el2">
                 
@@ -189,7 +221,8 @@
                 
               <div class="small el2l" style="font-size: 25px; position: relative; bottom: 5px; right: 40px;">\(\leftarrow\)</div>
                 
-              <img src="logo_square_white_transparent.png" class="small" style="z-index:2000; height: 30px; width: 30px; position: relative; float: left; top:-4.5px; left: -31px;  filter: brightness(0) saturate(100%) invert(73%) sepia(5%) saturate(6702%) hue-rotate(348deg) brightness(111%) contrast(99%);">
+              <img src="logo_square_white_transparent.png" class="small recolour" style="
+              z-index:2000; height: 30px; width: 30px; position: relative; float: left; top:-4.5px; left: -31px; ">
                 
               <div class="small el2r" style="font-size: 25px; position: relative; bottom: 5px; left: -32px;">\(\rightarrow\)</div>
                 
@@ -201,21 +234,21 @@
               
             </div>
             
-              <a class="playbutton play2"><div class="playicon"></div></a>
+              <a class="playbutton pb2 play2"><div class="playicon"></div></a>
           </div>
           
           <p> The acceleration \(\textbf{a}\) of an object is calculated from the net force \(\textbf{F}\) acting upon it using: \[\textbf{F} = m\textbf{a}\]
               where \(m\) is the mass of the object.
               <br/>
               <br/>
-              <strong>Newton's 3rd Law:</strong>
+            <span class="boxy">Newton's 3rd Law:</span>
           </p>
           <blockquote class="small-blockquote"> For every action there is an equal and opposite reaction </blockquote>
           
           
           <div class="demo-wrapper">
             <div class="line" style="display: flex;">
-              <img src="logo_square_white_transparent.png"  class="small shadow" style="height: 30px; width: 30px; position: relative; float: left; top:-4.5px; filter: brightness(0) saturate(100%) invert(73%) sepia(5%) saturate(6702%) hue-rotate(348deg) brightness(111%) contrast(99%);">
+              <img src="logo_square_white_transparent.png"  class="small shadow recolour" style="height: 30px; width: 30px; position: relative; float: left; top:-4.5px;">
               
               <div style="display: flex; position: relative; bottom: 0px; right: 35px;" class="el3L">
                 
@@ -224,13 +257,13 @@
                 
               <div class="small el3l" style="font-size: 25px; position: relative; bottom: 6px; right: 40px;">\(\leftarrow\)</div>
                 
-                <img src="logo_square_white_transparent.png" class="small" style="z-index:2000; height: 30px; width: 30px; position: relative; float: left; top:-4.5px; left: -31px;  filter: brightness(0) saturate(100%) invert(73%) sepia(5%) saturate(6702%) hue-rotate(348deg) brightness(111%) contrast(99%);">
+                <img src="logo_square_white_transparent.png" class="small recolour" style="z-index:2000; height: 30px; width: 30px; position: relative; float: left; top:-4.5px; left: -31px;">
                 
               </div>
               
               <div style="display: flex; position: relative; bottom: 0px; right: 35px;" class="el3R">
                 
-                <img src="logo_square_white_transparent.png"  class="small" style="z-index:2000; height: 30px; width: 30px; position: relative; float: left; top:-4.5px; left: -31px; filter: brightness(0) saturate(100%) invert(73%) sepia(5%) saturate(6702%) hue-rotate(348deg) brightness(111%) contrast(99%);">
+                <img src="logo_square_white_transparent.png"  class="small recolour" style="z-index:2000; height: 30px; width: 30px; position: relative; float: left; top:-4.5px; left: -31px;">
                 
               <div class="small el3r" style="font-size: 25px; position: relative; bottom: 6px; left: -32px; ">\(\rightarrow\)</div>
 
@@ -240,7 +273,7 @@
               
             </div>
             
-              <a class="playbutton play3"><div class="playicon"></div></a>
+              <a class="playbutton pb3 play3"><div class="playicon"></div></a>
           </div>
           
             <p>
@@ -262,12 +295,13 @@
         <input id="advert" class="toggle" type="checkbox" checked>
               <label for="advert" class="lbl-toggle ad-toggle">
                 <h3 class="summary-title-2-ad"><span class="white-bubble-title">Ad</span></h3>
+                <!--
               <div class="circle-plus opened summary-title-2-plusminus">
              <div class="pm-circle"> 
             <div class="vertical"></div>
             <div class="horizontal"></div>
           </div>
-           </div>
+           </div> -->
                 </label>
         <div class="collapsible-content">
         <div class="content-inner">
@@ -308,7 +342,7 @@
           </div>
            </div>
         </label>
-        <div class="collapsible-content">
+        <div class="collapsible-content images-over-border">
         <div class="content-inner">
           <blockquote>WHAT!?<br/> <span>&mdash;  <a href="https://www.youtube.com/watch?v=K5tVbVu9Mkg" target="_blank">Lil Jon</a> </span></blockquote>
           
@@ -320,6 +354,18 @@
             <br/> <br/>
             The role of all other laws of physics is to tell us <i><b>why</b></i> things move, i.e. they tell us <i>what these forces are</i>.
           </p>
+          
+          
+          <!-- Play youtube videos without suggested vids at end -->
+          <!-- https://maxl.us/hideyt 
+          <div class="hytPlayerWrapOuter"> 
+            <div class="hytPlayerWrap"> 
+              <iframe src="https://www.youtube.com/embed/-fC2oke5MFg?rel=0&enablejsapi=1" frameborder="0" ></iframe> 
+            </div>
+          </div>-->
+          
+          
+          
           
           <div class="lvl1 wrap-collabsible">
             <input id="0a" class="toggle" type="checkbox" name="chk">
@@ -361,7 +407,7 @@
             <div class="horizontal"></div>
           </div>
            </div></label>
-        <div class="collapsible-content">
+        <div class="collapsible-content images-over-border">
         <div class="content-inner">
           
             <blockquote class="small-blockquote">An object in motion stays in motion</blockquote>
@@ -369,11 +415,11 @@
             
           <div class="demo-wrapper">
             <div class="line">
-              <img src="logo_square_white_transparent.png" class="small shadow" style="height: 30px; width: 30px; position: relative; float: left; top:-4.5px">
-              <img src="logo_square_white_transparent.png" class="small el1" style="height: 30px; width: 30px; position: relative; float: left; left: -30px; top:-4.5px">
+              <img src="logo_square_white_transparent.png" class="small shadow recolour" style="height: 30px; width: 30px; position: relative; float: left; top:-4.5px">
+              <img src="logo_square_white_transparent.png" class="small el1 recolour" style="height: 30px; width: 30px; position: relative; float: left; left: -30px; top:-4.5px">
             </div>
             
-        <a class="playbutton playAgain"><div class="playicon"></div></a>
+        <a class="playbutton pb1 playAgain"><div class="playicon"></div></a>
           </div>
           
           
@@ -384,8 +430,33 @@
             <span style="">Philip the Physics Fox says...</span>
             <br></p>
             <div class="row">
-          <div class="column"><img src="Philip_says.svg" class="philip"></div>
-          <div class="column"> <p>You might also hear Newton's 1st Law referred to by the grandiose title "the law of inertia", but this doesn't tell you anything you didn't already know.</p> </div>
+          <div class="column">
+            
+            <!-- 
+            <div class="sticker-wrapper">
+              <div class="sticker is-peeled philip">
+                <div class="sticker__face sticker__face--front">
+                  <div class="sticker__holder">
+                    <div class="sticker__content">
+                      <div class="sticker__shadow"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="sticker__face sticker__face--back">
+                  <div class="sticker__holder">
+                    <div class="sticker__content">
+                      <div class="sticker__shadow"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+            
+            <img src="Philip_sticker.svg" class="philip">
+              
+              
+              </div>
+          <div class="column"> <p style="font-size: 15px">You might also hear Newton's 1st Law referred to by the grandiose title "the law of inertia", but this doesn't tell you anything you didn't already know.</p> </div>
             </div>
               
           
@@ -425,7 +496,7 @@
           
           <div class="demo-wrapper">
             <div class="line" style="display: flex;">
-              <img src="logo_square_white_transparent.png" class="small shadow custom" style="height: 30px; width: 30px; position: relative; float: left; top:-4.5px">
+              <img src="logo_square_white_transparent.png" class="small shadow custom recolour" style="height: 30px; width: 30px; position: relative; float: left; top:-4.5px">
               
               <div style="display: flex; position: relative; bottom: 0px; right: 35px;" class="el2">
                 
@@ -433,7 +504,7 @@
                 
               <div class="small el2l" style="font-size: 25px; position: relative; bottom: 5px; right: 42px;">\(\leftarrow\)</div>
                 
-              <img src="logo_square_white_transparent.png" class="small" style="z-index:2000; height: 30px; width: 30px; position: relative; float: left; top:-4.5px; left: -31px; ">
+              <img src="logo_square_white_transparent.png" class="small recolour" style="z-index:2000; height: 30px; width: 30px; position: relative; float: left; top:-4.5px; left: -31px; ">
                 
               <div class="small el2r" style="font-size: 25px; position: relative; bottom: 5px; left: -32px;">\(\rightarrow\)</div>
                 
@@ -445,7 +516,7 @@
               
             </div>
             
-              <a class="playbutton play2Again"><div class="playicon"></div></a>
+              <a class="playbutton pb2 play2Again"><div class="playicon"></div></a>
           </div>
           
           <p> The acceleration \(\textbf{a}\) of an object is calculated from the net force \(\textbf{F}\) acting upon it using:
@@ -485,7 +556,7 @@
           
           <div class="demo-wrapper">
             <div class="line" style="display: flex;">
-              <img src="logo_square_white_transparent.png"  class="small shadow" style="height: 30px; width: 30px; position: relative; float: left; top:-4.5px">
+              <img src="logo_square_white_transparent.png"  class="small shadow recolour" style="height: 30px; width: 30px; position: relative; float: left; top:-4.5px">
               
               <div style="display: flex; position: relative; bottom: 0px; right: 35px;" class="el3L">
                 
@@ -494,13 +565,13 @@
                 
               <div class="small el3l" style="font-size: 25px; position: relative; bottom: 6px; right: 42px;">\(\leftarrow\)</div>
                 
-                <img src="logo_square_white_transparent.png" class="small" style="z-index:2000; height: 30px; width: 30px; position: relative; float: left; top:-4.5px; left: -31px;">
+                <img src="logo_square_white_transparent.png" class="small recolour" style="z-index:2000; height: 30px; width: 30px; position: relative; float: left; top:-4.5px; left: -31px;">
                 
               </div>
               
               <div style="display: flex; position: relative; bottom: 0px; right: 35px;" class="el3R">
                 
-                <img src="logo_square_white_transparent.png"  class="small" style="z-index:2000; height: 30px; width: 30px; position: relative; float: left; top:-4.5px; left: -31px;">
+                <img src="logo_square_white_transparent.png"  class="small recolour" style="z-index:2000; height: 30px; width: 30px; position: relative; float: left; top:-4.5px; left: -31px;">
                 
               <div class="small el3r" style="font-size: 25px; position: relative; bottom: 6px; left: -32px; ">\(\rightarrow\)</div>
 
@@ -510,7 +581,7 @@
               
             </div>
             
-              <a class="playbutton play3Again"><div class="playicon"></div></a>
+              <a class="playbutton pb3 play3Again"><div class="playicon"></div></a>
           </div>
           
           <p>
@@ -565,11 +636,13 @@
             
          </div>
           
+            
+            
             <h4 class="listy-footer">
+                <a href="#" style="champagne"><span><img src="PA-right-arrow.svg" class="left-arrow"></span> Previous </a>
               
-                <a href="#"><span class=arrows>&larr;</span> Previous </a>
               <span style="float:right;">
-        <a href="density_volume.html">Next • What is Physics?  <span class=arrows>→</span></a>
+        <a href="density_volume.html">Next • What is Physics? <span><img src="PA-right-arrow.svg" class="right-arrow"></span></a>
               </span> 
             </h4>
             
@@ -676,12 +749,16 @@
             <a href="#">contact</a> <!-- • 
             <a href="#">privacy policy</a> • 
             <a href="#">send feedback</a> -->
-          <br> This page last updated: 22 June 2020
+          <br> <span style="opacity: 0.4;">This page last updated: 2 August 2020</span>
             </span>
         </footer>
             
     </div> 
         
+    </div>
+      
+      
+      
     </div>
       
     
@@ -691,6 +768,7 @@
     <!-- <script src="quiz.js"></script>
     <script src="confetti.js"></script> -->
     <script src="quizconfetti.js"></script>
+    <script src="slidemenu.js"></script>
     
 
     <script>
@@ -736,6 +814,7 @@
       */
     </script>
     
+    
     <script>
 $("#columnTwo").height($("#columnOne").height());
     </script>
@@ -753,6 +832,10 @@ $("#columnTwo").height($("#columnOne").height());
 	        .siblings().removeClass('red');
 	    });
 	});</script>
+    
+    <!-- for youtube player -->
+          
+    <script>"use strict"; document.addEventListener('DOMContentLoaded', function(){if (window.hideYTActivated) return; let onYouTubeIframeAPIReadyCallbacks=[]; for (let playerWrap of document.querySelectorAll(".hytPlayerWrap")){let playerFrame=playerWrap.querySelector("iframe"); let tag=document.createElement('script'); tag.src="https://www.youtube.com/iframe_api"; let firstScriptTag=document.getElementsByTagName('script')[0]; firstScriptTag.parentNode.insertBefore(tag, firstScriptTag); let onPlayerStateChange=function(event){if (event.data==YT.PlayerState.ENDED){playerWrap.classList.add("ended");}else if (event.data==YT.PlayerState.PAUSED){playerWrap.classList.add("paused");}else if (event.data==YT.PlayerState.PLAYING){playerWrap.classList.remove("ended"); playerWrap.classList.remove("paused");}}; let player; onYouTubeIframeAPIReadyCallbacks.push(function(){player=new YT.Player(playerFrame,{events:{'onStateChange': onPlayerStateChange}});}); playerWrap.addEventListener("click", function(){let playerState=player.getPlayerState(); if (playerState==YT.PlayerState.ENDED){player.seekTo(0);}else if (playerState==YT.PlayerState.PAUSED){player.playVideo();}});}window.onYouTubeIframeAPIReady=function(){for (let callback of onYouTubeIframeAPIReadyCallbacks){callback();}}; window.hideYTActivated=true;});</script>
       
       <!-- </div> -->
   </body>

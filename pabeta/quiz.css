@@ -14,12 +14,12 @@
  
  #app {
 	 overflow: hidden;
-	 width: 350px;
+	 width: 340px;
 	 height: 708px; /*678px*/
    
 	 position: relative;
 	 margin: 15px auto 0;
-   left: -5px;
+   left: -7px; 
    width: 100% !important;
 }
 
@@ -30,7 +30,7 @@
   }
 } 
  #people, .person {
-	 width: 350px;
+	 width: 340px;
 	 height: 450px;
    padding-top: 30px;
 }
@@ -38,6 +38,7 @@
  #people {
 	 position: relative;
 	 margin: 0 auto;
+   
 }
 
  .person {
@@ -46,38 +47,43 @@
 	 overflow: hidden;
 	 border: 7px solid #00004c;
 	 transition: all 1.6s;
-   
+   /* transform: translateY(-30px);
+   Above New with smooth anims (not sure why needed) */
 }
  .person:nth-child(1) {
 	 z-index: 5;
-	 top: 50px;
+	 /* top: 50px; */
+   transform: translateY(20px);
 	 transition: 0.9s;
 }
-
  .person:nth-child(2) {
 	 z-index: 4;
-	 top: 100px;
+	 /* top: 100px; */
+   /* transform: scale(0.9); */
+   transform: translateY(70px) scale(0.9);
    border-color: #7e80a6;
-	 transform: scale(0.9);
 	 transition: 1.3s;
 }
  .person:nth-child(3) {
 	 z-index: 3;
-	 top: 147px;
+	 /* top: 147px; */
+   /* transform: scale(0.8); */
+   transform: translateY(117px) scale(0.8);
    border-color: #c6c7d5;
-	 transform: scale(0.8);
 }
  .person:nth-child(n+4) {
 	 z-index: 2;
-	 transform: scale(0.7);
-	 top: 200px;
+	 /* top: 200px; */
+	 /* transform: scale(0.7); */
+   transform: translateY(170px) scale(0.7);
    border-color: #c6c7d5;
    opacity: 0;
 }
 .person:before { /*For the 'stamps' put on top*/
   position: absolute;
-  top: 0;
-  left: 0;
+  /* top: 0;
+  left: 0; */
+  transform: translateX(0px) translateY(0px);
   width: 100%;
   height: 100%;
   display: block;
@@ -118,18 +124,18 @@
 }
  @keyframes yes {
 	 0% {
-		 transform: translateX(0px);
+		 transform: translateX(0px) translateY(20px);
 		 /* left: 0; */
 	}
 	 30% {
-		 transform: translateX(0px);
+		 transform: translateX(0px) translateY(20px);
 		 /* left: 0; */
 	}
 	 60% {
 		 opacity: 1;
 	}
 	 100% {
-		 transform: translateX(400px) rotateZ(45deg);
+		 transform: translateX(400px) translateY(20px) rotateZ(45deg);
 		 /* left: 400px; */
      opacity: 0.2;
 	}
@@ -167,43 +173,47 @@
 } */
  @keyframes skip {
 	 0% {
-		 right: -14px;
+		 /* right: -14px */;
+     transform: translateX(-14px) translateY(20px);
      z-index: 999;
 	} 
    10% {
      z-index: 999;
 	}
 	 50% {
-		 right: 250px;
-     transform: perspective(800px) rotateY(80deg) rotateZ(-20deg);
-     top: 100px;
+		 /* right: 250px; */
+     transform: translateX(-250px) perspective(800px) rotateY(80deg) rotateZ(-20deg) translateY(100px);
+     /* top: 100px; */
      z-index: 0;
      opacity: 1;
 	}
 	 80% {
-     top: 150px;
+     /* top: 150px; */
+     transform: scale(0.2) translateY(150px);
      z-index: 0;
 	}
 	 90% {
      z-index: 0;
-	   transform: scale(0.35) perspective(400px) rotateY(45deg);
+	   transform: scale(0.2) perspective(400px) rotateY(45deg);
 	}
 	 100% {
-     top: 200px;
+     /* top: 200px; */
      z-index: 0;
-		 right: 0px;
-	   transform: scale(0.35);
+		 /* right: 0px; */
+	   transform:  scale(0.2) translateY(200px) translateX(0px);
      opacity: 0;
 	}
 }
  .animateSkip {
 	 animation-fill-mode: both;
 	 animation: skip 0.8s ease-in;
+	 will-change: transform;
 }
  .animateSkip:before {
 	 transform: scale(0.75) rotateZ(0deg);
 	 /* background: url(PA_skip_4.svg) no-repeat center 50%; */
    transition: all 0.2s;
+	 will-change: transform;
 }
 
  .animateYes {
@@ -212,7 +222,7 @@
 	 will-change: transform;
 }
  .animateYes:before {
-	 transform: scale(0.75) rotateZ(0deg);
+	 transform: scale(0.75) translateY(-80px) rotateZ(0deg);
 	 background: url(PA_greenyes.svg) no-repeat center 100%;
    transition: all 0.2s;
    z-index: 9999;
@@ -232,6 +242,7 @@
 	}
 } */
 
+/* ORIGINAL NO
  @keyframes no {
 	 0% {
 		 right: -14px;
@@ -264,16 +275,75 @@
 	   transform: scale(0.35);
      opacity: 0;
 	}
+} */
+
+ @keyframes no {
+	 0% {
+     z-index: 999;
+     transform: translateX(14px);
+	} 
+   30% {
+     z-index: 999;
+     transform: translateX(-20px) rotateZ(-3deg);
+	}
+	 80% {
+     transform: perspective(800px) translateX(-250px) translateY(100px) rotateY(80deg) rotateZ(-20deg) scale(0.95);
+     z-index: 0;
+     opacity: 1;
+	}
+	 90% {
+     transform: translateY(150px) scale(0.2);
+     z-index: 0;
+	}
+	 95% {
+     z-index: 0;
+	   transform: perspective(400px) rotateY(45deg) scale(0.2);
+	}
+	 100% {
+     z-index: 0;
+	   transform: translateX(0px) translateY(200px) scale(0.2);
+     opacity: 0;
+	}
+}
+
+ @keyframes no2 {
+	 0% {
+     transform: translateX(-14px) translateY(20px);
+     z-index: 999;
+	} 
+   10% {
+     z-index: 999;
+	}
+	 50% {
+     transform: translateX(-250px) perspective(800px) rotateY(80deg) rotateZ(-20deg) translateY(100px);
+     z-index: 0;
+     opacity: 1;
+	}
+	 80% {
+     transform: scale(0.2) translateY(150px);
+     z-index: 0;
+	}
+	 90% {
+     z-index: 0;
+	   transform: scale(0.2) perspective(400px) rotateY(45deg);
+	}
+	 100% {
+     z-index: 0;
+	   transform:  scale(0.2) translateY(200px) translateX(0px);
+     opacity: 0;
+	}
 }
  .animateNo {
 	 animation-fill-mode: both;
-	 animation: no 0.8s ease-in;
+	 animation: no2 0.8s ease-in;
+	 will-change: transform;
 }
  .animateNo:before {
-	 transform: scale(0.75) rotateZ(0deg);
+	 transform: scale(0.75) translateY(-60px) rotateZ(0deg);
 	 background: url(PA_redno.svg) no-repeat center 50%;
    transition: all 0.2s;
    z-index: 9999;
+	 will-change: transform;
 }
 
 

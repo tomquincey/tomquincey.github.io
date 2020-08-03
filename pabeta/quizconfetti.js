@@ -40,7 +40,6 @@ var Person = {
   people: [
     {
       q_title: "Who discovered <b><i><u>Newton's</u></i></b> Laws of Motion?",
-      name: 'A',
       age: 1,
       img: "newton.jpeg",
       A: "Sir Isaac Newton",
@@ -55,20 +54,19 @@ var Person = {
       answer: 'A',
     }, 
     {
-      q_title: "Question Title",
-      name: 'B',
+      q_title: "<b>How many</b> laws of motion are there?",
       age: 2,
-      img: "Pingu_ad.jpg",
-      A: "Answer A",
+      img: "question_bg.svg",
+      A: "1",
       A_height: "one",
-      B: "Answer B !",
+      B: "2",
       B_height: "one",
-      C: "Answer C",
+      C: "3",
       C_height: "one",
-      D: "Answer D",
+      D: "4",
       D_height: "one",
       stars: 2,
-      answer: 'B', // placeholder; all correct
+      answer: 'C', // placeholder; all correct
     }, 
     {
       q_title: "Question Title",
@@ -87,6 +85,7 @@ var Person = {
       answer: 'C',
     },
     {
+      q_title: "This is Question 4",
       name: 'D',
       age: 4,
       img: "Pingu_ad.jpg",
@@ -98,7 +97,6 @@ var Person = {
       C_height: "one",
       D: "Answer D !",
       D_height: "one",
-      img: "pingu.png",
       stars: 3,
       answer: 'D',
     }, 

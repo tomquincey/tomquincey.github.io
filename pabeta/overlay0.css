@@ -96,7 +96,8 @@ body {
   transform: scale(1);
   z-index: 1000;
   
-  transition: transform 0.3s, background-color 0.3s;
+  /* transition: transform 0.3s, background-color 0.3s; */
+  transition: all 0.3s;
 }
 .menu:hover .menu-circle {
   transform: scale(1.5);
