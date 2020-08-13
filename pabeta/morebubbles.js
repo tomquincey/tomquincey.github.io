@@ -67,7 +67,7 @@
       parent.width * 0.2 + Math.random() * parent.width * 0.6,
       parent.height * 0.2 + Math.random() * parent.height * 0.6
     );
-    this.size = (parent.wh / 9) + ( Math.random() * (max - min) + min ) * (parent.wh / 9); // /15 is default
+    this.size = (parent.wh / 15) + ( Math.random() * (max - min) + min ) * (parent.wh / 15); // /9 /15 is default
     this.width = parent.width;
     this.height = parent.height;
   };
@@ -256,7 +256,7 @@
     lava0.renderMetaballs();
   };
   // canvas
-  var screen = ge1doot.screen.init("morebubble", null, true),
+  var screen = ge1doot.screen.init("morebubbles", null, true),
       ctx = screen.ctx;
   screen.resize();
   // create LavaLamps
@@ -265,7 +265,7 @@
   //var topcolour = "rgba(239, 57, 57, 0.47)"//"#035f51"
   //var botcolour = "rgba(92, 0, 21, 0.4)"//"#32003e"
     
-    lava0 = new LavaLamp(screen.width, screen.height, 4, moretopcolour, morebotcolour); // default: 7 blobs
+    lava0 = new LavaLamp(screen.width, screen.height, 12, moretopcolour, morebotcolour); // default: 7 blobs
 
 
   run();

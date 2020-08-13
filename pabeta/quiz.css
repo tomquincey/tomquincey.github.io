@@ -53,14 +53,14 @@
  .person:nth-child(1) {
 	 z-index: 5;
 	 /* top: 50px; */
-   transform: translateY(20px);
+   transform: translateY(20px) translateZ(0);
 	 transition: 0.9s;
 }
  .person:nth-child(2) {
 	 z-index: 4;
 	 /* top: 100px; */
    /* transform: scale(0.9); */
-   transform: translateY(70px) scale(0.9);
+   transform: translateY(70px) translateZ(0) scale(0.9);
    border-color: #7e80a6;
 	 transition: 1.3s;
 }
@@ -68,14 +68,14 @@
 	 z-index: 3;
 	 /* top: 147px; */
    /* transform: scale(0.8); */
-   transform: translateY(117px) scale(0.8);
+   transform: translateY(117px) translateZ(0) scale(0.8);
    border-color: #c6c7d5;
 }
  .person:nth-child(n+4) {
 	 z-index: 2;
 	 /* top: 200px; */
 	 /* transform: scale(0.7); */
-   transform: translateY(170px) scale(0.7);
+   transform: translateY(170px) translateZ(0) scale(0.7);
    border-color: #c6c7d5;
    opacity: 0;
 }
@@ -83,7 +83,7 @@
   position: absolute;
   /* top: 0;
   left: 0; */
-  transform: translateX(0px) translateY(0px);
+  transform: translateX(0px) translateY(0px) translateZ(0);
   width: 100%;
   height: 100%;
   display: block;
@@ -124,7 +124,7 @@
 }
  @keyframes yes {
 	 0% {
-		 transform: translateX(0px) translateY(20px);
+		 transform: translateX(0px) translateY(20px) translateZ(0);
 		 /* left: 0; */
 	}
 	 30% {
@@ -174,7 +174,7 @@
  @keyframes skip {
 	 0% {
 		 /* right: -14px */;
-     transform: translateX(-14px) translateY(20px);
+     transform: translateX(-14px) translateY(20px) translateZ(0);
      z-index: 999;
 	} 
    10% {
@@ -210,7 +210,7 @@
 	 will-change: transform;
 }
  .animateSkip:before {
-	 transform: scale(0.75) rotateZ(0deg);
+	 transform: scale(0.75) rotateZ(0deg) translateZ(0);
 	 /* background: url(PA_skip_4.svg) no-repeat center 50%; */
    transition: all 0.2s;
 	 will-change: transform;
@@ -222,7 +222,7 @@
 	 will-change: transform;
 }
  .animateYes:before {
-	 transform: scale(0.75) translateY(-80px) rotateZ(0deg);
+	 transform: scale(0.75) translateY(-80px) rotateZ(0deg) translateZ(0);
 	 background: url(PA_greenyes.svg) no-repeat center 100%;
    transition: all 0.2s;
    z-index: 9999;
@@ -280,7 +280,7 @@
  @keyframes no {
 	 0% {
      z-index: 999;
-     transform: translateX(14px);
+     transform: translateX(14px) translateZ(0);
 	} 
    30% {
      z-index: 999;
@@ -308,7 +308,7 @@
 
  @keyframes no2 {
 	 0% {
-     transform: translateX(-14px) translateY(20px);
+     transform: translateX(-14px) translateY(20px) translateZ(0);
      z-index: 999;
 	} 
    10% {
@@ -339,7 +339,7 @@
 	 will-change: transform;
 }
  .animateNo:before {
-	 transform: scale(0.75) translateY(-60px) rotateZ(0deg);
+	 transform: scale(0.75) translateY(-60px) translateZ(0) rotateZ(0deg);
 	 background: url(PA_redno.svg) no-repeat center 50%;
    transition: all 0.2s;
    z-index: 9999;
@@ -459,7 +459,7 @@
 
  #control .button .trigger:active {
 	 transform: translateY(-50%) scale(0.75); /*translateY(-50%) */
-	 transition: all 0.05s linear; /*0.05s*/
+	 transition: all 200ms; /*0.05s*/
 }
  #control .button .trigger:before {
 	 position: absolute;
@@ -655,6 +655,10 @@
   box-shadow: none;
   cursor: pointer;
 }
+/*
+.child:active {
+  transform: scale(0.95);
+} */
 
 .one-line {
   

@@ -1,19 +1,7 @@
-@import url(https://fonts.googleapis.com/css?family=Oxygen:400,700);
-/* 
-  Fonts
-*/
-/*
-body {
-  margin: 0;
-  background: #556270;
-  color: #353d46;
-  font: 18px/27px 'Oxygen', sans-serif;
-}
-*/
 nav#slide-menu {
   position: fixed;
-  top: 0;
-  right: 100px; 
+  top: -10px;
+  right: -300px; /*100px*/
   /* transform: translateX(-100px); */
   bottom: 0;
   display: block;
@@ -47,6 +35,8 @@ nav#slide-menu > ul li {
   /* color: #dfe5eb; */
   padding: 6px 0;
   cursor: pointer;
+  
+  transition: color 150ms;
 }
 nav#slide-menu > ul li:hover {
   color: #f4c248;
@@ -95,13 +85,14 @@ nav#slide-menu > ul li.logout:before {
 
 body.slide-menu-active nav#slide-menu {
   /*right: 0px;*/
-  transform: translateX(100px);
+  transform: translateX(-300px) translateZ(0);
   opacity: 1;
+  z-index: 1; 
 }
 
 body.slide-menu-active nav#slide-menu ul {
   /*right: 0px;*/
-  transform: translateX(0px);
+  transform: translateX(0px) translateZ(0);
   opacity: 1;
 }
 
@@ -109,21 +100,23 @@ body.slide-menu-active nav#slide-menu ul {
   Content
 */
 div#slide-content {
-  position: fixed;
-  /top: 0; 
-  /*right: 0px;*/
-  transform: translateX(0px);
+  /* position: fixed; */
+
+  /*top: 0; 
+  right: 0px;*/
+  transform: translateX(0px) translateZ(0);
   width: 100%;
   height: 100%; 
   /*  padding: 60px; */
-  background: inherit; 
   overflow: scroll; 
+  
+  /*
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   -moz-box-shadow: 0px 0 30px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 0px 0 30px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 0 30px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0 30px rgba(0, 0, 0, 0.75); */
   -moz-transition: all 300ms;
   -webkit-transition: all 300ms;
   transition: all 300ms;
@@ -133,77 +126,233 @@ div#slide-content {
 }
 div#slide-content div.slide-menu-trigger {
   position: absolute; 
-  background: url("PA_star_border_2_user_2.svg") no-repeat;
-  top: 18px;
+  background: url("user_star-2.svg") no-repeat;
+  top: 20px;
   right: 15px;
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   cursor: pointer;
-  border-radius: 0px;
+  /* border-radius: 0px; */
   -moz-transition: all 300ms;
   -webkit-transition: all 300ms;
   transition: all 300ms;
   
-  z-index: 999;
+  z-index: 1;
   will-change: transform;
 }
+
 div#slide-content div.slide-menu-trigger:before {
-  content: 'Tom';
+  content: '7';
   display: inline-block;
   width: 50px;
   height: 50px;
-  transform: translateX(5px) translateY(55px);
+  transform: translateX(0px) translateY(17px);
+  font-family: "Montserrat", "Gilroy", "helvetica neue", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  font-style: normal;
+  font-variant: normal;
+  text-align: center;
+  text-transform: none;
+  color: white;
+}
+div#slide-content div.slide-menu-trigger:after {
+  content: 'Tom';
+  display: inline-block;
+  width: 50px;
+  height: 20px;
+  transform: translateX(0px) translateY(6px);
   font-family: "Montserrat", "Gilroy", "helvetica neue", sans-serif;
   font-size: 14px;
   font-style: normal;
   font-variant: normal;
   text-align: center;
   text-transform: none;
+  
+  transition: color 300ms;
 }
-div#slide-content div.slide-menu-trigger:hover {
-  transform: scale(0.9);
+div#slide-content div.slide-menu-trigger:active {
+  transform: scale(0.8);
 }
-div#slide-content div.slide-menu-trigger:hover:before {
+div#slide-content div.slide-menu-trigger:hover:after {
   color: #f4c248;
 }
 
 body.slide-menu-active div#slide-content {
+ 
   /*right: 284px;*/
-  transform: translateX(-284px);
+  transform: translateX(-284px); /*-284px*/
   /*border-radius: 7px 0 0 7px;*/
-  border-radius: 20px;
+  /*border-radius: 20px;*/
   border-right: 0px solid #bfbdbd;
-  opacity: 1;
   
-  filter: blur(1px);
-  -webkit-filter: blur(1px); 
+  /* Darken (with filter?)
+  
+  filter: blur(2px);
+  -webkit-filter: blur(2px);  */
+  filter: grey;
+  
+   position: fixed;
+  overflow: hidden; 
 }
 
 body.slide-menu-active div#slide-content .slide-menu-trigger {
   /* right: 294px; not needed, since changed position from fixed to absolute */
 }
 
+
+
+
+
+
+
+
+
+
 .user-nav-items {
   position: absolute;
-  bottom: -90px; 
+  bottom: -110px; 
   left: 40px; 
   font-size: 18px; 
   text-align: center; 
   color: #00004c; 
   line-height: 30px;
 }
+.menu-nav-items { 
+  padding-top: 30px;
+  left: 60px; 
+  font-size: 18px; 
+  text-align: center; 
+  color: #00004c; 
+  line-height: 25px;
+}
 
-.stars-menu {
+.menu-nav-items-fund { 
+  padding-top: 15px;
+  left: 60px; 
+  font-size: 18px; 
+  text-align: center; 
+  color: #00004c; 
+  line-height: 25px;
+}
+
+.menu-nav-items-fund li { 
+  padding-top: 10px;
+}
+
+.user-menu-buttons {
   position: relative !important;
   width: 220px !important;
   left: -0px !important;
-  padding-bottom: 10px;
+}
+/*
+#user-menu-stars:before {
   
-  transition: all 300ms;
+  content: 'hwajk';
+  display: inline-block;
+  font-family: "Montserrat", "Gilroy", "helvetica neue", sans-serif;
+  color: #00004c;
+  font-size: 22px;
+  font-style: normal;
+  font-variant: normal;
+  text-align: center;
+  text-transform: none;
+  z-index: 999999;
+} */
+
+.user-button-numbers {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  font-size: 27px;
+  font-weight: 600;
+  color: #00004c;
+  display: inline-block;
+  z-index: 999999;
+}
+
+.user-menu-buttons-all {
+  transition: all 300ms !important;
   cursor: pointer;
   will-change: transform;
 }
 
-.stars-menu:hover {
+.user-menu-buttons-all:hover {
   transform: translateX(5px);
+}
+
+.ubn-stars {
+  top: 12px;
+  left: 45px;
+}
+
+.ubn-const {
+  color: white;
+  font-size: 16px;
+  top: 21px;
+  left: 30px;
+}
+
+.ubn-badges {
+  color: white;
+  font-size: 20px;
+  top: 17px;
+  left: 42px;
+}
+
+.spacing-div {
+  margin-bottom: 10px;
+}
+
+.user-menu-stars-arrow {
+  transform: rotateZ(180deg) translateX(-280px) translateY(-60px); 
+  width: 40px;
+}
+
+.user-menu-title {
+  font-size: 35px;
+  font-weight: 700;
+  color: #00004c;
+  font-family: "Montserrat", "Gilroy", "helvetica neue", sans-serif;
+  transform: translateX(50px) translateY(4px);
+}
+
+.user-menu-stats {
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.ubn-stars-single {
+  left: 58px;
+}
+
+#slide-content-darken {
+  opacity: 0;
+  transition: opacity 150ms;
+  
+  cursor: pointer;
+}
+
+body.slide-menu-active div#slide-content-darken {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  opacity: 0.6;
+  z-index: 999;
+}
+
+.user-menu-cancel {
+  position: absolute;
+  width: 30px !important;
+  right: 32px;
+  top: 40px;
+}
+
+.const-background {
+  position: absolute;
+  background: black;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
 }

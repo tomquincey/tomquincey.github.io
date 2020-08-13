@@ -25,6 +25,10 @@ body {
   width: 46px;
 }
 
+.menu:hover {
+  filter: brightness(0) saturate(100%) invert(82%) sepia(99%) saturate(4212%) hue-rotate(318deg) brightness(97%) contrast(96%) !important;
+}
+
 .menuright {
   position: absolute;
   font-family: "Montserrat";

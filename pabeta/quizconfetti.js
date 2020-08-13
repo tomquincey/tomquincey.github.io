@@ -516,7 +516,7 @@ if (quiz_complete == 'true') {
 };
 
 
-App.yesButton.on('mousedown', function() {
+App.yesButton.click(function() {
   
   resetSkip();
   //setTimeout(selectSkip, 900);
@@ -590,7 +590,7 @@ App.yesButton.on('mousedown', function() {
   }
 });
 
-App.skipButton.on('mousedown', function() {
+App.skipButton.click(function() {
   
   
   if (App.skipButton.hasClass('activeSkipButton')) { // so can't click skip isn't possible
@@ -609,7 +609,7 @@ App.skipButton.on('mousedown', function() {
   
 });
 
-App.restartButton.on('mousedown', function() {
+App.restartButton.click(function() {
   if (storageAvailable('sessionStorage')) { // Uses above script, "if there is storage available, then:"
     sessionStorage.setItem('quiz_complete', 'false');
   }

@@ -56,8 +56,8 @@
 
   // Ball constructor
   var Ball = function(parent) {
-    var min = .1; // 1.5;
-    var max = 1.5; // 1.5;
+    var min = 0.8; // 0.1, 1.5;
+    var max = 1.2; // 1.5;
     var maxvel = 0.2 //default: 1, then 0.3 
       
     this.vel = new Point(
@@ -68,7 +68,13 @@
       parent.width * 0.2 + Math.random() * parent.width * 0.6,
       parent.height * 0.2 + Math.random() * parent.height * 0.6
     );
-    this.size = (parent.wh / 10) + ( Math.random() * (max - min) + min ) * (parent.wh / 12); // /12, 15 is default
+    
+    //this.size = (parent.wh / 10) + ( Math.random() * (max - min) + min ) * (parent.wh / 30); // /12, 15 is default 
+    
+    //New:
+    this.size = (parent.area / 9) + ( Math.random() * (max - min) + min ) * (parent.area / 9);
+    // 9 for phones, 14 for laptop
+    
     this.width = parent.width;
     this.height = parent.height;
   };
@@ -77,6 +83,24 @@
   Ball.prototype.move = function() {
 
     // bounce borders
+    /*
+    if (this.pos.x >= this.width - this.size) {
+      if (this.vel.x > 0) this.vel.x = -this.vel.x;
+      this.pos.x = this.width - this.size;
+    } else if (this.pos.x <= this.size) {
+      if (this.vel.x < 0) this.vel.x = -this.vel.x;
+      this.pos.x = this.size;
+    }
+
+    if (this.pos.y >= this.height - this.size) {
+      if (this.vel.y > 0) this.vel.y = -this.vel.y;
+      this.pos.y = this.height - this.size;
+    } else if (this.pos.y <= this.size) {
+      if (this.vel.y < 0) this.vel.y = -this.vel.y;
+      this.pos.y = this.size;
+    } */
+    
+    // Tom bounce borders
     if (this.pos.x >= this.width - this.size) {
       if (this.vel.x > 0) this.vel.x = -this.vel.x;
       this.pos.x = this.width - this.size;
@@ -92,6 +116,7 @@
       if (this.vel.y < 0) this.vel.y = -this.vel.y;
       this.pos.y = this.size;
     }
+    
 
     // velocity
     this.pos = this.pos.add(this.vel);
@@ -104,6 +129,7 @@
     this.width = width;
     this.height = height;
     this.wh = Math.min(width, height);
+    this.area = (width * height) / 1000; // Tom
     this.sx = Math.floor(this.width / this.step);
     this.sy = Math.floor(this.height / this.step);
     this.paint = false;
