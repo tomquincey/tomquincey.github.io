@@ -72,8 +72,16 @@
     //this.size = (parent.wh / 10) + ( Math.random() * (max - min) + min ) * (parent.wh / 30); // /12, 15 is default 
     
     //New:
+    if (parent.width < 700) {
     this.size = (parent.area / 9) + ( Math.random() * (max - min) + min ) * (parent.area / 9);
     // 9 for phones, 14 for laptop
+    } else {
+    if (parent.width < 1000) {
+      this.size = (parent.area / 12) + ( Math.random() * (max - min) + min ) * (parent.area / 12); 
+    } else {
+      this.size = (parent.area / 14) + ( Math.random() * (max - min) + min ) * (parent.area / 14);
+    } 
+    };
     
     this.width = parent.width;
     this.height = parent.height;
