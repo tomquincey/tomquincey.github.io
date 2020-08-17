@@ -34,7 +34,7 @@ label {
   font-weight: 400 !important;
 }
 
-.noSelect {
+.noSelect, a, .listy {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
