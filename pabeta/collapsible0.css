@@ -112,7 +112,7 @@ input[type='checkbox'] {
 
 
 .lbl-toggle h3 {
-  transition: color .5s ease;
+  transition: color 200ms;
 }
 
 

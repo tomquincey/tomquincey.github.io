@@ -207,8 +207,11 @@ document.querySelector('.restart2').onclick = animation2.restart;*/
 
 document.querySelector('.play3').onclick = ThirdLawAnim;
 document.querySelector('.play3Again').onclick = ThirdLawAnim;
-      
+ 
+
+/*     
 controlsProgressEl.addEventListener('input', function() {
   animation.seek(animation.duration * (controlsProgressEl.value / 100));
 });
+*/
     

@@ -16,6 +16,14 @@ body {
   z-index: 1000 !important;
   
 }
+
+html, #slide-content { /*prevent horizontal scrolling (on phones) */
+  overflow-x: hidden !important;
+}
+#slide-content {
+  position: relative;
+}
+
 ::selection {
   background: rgba(254, 188, 45, 0.5); /* WebKit/Blink Browsers */
 }
@@ -215,10 +223,13 @@ a {
   
   -webkit-tap-highlight-color: rgba(0,0,0,0);
   -webkit-tap-highlight-color: transparent;
+  
+  transition: color 150ms;
 }
 
 a:hover {
   text-decoration: none;
+  color: #f4c248 !important;
 }
 /*
 a:after {
@@ -247,6 +258,7 @@ a:hover:after {
   
   /*when no faux-borders:
   border: 7px solid #00004c !important;*/
+  margin-top: -5px !important;
 }
 
 
@@ -279,6 +291,10 @@ a:hover:after {
   font-size: 25px;   
   text-align: left; 
   padding-left: 15px;  
+  
+  
+  /* when no faux-borders: */
+  margin-bottom: -16px;
 }
 
 @media (max-width:430px) {
@@ -769,6 +785,11 @@ left:0;
   padding: 15px; 
   padding-top: 0px; 
   text-align: left;
+  
+
+  /* when no faux-borders: */
+  border: 7px solid #00004c;
+  padding-top: 10px; 
 }
 
 .faux-border-top {
@@ -1132,10 +1153,6 @@ background-color: #f7f7f7;
 }
 .home-icon {
   color: #00004c !important;
-}
-
-.waves-icon:hover {
-  
 }
 
 

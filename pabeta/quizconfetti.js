@@ -66,7 +66,7 @@ var Person = {
       D: "4",
       D_height: "one",
       stars: 2,
-      answer: 'C', // placeholder; all correct
+      answer: 'C', 
     }, 
     {
       q_title: "Question Title",
@@ -126,7 +126,7 @@ var Person = {
     
     var person_i = this.people[i];
     this.wrap.append(
-      "<div class='person'><h3 class='quiz-title'><span class='white-bubble-title-quiz'>" + person_i.age + ".</span><span><img src='question_stars_" + person_i.stars + ".svg' class='question_stars_" + person_i.stars + "'></span></h3><div style='padding: 25px; padding-top: 20px; text-align: left; height: 290px;'>"+person_i.q_title+"</div><form><img src='"+person_i.img+"' style='width: 100%; height: 180px; position: absolute; top: 118px; left: 0px;'><div class='parent'><label class='child childA "+person_i.A_height+"-line' for='question-1-answers-A'>" + person_i.A + "<input type='radio' id='question-1-answers-A' name='question-1-answers'  value='A' /></label><label class='child childB "+person_i.B_height+"-line' for='question-1-answers-B'>" + person_i.B + "<input type='radio' id='question-1-answers-B' name='question-1-answers'  value='B' /></label><label class='child childC "+person_i.C_height+"-line' for='question-1-answers-C'>" + person_i.C + "<input type='radio' id='question-1-answers-C' name='question-1-answers'  value='C' /></label><label class='child childD "+person_i.D_height+"-line' for='question-1-answers-D'>" + person_i.D + "<input type='radio' id='question-1-answers-D' name='question-1-answers'  value='D' /></label></div></form></div>");
+      "<div class='person'><h3 class='quiz-title'><span class='white-bubble-title-quiz'>" + person_i.age + ".</span><span><img src='question_stars_" + person_i.stars + "_blue.svg' class='question_stars_" + person_i.stars + "'></span></h3><div style='padding: 25px; padding-top: 20px; text-align: left; height: 290px;'>"+person_i.q_title+"</div><form><img src='"+person_i.img+"' style='width: 100%; height: 180px; position: absolute; top: 118px; left: 0px;'><div class='parent'><label class='child childA "+person_i.A_height+"-line' for='answers-"+person_i.age+"A'>" + person_i.A + "<input type='radio' id='answers-"+person_i.age+"A' name='question-1-answers'  value='A' /></label><label class='child childB "+person_i.B_height+"-line' for='answers-"+person_i.age+"B'>" + person_i.B + "<input type='radio' id='answers-"+person_i.age+"B' name='question-1-answers'  value='B' /></label><label class='child childC "+person_i.C_height+"-line' for='answers-"+person_i.age+"C'>" + person_i.C + "<input type='radio' id='answers-"+person_i.age+"C' name='question-1-answers'  value='C' /></label><label class='child childD "+person_i.D_height+"-line' for='answers-"+person_i.age+"D'>" + person_i.D + "<input type='radio' id='answers-"+person_i.age+"D' name='question-1-answers'  value='D' /></label></div></form></div>");
   }
   
   

@@ -1,24 +1,34 @@
 nav#slide-menu-3const {
   position: fixed;
-  top: -30px;
-  right: -60px; 
+  right: -100px; 
   /* transform: translateX(-100px); */
   display: block;
   float: left;
   width: 100%;
-  max-width: 284px;
-  height: 100%;
+  max-width: 450px;
   -moz-transition: all 300ms;
   -webkit-transition: all 300ms;
   transition: all 300ms;
-  background:  inherit;
   
   
   opacity: 0;
   will-change: transform;
-  /* overflow-y: auto; */
-  
+  overflow-y: auto; 
+  height: 100%; /* See .night-sky */
+  color: white !important;
+  background: #111;
+  background: -webkit-gradient(linear, left bottom, left top, from(#00004c), to(#000000));
+  background: linear-gradient(180deg, #000000, #00004c);
 }
+
+
+
+@media only screen and (min-width: 450px) {
+  nav#slide-menu-3const {
+    max-width: 284px;
+  }
+}
+
 nav#slide-menu-3const > ul {
   font-family: "Montserrat", "Gilroy", "helvetica neue", sans-serif;
   display: block;
@@ -67,22 +77,6 @@ nav#slide-menu-3const > ul li.username {
   cursor: default !important;
   color: #00004c !important;
 }
-nav#slide-menu-3const > ul li.timeline:before {
-  content: '\e805';
-}
-nav#slide-menu-3const > ul li.events:before {
-  content: '\e802';
-}
-nav#slide-menu-3const > ul li.calendar:before {
-  content: '\e800';
-}
-nav#slide-menu-3const > ul li.settings:before {
-  content: '\e803';
-}
-nav#slide-menu-3const > ul li.logout:before {
-  content: '\e804';
-}
-
 /*
 body.slide-menu-3-active nav#slide-menu-3const {
   background: black !important;
@@ -92,7 +86,12 @@ body.slide-menu-3-active nav#slide-menu-3const {
   /*right: 0px;*/
   transform: translateX(-100px) translateZ(0);
   opacity: 1;
+  z-index: 1;
   
+}
+
+body.slide-menu-2-active nav#slide-menu {
+  z-index: 2;
 }
 
 body.slide-menu-3-active nav#slide-menu-3const ul {
@@ -124,11 +123,11 @@ div#slide-content .slide-menu-trigger-3const {
 
 body.slide-menu-3-active div#slide-content {
  
-  /*right: 284px;*/
-  transform: translateX(-320px);
+  /*right: 284px;
+  transform: translateX(-320px);*/
   /*border-radius: 7px 0 0 7px;*/
-  /* border-radius: 20px; */
-  border-right: 0px solid #bfbdbd;
+  /* border-radius: 20px; 
+  border-right: 0px solid #bfbdbd;*/
   
   /* Darken (with filter?)
   
@@ -139,18 +138,55 @@ body.slide-menu-3-active div#slide-content {
   overflow: hidden; 
 }
 .user-menu-stars {
-  width: 320px !important;
-  transform: translateX(28px) translateY(30px);
 }
 
 
 
-body.slide-menu-3-active div#slide-content-darken {
+
+body.slide-menu-3-active div #slide-content-darken {
+  opacity: 0.95;
+  z-index: 999;
+  cursor: pointer;
+  transition: opacity 300ms !important;
+  background-color: #000011;
+}
+
+div#slide-content-darken {
   position: fixed;
   width: 100%;
-  height: 100%;
-  background-color: white;
-  opacity: 0.5;
-  z-index: 999;
+  height: 140%;
+  opacity: 0;
+  transition: opacity 100ms !important;
 }
 
+
+
+.actual-constellations {
+  width: 200px;
+  margin-left: auto; 
+  margin-right: auto; 
+  padding-top: 10px;
+
+}
+
+.indiv-constellation {
+  margin-top: 90px;
+}
+
+.const-titles {
+  font-family: 'Montserrat';
+  color: white;
+  font-weight: 600;
+  font-size: 20px;
+  padding-top: 10px;
+  text-align: center
+}
+
+.const-subtitles {
+  font-family: 'Montserrat';
+  color: white;
+  font-weight: 400;
+  font-size: 15px;
+  padding-top: 0px;
+  text-align: center
+}

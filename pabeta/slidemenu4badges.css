@@ -1,27 +1,36 @@
-nav#slide-menu-4badges {
+nav#slide-menu-4 {
   position: fixed;
-  top: -30px;
-  right: -60px; 
+  right: -100px; 
   /* transform: translateX(-100px); */
   display: block;
   float: left;
   width: 100%;
-  max-width: 284px;
   height: 100%;
+  max-width: 450px;
+  
   -moz-transition: all 300ms;
   -webkit-transition: all 300ms;
   transition: all 300ms;
-  background:  inherit;
+  background:  #f7f7f7;
   
   
   opacity: 0;
-  will-change: transform;
-  
+  overflow-y: auto;
 }
-nav#slide-menu-4badges > ul {
+
+
+@media only screen and (min-width: 450px) {
+  nav#slide-menu-4 {
+    max-width: 284px;
+  }
+}
+
+nav#slide-menu-4 > ul {
   font-family: "Montserrat", "Gilroy", "helvetica neue", sans-serif;
   display: block;
-  margin: 40px;
+  margin: 45px;
+  margin-right: 20px;
+  margin-top: 40px;
   padding: 0;
   list-style: none;
   opacity: 0.5;
@@ -31,17 +40,17 @@ nav#slide-menu-4badges > ul {
   
   will-change: transform;
 }
-nav#slide-menu-4badges > ul li {
+nav#slide-menu-4 > ul li {
   /* color: #dfe5eb; */
   padding: 6px 0;
   cursor: pointer;
   
   transition: color 150ms;
 }
-nav#slide-menu-4badges > ul li:hover {
+nav#slide-menu-4 > ul li:hover {
   color: #f4c248;
 }
-nav#slide-menu-4badges > ul li:before {
+nav#slide-menu-4 > ul li:before {
   font-style: normal;
   font-weight: normal;
   speak: none;
@@ -55,41 +64,30 @@ nav#slide-menu-4badges > ul li:before {
   text-transform: none;
   line-height: 1em;
 }
-nav#slide-menu-4badges > ul li.sep {
+nav#slide-menu-4 > ul li.sep {
   margin-top: 7px;
   padding-top: 14px;
-  border-top: 1px solid #6b7b8d;
 }
-nav#slide-menu-4badges > ul li.username {
+nav#slide-menu-4 > ul li.username {
   font-weight: 700;
   font-size: 45px;
   cursor: default !important;
   color: #00004c !important;
 }
-nav#slide-menu-4badges > ul li.timeline:before {
-  content: '\e805';
-}
-nav#slide-menu-4badges > ul li.events:before {
-  content: '\e802';
-}
-nav#slide-menu-4badges > ul li.calendar:before {
-  content: '\e800';
-}
-nav#slide-menu-4badges > ul li.settings:before {
-  content: '\e803';
-}
-nav#slide-menu-4badges > ul li.logout:before {
-  content: '\e804';
-}
 
 
-body.slide-menu-4-active nav#slide-menu-4badges {
+body.slide-menu-4-active nav#slide-menu-4 {
   /*right: 0px;*/
   transform: translateX(-100px) translateZ(0);
   opacity: 1;
+  z-index: 1;
 }
 
-body.slide-menu-4-active nav#slide-menu-4badges ul {
+body.slide-menu-4-active nav#slide-menu {
+  z-index: 2;
+}
+
+body.slide-menu-4-active nav#slide-menu-4 ul {
   /*right: 0px;*/
   transform: translateX(0px) translateZ(0);
   opacity: 1;
@@ -99,7 +97,7 @@ body.slide-menu-4-active nav#slide-menu-4badges ul {
   Content
 */
 
-div#slide-content .slide-menu-trigger-4badges {
+div#slide-content .slide-menu-trigger-4 {
   position: absolute; 
   background: url("user_star.svg") no-repeat;
   top: 18px;
@@ -118,11 +116,11 @@ div#slide-content .slide-menu-trigger-4badges {
 
 body.slide-menu-4-active div#slide-content {
  
-  /*right: 284px;*/
-  transform: translateX(-320px);
+  /*right: 284px;
+  transform: translateX(-320px);*/
   /*border-radius: 7px 0 0 7px;*/
-  border-radius: 20px;
-  border-right: 0px solid #bfbdbd;
+  /*border-radius: 20px;
+  border-right: 0px solid #bfbdbd;*/
   
   /* Darken (with filter?)
   
@@ -130,21 +128,49 @@ body.slide-menu-4-active div#slide-content {
   -webkit-filter: blur(2px);  */
   
    position: fixed;
-  overflow: hidden; 
 }
 .user-menu-stars {
-  width: 320px !important;
-  transform: translateX(28px) translateY(30px);
 }
 
 
 
-body.slide-menu-4-active div#slide-content-darken {
+
+body.slide-menu-4-active div #slide-content-darken {
+  opacity: 0.9;
+  z-index: 999;
+  cursor: pointer;
+  transition: opacity 300ms !important;
+}
+
+div#slide-content-darken {
   position: fixed;
   width: 100%;
-  height: 100%;
-  background-color: white;
-  opacity: 0.5;
-  z-index: 999;
+  height: 140%;
+  background-color: #00004c;
+  opacity: 0;
+  transition: opacity 100ms !important;
 }
 
+
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -25px;
+}
+
+.flex-container > div {
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  text-align: center;
+  font-size: 30px;
+  background-image: url(user_star.svg);
+  opacity: 0.3;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.flex-container > div#star-1-active { 
+  opacity: 1 !important;
+}

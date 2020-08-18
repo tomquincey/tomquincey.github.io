@@ -759,7 +759,13 @@ input[type="radio"]:checked > lebel {
   opacity: 1 !important;
   cursor: pointer;
 }
+.activeConfirmButton:hover {
+  color: #f4c248;
+}
 .activeSkipButton {
   opacity: 1 !important;
   cursor: pointer;
+}
+.activeSkipButton:hover {
+  color: #f4c248;
 }

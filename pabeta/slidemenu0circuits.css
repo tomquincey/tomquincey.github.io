@@ -1,4 +1,4 @@
-nav#slide-menu-0-f {
+nav#slide-menu-0-circuits {
   position: fixed;
   top: 0px;
   left: -300px; /*100px*/
@@ -23,7 +23,7 @@ nav#slide-menu-0-f {
   
   z-index: 500;
 }
-nav#slide-menu-0-f > ul {
+nav#slide-menu-0-circuits > ul {
   font-family: "Montserrat", "Gilroy", "helvetica neue", sans-serif;
   display: block;
   margin: 40px;
@@ -36,17 +36,17 @@ nav#slide-menu-0-f > ul {
   
   will-change: transform;
 }
-nav#slide-menu-0-f > ul li {
+nav#slide-menu-0-circuits > ul li {
   /* color: #dfe5eb; */
   padding: 6px 0;
   cursor: pointer;
   
   transition: color 150ms;
 }
-nav#slide-menu-0-f > ul li:hover {
+nav#slide-menu-0-circuits > ul li:hover {
   color: #f4c248;
 }
-nav#slide-menu-0-f > ul li:before {
+nav#slide-menu-0-circuits > ul li:before {
   font-style: normal;
   font-weight: normal;
   speak: none;
@@ -60,12 +60,12 @@ nav#slide-menu-0-f > ul li:before {
   text-transform: none;
   line-height: 1em;
 }
-nav#slide-menu-0-f > ul li.sep {
+nav#slide-menu-0-circuits > ul li.sep {
   margin-top: 7px;
   padding-top: 14px;
   border-top: 1px solid #6b7b8d;
 }
-nav#slide-menu-0-f > ul li.username {
+nav#slide-menu-0-circuits > ul li.username {
   font-weight: 700;
   font-size: 45px;
   cursor: default !important;
@@ -73,14 +73,14 @@ nav#slide-menu-0-f > ul li.username {
   line-height: 35px;
 }
 
-body.slide-menu-0-f-active nav#slide-menu-0-f {
+body.slide-menu-0-circuits-active nav#slide-menu-0-circuits {
   /*right: 0px;*/
   transform: translateX(300px) translateZ(0);
   opacity: 1;
   z-index: 1; 
 }
 
-body.slide-menu-0-f-active nav#slide-menu-0-f ul {
+body.slide-menu-0-circuits-active nav#slide-menu-0-circuits ul {
   /*right: 0px;*/
   transform: translateX(0px) translateZ(0);
   opacity: 1;
@@ -100,55 +100,32 @@ div#slide-content {
   /*  padding: 60px; */
   overflow: scroll; 
   
-  /*
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  -moz-box-shadow: 0px 0 30px rgba(0, 0, 0, 0.75);
-  -webkit-box-shadow: 0px 0 30px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 0 30px rgba(0, 0, 0, 0.75); 
-  -moz-transition: all 300ms;
-  -webkit-transition: all 300ms;
-  transition: all 300ms;
-  
-  
-  will-change: transform;*/
 }
 
 
-body.slide-menu-0-f-active div#slide-content {
+body.slide-menu-0-circuits-active div#slide-content {
  
-  /*right: 284px;
-  transform: translateX(0px);*/ /*-284px*/
-  /*border-radius: 7px 0 0 7px;*/
-  /*border-radius: 20px;
-  border-right: 0px solid #bfbdbd; */
-  
-  /* Darken (with filter?)
-  
-  filter: blur(2px);
-  -webkit-filter: blur(2px);  */
   filter: grey;
   
    position: fixed;
   overflow: hidden; 
 }
 
-body.slide-menu-0-f-active div#slide-content .slide-menu-trigger {
+body.slide-menu-0-circuits-active div#slide-content .slide-menu-trigger {
   /* right: 294px; not needed, since changed position from fixed to absolute */
 }
 
 
 
 
-body.slide-menu-0-f-active div#slide-content-darken {
+body.slide-menu-0-circuits-active div#slide-content-darken {
   position: fixed;
   width: 100%;
   height: 140%;
   opacity: 0.9;
   z-index: 999;
   cursor: pointer;
-  background-color: #f4c248;
+  background-color: #00d692;
 }
 div#slide-content-darken {
   opacity: 0;
