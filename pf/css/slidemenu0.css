@@ -1,0 +1,199 @@
+nav#slide-menu-0 {
+  position: fixed;
+  left: -300px; /*100px*/
+  /* transform: translateX(-100px); */
+  bottom: 0;
+  display: block;
+  float: left;
+  width: 100%;
+  max-width: 284px;
+  height: 100%;
+  
+  -moz-transition: all 300ms;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+  
+  background:  #f7f7f7;
+  overflow-y: auto;
+  
+  
+  opacity: 1;
+  will-change: transform;
+  
+  z-index: 9999 !important;
+}
+nav#slide-menu-0 > ul {
+  font-family: "Montserrat", "Gilroy", "helvetica neue", sans-serif;
+  display: block;
+  margin: 40px;
+  padding: 0;
+  list-style: none;
+  opacity: 0.5;
+  -moz-transition: all 300ms;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+  
+  will-change: transform;
+}
+nav#slide-menu-0 > ul li {
+  /* color: #dfe5eb; */
+  padding: 6px 0;
+  cursor: pointer;
+  
+  transition: color 150ms;
+}
+nav#slide-menu-0 > ul li:hover {
+  color: #f4c248;
+}
+nav#slide-menu-0 > ul li:before {
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  color: #f4c248;
+  margin-right: 12px;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+}
+nav#slide-menu-0 > ul li.sep {
+  margin-top: 7px;
+  padding-top: 14px;
+  border-top: 1px solid #6b7b8d;
+}
+nav#slide-menu-0 > ul li.username {
+  font-weight: 700;
+  font-size: 45px;
+  cursor: default !important;
+  color: #00004c !important;
+  line-height: 35px;
+}
+
+body.slide-menu-0-active nav#slide-menu-0 {
+  /*right: 0px;*/
+  transform: translateX(300px) translateZ(0);
+  opacity: 1;
+  z-index: 1; 
+}
+
+body.slide-menu-0-active nav#slide-menu-0 ul {
+  /*right: 0px;*/
+  transform: translateX(0px) translateZ(0);
+  opacity: 1;
+}
+
+/*
+  Content
+*/
+div#slide-content {
+  /* position: fixed; */
+
+  /*top: 0; 
+  right: 0px;
+  transform: translateX(0px) translateZ(0);*/
+  width: 100%;
+  height: 100%; 
+  /*  padding: 60px; */
+  
+  /*
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-box-shadow: 0px 0 30px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 0 30px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 0 30px rgba(0, 0, 0, 0.75); 
+  -moz-transition: all 300ms;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+  
+  
+  will-change: transform;*/
+}
+div#slide-content div.slide-menu-trigger-0 {
+  position: absolute; 
+  background: url("../img/PA-3bar.svg") no-repeat;
+  top: 48px;
+  left: 35px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  /* border-radius: 0px; */
+  -moz-transition: all 300ms;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+  
+  z-index: 990;
+  will-change: transform;
+}
+
+
+div#slide-content div.slide-menu-trigger-0:active {
+  transform: scale(0.8);
+}
+div#slide-content div.slide-menu-trigger-0:hover:after {
+  background-color: #f4c248;
+}
+
+body.slide-menu-0-active div#slide-content {
+ 
+  /*right: 284px;*/
+  /* transform: translateX(0px); */ /*-284px*/
+  /*border-radius: 7px 0 0 7px;*/
+  /*border-radius: 20px;
+  border-right: 0px solid #bfbdbd;*/
+  
+  /* Darken (with filter?)
+  
+  filter: blur(2px);
+  -webkit-filter: blur(2px);  */
+  filter: grey;
+  
+   position: fixed;
+  overflow: hidden; 
+}
+
+body.slide-menu-0-active div#slide-content .slide-menu-trigger {
+  /* right: 294px; not needed, since changed position from fixed to absolute */
+}
+
+
+
+
+body.slide-menu-0-active div #slide-content-darken {
+  opacity: 0.9;
+  z-index: 999;
+  cursor: pointer;
+  transition: all 300ms !important;
+}
+
+div#slide-content-darken {
+  position: fixed;
+  width: 100%;
+  height: 140%;
+  background-color: #00004c;
+  opacity: 0;
+  transition: all 150ms !important;
+}
+
+.PA-text-logo {
+  width: 96%;
+}
+
+/*
+body.slide-menu-0-active #bubbles {
+  opacity: 0.05 !important;
+  z-index: 1 !important;
+  filter: brightness(0) saturate(100%) invert(99%) sepia(37%) saturate(63%) hue-rotate(313deg) brightness(116%) contrast(94%);
+  cursor: pointer;
+} */
+
+
+
+woof {
+  position: relative;
+  top: -20px;
+  left: -13px;
+}
