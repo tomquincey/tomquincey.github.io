@@ -40,7 +40,7 @@ var Person = {
   people: [
     {
       q_title: "Who discovered <b><i><u>Newton's</u></i></b> Laws of Motion?",
-      age: 1,
+      q_no: 1,
       img: "../img/newton.jpeg",
       A: "Sir Isaac Newton",
       A_height: "two",
@@ -55,7 +55,7 @@ var Person = {
     }, 
     {
       q_title: "<b>How many</b> laws of motion are there?",
-      age: 2,
+      q_no: 2,
       img: "../img/question_bg.svg",
       A: "1",
       A_height: "one",
@@ -71,7 +71,7 @@ var Person = {
     {
       q_title: "Question Title",
       name: 'B',
-      age: 3,
+      q_no: 3,
       img: "../img/Pingu_ad.jpg",
       A: "Answer A",
       A_height: "one",
@@ -87,7 +87,7 @@ var Person = {
     {
       q_title: "This is Question 4",
       name: 'D',
-      age: 4,
+      q_no: 4,
       img: "../img/Pingu_ad.jpg",
       A: "Answer A",
       A_height: "one",
@@ -126,22 +126,8 @@ var Person = {
     
     var person_i = this.people[i];
     this.wrap.append(
-      "<div class='person'><h3 class='quiz-title'><span class='white-bubble-title-quiz'>" + person_i.age + ".</span><span><img src='../img/question_stars_" + person_i.stars + "_blue.svg' class='question_stars_" + person_i.stars + "'></span></h3><div style='padding: 25px; padding-top: 20px; text-align: left; height: 290px;'>"+person_i.q_title+"</div><form><img src='../img/"+person_i.img+"' style='width: 100%; height: 180px; position: absolute; top: 118px; left: 0px;'><div class='parent'><label class='child childA "+person_i.A_height+"-line' for='answers-"+person_i.age+"A'>" + person_i.A + "<input type='radio' id='answers-"+person_i.age+"A' name='question-1-answers'  value='A' /></label><label class='child childB "+person_i.B_height+"-line' for='answers-"+person_i.age+"B'>" + person_i.B + "<input type='radio' id='answers-"+person_i.age+"B' name='question-1-answers'  value='B' /></label><label class='child childC "+person_i.C_height+"-line' for='answers-"+person_i.age+"C'>" + person_i.C + "<input type='radio' id='answers-"+person_i.age+"C' name='question-1-answers'  value='C' /></label><label class='child childD "+person_i.D_height+"-line' for='answers-"+person_i.age+"D'>" + person_i.D + "<input type='radio' id='answers-"+person_i.age+"D' name='question-1-answers'  value='D' /></label></div></form></div>");
+      "<div class='person'><h3 class='quiz-title'><span class='white-bubble-title-quiz'>" + person_i.q_no + ".</span><span><img src='../img/question_stars_" + person_i.stars + "_blue.svg' class='question_stars_" + person_i.stars + "'></span></h3><div style='padding: 25px; padding-top: 20px; text-align: left; height: 290px;'>"+person_i.q_title+"</div><form><img src='../img/"+person_i.img+"' style='width: 100%; height: 180px; position: absolute; top: 118px; left: 0px;'><div class='parent'><label class='child childA "+person_i.A_height+"-line' for='answers-"+person_i.q_no+"A'>" + person_i.A + "<input type='radio' id='answers-"+person_i.q_no+"A' name='question-1-answers'  value='A' /></label><label class='child childB "+person_i.B_height+"-line' for='answers-"+person_i.q_no+"B'>" + person_i.B + "<input type='radio' id='answers-"+person_i.q_no+"B' name='question-1-answers'  value='B' /></label><label class='child childC "+person_i.C_height+"-line' for='answers-"+person_i.q_no+"C'>" + person_i.C + "<input type='radio' id='answers-"+person_i.q_no+"C' name='question-1-answers'  value='C' /></label><label class='child childD "+person_i.D_height+"-line' for='answers-"+person_i.q_no+"D'>" + person_i.D + "<input type='radio' id='answers-"+person_i.q_no+"D' name='question-1-answers'  value='D' /></label></div></form></div>");
   }
-  
-  
-  /*
-  
-      "<div class='person'><h3 class='quiz-title'><span class='white-bubble-title-quiz'>" + person_i.age + ".</span><span><img src='question_stars_" + person_i.stars + ".svg' class='question_stars_" + person_i.stars + "'></span></h3><div style='padding: 25px; padding-top: 20px; text-align: left; height: 290px;'>"+person_i.q_title+"</div><form><div class='parent'><div><label class='child "+person_i.A_height+"-line' for='question-1-answers-A'>" + person_i.A + "<input type='radio' id='question-1-answers-A' name='question-1-answers'  value='A' /></label></div><div class='child "+person_i.B_height+"-line'><input type='radio' id='question-1-answers-B' name='question-1-answers'  value='B' /><label for='question-1-answers-B'>" + person_i.B + "</label></div><div class='child " + person_i.C_height + "-line'><input type='radio' id='question-1-answers-C' name='question-1-answers'  value='C' /><label for='question-1-answers-C'>" + person_i.C + "</label></div><div class='child " + person_i.D_height + "-line'><input type='radio' id='question-1-answers-D' name='question-1-answers'  value='D' /><label for='question-1-answers-D'>" + person_i.D + "</label></div></div></form></div>");
-      */
-  
-  // add random person:
-  
-  /* add: function(){
-    var random = this.people[Math.floor(Math.random() * this.people.length)];
-    this.wrap.append(
-      "<div class='person'><span><strong>" + random.name + "</strong>, " + random.age + "</span><img alt='" + random.name + "' src='" + random.img + "' /></div>");
-  } */
 };
 
 

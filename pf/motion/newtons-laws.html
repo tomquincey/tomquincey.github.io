@@ -53,16 +53,24 @@
     
     <style>
       .topic-color {
-          color: #e4525a; /* motion red */
+          /* #f4c248; fundamentals yellow */
+          /* #e4525a; motion red */
+          color: #f4c248;
       }
       .topic-background-color {
-          background-color: #e4525a;
+          background-color: #f4c248;
       }
       a:hover {
-          color: #e4525a; !important;
+          color: #f4c248; !important;
       }
       .playbutton:hover {
-          background-color: #e4525a;
+          background-color: #f4c248;
+      }
+      .playbutton {
+          border: 3px solid #f4c248;
+      }
+      blockquote::before {
+        color: #f4c248;
       }
     </style>
       
@@ -81,633 +89,6 @@
     
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <!-- Content panel -->
-    <canvas id="bubbles"></canvas>
-   <!-- <canvas id="morebubbles"></canvas> -->
-    
-    <div id="slide-content">
-      <div id="slide-content-darken" class="noSelect">
-      </div>
-      
-      <div class="slide-menu-trigger noSelect"></div>
-
-      
-      
-    <div class="wrap">
-        
-      
-      
-      <div class="menu slide-menu-trigger-0 noSelect"> <!-- Left menu -->
-      </div>
-      
-      <!-- When not logged in: -->
-      <!-- 
-      <div class="menuright">
-      <a href="#">Log In</a> • <br> <a href="#">Sign Up</a>
-      </div>
-        -->
-            
-        <div class="text">
-            <a href="#">
-            <img src="../img/PF-logo-10-alteyes3.svg" title="The Logo" class="small-logo">
-            </a>
-            <!--
-          <!-- <span>
-            <h3 style="font-size: 25px; color: #f4c248; padding-left: 20px; margin-top: -20px">
-            <img src="logo_nearly5_black.svg" title="The Logo" class="small-logo"> <span style="color: white">Level 0</span> <br>Fundamentals</h3>
-            </span> -->
-
-
-  <!-- <div style="display: flex;
-    align-items: center; padding-left: 25px">
-     <img src="logo_nearly5_blue.svg" title="The Logo" class="small-logo">
-     <h3 style="font-size: 25px; color: #f4c248; padding-left: 8px; margin-top: 30px; font-weight: 800; line-height: 25px"><span style="color: white;">Level 0</span> <br> Fundamentals</h3>
-  </div> -->
-          
-          <h3 class="topic-title"><a href="#slide-content" class="slide-menu-trigger-0-f noSelect topic-color"><span><img src="../img/PA-motion-icon-8.svg" class="topic-icon"></span> Motion</a></h3>
-          <h3 class="article-title"><span style="display: inline-block;">Newton's Laws</span> <span style="display: inline-block;">of Motion</span></h3>
-          
-            <h4 class="listy">
-              <span class="next-page-left">
-              <a><span><img src="../img/PA-right-arrow-square-2.png" class="left-arrow right-arrow-square"></span></a>
-              </span>  
-              <!--
-              <span style="float:right;">s
-        <a href="density_volume.html"><span style="color: white; z-index: 9999;">Next • What is Physics? </span><span><img src="PA-right-arrow.svg" style="position: relative; top: -85px;"></span></a>
-              </span> -->
-              <span style="float:right;" class="next-page-right">
-        <a href="density_volume.html">Hooke's Law <span><img src="../img/PA-right-arrow-square-2.png" class="right-arrow right-arrow-square"></span></a>
-              </span> 
-            </h4>
-            
-          
-          
-          
-          
-          
-        <div class="summary wrap-collabsible" style="margin-top: 55px;">
-        <input class="toggle" type="checkbox" name="chk">
-         <!--  <h3 class="summary-behind">Summary</h3> -->
-        <h3 class="summary-title"><span class="white-bubble-title-summary">Summary</span></h3>
-        <div class="summary-insides">
-          
-          <p>
-            Newton's three laws of motion describe how any object moves when forces act upon on it, as well as giving some insight into the nature of forces themselves.
-              <br/>
-              <br/>
-              <span class="boxy">Newton's 1st Law:</span><span class="triangg"></span>
-            
-            
-              <br/>
-            </p>
-            <blockquote class="small-blockquote">An object in motion stays in motion</blockquote>
-          
-            
-          <div class="demo-wrapper">
-            <div class="line">
-              <div class="small shadow" style="height: 30px; width: 30px; position: relative; float: left; top:-4.5px; background-color: red; border-radius: 50%;"></div>
-              <div class="small el1" style="height: 30px; width: 30px; position: relative; float: left; left: -30px; top:-4.5px; border-radius: 50%; background-color: red"></div>
-            </div>
-            
-        <a class="playbutton pb1 play topic-background-color"><div class="playicon"></div></a>
-      <!--<button class="pause">Pause</button>
-      <button class="restart"><i class="fas fa-redo-alt"></i></button> -->
-      <!--
-      <input class="progress" step=".001" type="range" min="0" max="100" value="0"><span class="timelabel">time</span> -->
-          </div>
-
-
-          <p>  
-            When no force is acting upon an object, it continues to move at the same speed, in the same direction.
-              <br/>
-              <br/>
-            <span class="boxy">Newton's 2nd Law:</span>
-          </p>
-            
-
-          <div class="demo-wrapper">
-            <div class="line" style="display: flex;">
-              <div class="small shadow custom topic-background-color" style="height: 30px; width: 30px; position: relative; float: left; top:-4.5px; border-radius: 50%;"></div>
-              
-              <div style="display: flex; position: relative; bottom: 0px; right: 35px;" class="el2">
-                
-              <div class="small el2l" style="font-size: 20px; position: relative; bottom: 0px; right: 50px;">\(\textbf{F}\)</div>
-                
-              <div class="small el2l" style="font-size: 25px; position: relative; bottom: 5px; right: 40px;">\(\leftarrow\)</div>
-                
-              <div class="small topic-background-color" style="
-              z-index:2000; height: 30px; width: 30px; position: relative; float: left; top:-4.5px; left: -31px; border-radius: 50%;"></div>
-                
-              <div class="small el2r" style="font-size: 25px; position: relative; bottom: 5px; left: -32px;">\(\rightarrow\)</div>
-                
-              <div class="small el2r" style="font-size: 20px; position: relative; bottom: -0.5px; right: 15px;">\(\textbf{F}\)</div>
-                
-                </div>
-              
-              <div class="custom"></div>
-              
-            </div>
-            
-              <a class="playbutton pb2 play2 topic-background-color"><div class="playicon"></div></a>
-          </div>
-          
-          <p> The acceleration \(\textbf{a}\) of an object is calculated from the net force \(\textbf{F}\) acting upon it using: \[\textbf{F} = m\textbf{a}\]
-              where \(m\) is the mass of the object.
-              <br/>
-              <br/>
-            <span class="boxy">Newton's 3rd Law:</span>
-          </p>
-          <blockquote class="small-blockquote"> For every action there is an equal and opposite reaction </blockquote>
-          
-          
-          <div class="demo-wrapper">
-            <div class="line" style="display: flex;">
-              <div class="small shadow topic-background-color" style="height: 30px; width: 30px; position: relative; float: left; top:-4.5px; border-radius: 50%;"></div>
-              
-              <div style="display: flex; position: relative; bottom: 0px; right: 35px;" class="el3L">
-                
-                <div class="small el3l" style="font-size: 20px; position: relative; bottom: 2px; right: 50px;">\(\textbf{F}_{1}\)</div>
-
-                
-              <div class="small el3l" style="font-size: 25px; position: relative; bottom: 6px; right: 40px;">\(\leftarrow\)</div>
-                
-              <div class="small topic-background-color" style="z-index:2000; height: 30px; width: 30px; position: relative; float: left; top:-4.5px; left: -31px;border-radius: 50%;"></div>
-                
-              </div>
-              
-              <div style="display: flex; position: relative; bottom: 0px; right: 35px;" class="el3R">
-                
-              <div class="small topic-background-color" style="z-index:2000; height: 30px; width: 30px; position: relative; float: left; top:-4.5px; left: -31px; border-radius: 50%;"></div>
-                
-              <div class="small el3r" style="font-size: 25px; position: relative; bottom: 6px; left: -32px; ">\(\rightarrow\)</div>
-
-                <div class="small el3r" style="font-size: 20px; position: relative; bottom: 2px; right: 15px;">\(\textbf{F}_{2}\)</div>
-                
-              </div>
-              
-            </div>
-            
-              <a class="playbutton pb3 play3 topic-background-color"><div class="playicon"></div></a>
-          </div>
-          
-            <p>
-            \[\textbf{F}_{1} = - \textbf{F}_{2}\]
-            For any force, there must always be a corresponding force of the same strength in the opposite direction.
-          </p>
-        </div>
-        </div>  
-          
-          
-          <!-- <div class="faux-border-bottom-2"></div> -->
-          
-          
-          
-          <!-- <div style="height: 900px"></div> -->
-          
-          
-            <div class="wrap-collabsible ad">
-        <input id="advert" class="toggle" type="checkbox" checked>
-              <label for="advert" class="lbl-toggle ad-toggle">
-                <h3 class="summary-title-2-ad"><span class="white-bubble-title">Ad</span></h3>
-                <!--
-              <div class="circle-plus opened summary-title-2-plusminus">
-             <div class="pm-circle"> 
-            <div class="vertical"></div>
-            <div class="horizontal"></div>
-          </div>
-           </div> -->
-                </label>
-        <div class="collapsible-content">
-        <div class="content-inner">
-          <a href="#">
-          <img src="../img/meats_by_dre.png" style="width: 300px"></a>
-        </div>
-        </div>
-        </div>
-          
-          
-          <br><br>
-            
-            <div class="wrap-collabsible" style="margin-bottom: -43px;">
-              <div class="all-collabsible togallButton">
-              <input type="checkbox" onClick="toggle(this)" id="togall" class="toggle">
-              <label for="togall" class="lbl-toggle togall-box" style="border-bottom: 0px solid #00004c;">
-              <div class="circle-plus closed summary-title-2-plusminus" style="right: -1px; down: 10px;">
-                <div class="pm-circle"> 
-            <div class="vertical"></div>
-            <div class="horizontal"></div>
-           </div>
-                </div>
-              </label>
-                </div>
-            </div>
-          <br><br>
-          <br><br>
-          
-          
-          <div class="wrap-collabsible">
-        <input id="clpsIntro" class="toggle" type="checkbox" name="chk">
-        <label for="clpsIntro" class="lbl-toggle">
-          <h3 class="summary-title-2"><span class="white-bubble-title">Introduction</span></h3>
-           <div class="circle-plus closed summary-title-2-plusminus">
-             <div class="pm-circle"> 
-            <div class="vertical"></div>
-            <div class="horizontal"></div>
-          </div>
-           </div>
-        </label>
-        <div class="collapsible-content images-over-border">
-        <div class="content-inner">
-          <!--
-          <blockquote>WHAT!?<br/> <span>&mdash;  <a href="https://www.youtube.com/watch?v=K5tVbVu9Mkg" target="_blank">Lil Jon</a> </span></blockquote> -->
-          
-          <p> <!--
-            Movement is all around us; from people driving cars the wrong way down one-way streets, to the peaceful drifting of leaves on an autumn day, to your ice cream falling to the ground as a seagull knocks it out your hand. 
-            <br/> Yellow-beaked munter.
-            <br/><br/> -->
-            The role of Newton's laws of motion is to tell us <i><b>how</b></i> things move, i.e. how objects respond when something called a <b>force</b> acts on them. 
-            <br/> <br/>
-            The role of all other laws of physics is to tell us <i><b>why</b></i> things move, i.e. they tell us <i>what these forces are</i>.
-          </p>
-          
-          
-          <!-- Play youtube videos without suggested vids at end -->
-          <!-- https://maxl.us/hideyt 
-          <div class="hytPlayerWrapOuter"> 
-            <div class="hytPlayerWrap"> 
-              <iframe src="https://www.youtube.com/embed/-fC2oke5MFg?rel=0&enablejsapi=1" frameborder="0" ></iframe> 
-            </div>
-          </div>-->
-          
-          
-          
-          <!--
-          <div class="lvl1 wrap-collabsible">
-            <input id="0a" class="toggle" type="checkbox" name="chk">
-            <label for="0a" class="lbl-toggle" name="chk">What actually <i>is</i> a force?</label>
-            <div class="collapsible-content">
-            <div class="content-inner">
-              <p style="margin-top: 3px;"> A very important (yet often overlooked) point to make note of is that Newton's laws, as they have so far been described in the Summary section, are completely <i>meaningingless</i> &mdash; for the simple reason that we have never actually described what a force <i>is</i>. <br> (You could replace all instances of the word 'force' with <i>'gorce'</i> instead, and Newton's laws would be equally unhelpful.)
-                <br><br> So what is a force? In all the time I have studied physics, the best description of force I have come across is the intuitive, yet slightly dopey notion of force simply <i>being how hard you push or pull something</i>. <br> Therefore, from Newton's 2nd law, it would follow that if you push two objects equally hard, and one was half as heavy as the other, then the lighter one would accelerate twice as much as the lighter one.
-                <br><br> "But I thought physics was about being precise," you might point out, "yet you're describing force, one of the most fundamental ideas in physics, in a fundamentally vague way." <br> A very valid thing to notice. However, we are missing half of the story. We need other laws of physics to tell us <i>what these forces are</i>; famous examples including <a href="#">gravitation<sup>[-2]</sup></a>, <a href="#">electrostatic attraction<sup>[-2]</sup></a> and <a href="#">Hooke's spring law</a>. Because these laws are all precisely expressed, our vague notion of force isn't relevant.
-                
-                <div class="lvl1 wrap-collabsible">
-            <input id="0ai" class="toggle" type="checkbox" name="chk">
-            <label for="0ai" class="lbl-toggle" name="chk">Example: Hooke's Law</label>
-            <div class="collapsible-content">
-            <div class="content-inner">
-              <p style="margin-top: 3px;"> 
-                
-                <p> Using Hooke's Law as an example, when you pull the end of a spring by a distance \(x\), it pulls back with a force of \(kx\) (where \(k\) is simply a constant value, called the stiffness of the spring). Move the end of the spring twice as far, the spring pulls back with twice the force.
-                  <br> This precise expression for the force \(\textbf{F}\), namely
-                  \[\textbf{F} = k\textbf{x}\]
-                  gives the force when the spring is moves, and then newton's laws tell us <i>how</i> the spring moves.
-              </p>
-            </div>
-            </div>
-            </div>
-            </div>
-            </div>
-            </div> -->
-        </div>
-        </div>
-        </div>
-          
-        <div class="wrap-collabsible max-height-400vh">
-        <input id="1" class="toggle" type="checkbox" name="chk">
-        <label for="1" class="lbl-toggle" name="chk"><h3 class="summary-title-2"><span class="white-bubble-title">Newton's 1st Law</span></h3>
-            <div class="circle-plus closed summary-title-2-plusminus">
-             <div class="pm-circle"> 
-            <div class="vertical"></div>
-            <div class="horizontal"></div>
-          </div>
-           </div></label>
-        <div class="collapsible-content images-over-border">
-        <div class="content-inner">
-          
-            <blockquote class="small-blockquote">An object in motion stays in motion</blockquote>
-          
-            
-          <div class="demo-wrapper">
-            <div class="line">
-              <div class="small shadow" style="height: 30px; width: 30px; position: relative; float: left; top:-4.5px; background-color: red; border-radius: 50%;"></div>
-              <div class="small el1" style="height: 30px; width: 30px; position: relative; float: left; left: -30px; top:-4.5px; border-radius: 50%; background-color: red"></div>
-            </div>
-            
-        <a class="playbutton pb1 playAgain topic-background-color"><div class="playicon"></div></a>
-          </div>
-          
-          
-          <p> Newton's first law of motion is as simple as it gets; <b>when there is no force on an object, it continues to move at the same speed, in the same direction. </b> 
-            <br><br> 
-            Therefore, if an object isn't moving at all (i.e. its speed \(=0 \:  m/s\)), then it will <i>continue</i> not moving &mdash; until a force acts upon it.
-            <br><br> 
-            <span style="">Philip the Physics Fox says...</span>
-            <br></p>
-            <div class="row">
-          <div class="column">
-            
-            <!-- 
-            <div class="sticker-wrapper">
-              <div class="sticker is-peeled philip">
-                <div class="sticker__face sticker__face--front">
-                  <div class="sticker__holder">
-                    <div class="sticker__content">
-                      <div class="sticker__shadow"></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="sticker__face sticker__face--back">
-                  <div class="sticker__holder">
-                    <div class="sticker__content">
-                      <div class="sticker__shadow"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div> -->
-            
-            <img src="../img/Philip_sticker.svg" class="philip">
-              
-              
-              </div>
-          <div class="column"> <p style="font-size: 15px">You might also hear Newton's 1st Law referred to by the grandiose title "the law of inertia", but this doesn't tell you anything you didn't already know.</p> </div>
-            </div>
-              
-          
-              <!--
-            <div class="lvl1 wrap-collabsible">
-            <input id="1a" class="toggle" type="checkbox" name="chk">
-            <label for="1a" class="lbl-toggle" name="chk">What actually <i>is</i> inertia?</label>
-            <div class="collapsible-content">
-            <div class="content-inner">
-              <p>
-                  Despite being a scary 3-syllabled Latin-inspired word, interia is a concept you are very familiar with. It simply means the desire of something to continue doing what it's already doing.
-                <br> <br>
-                  Familiar examples include the horror or getting out of bed in the morning, the unwillingness of <i>people these days</i>™ to get off their phones, and the insistence of smart-arses to exclusively use the Oxford comma.
-              </p>
-            </div>
-            </div>
-            </div>  -->
-              
-        </div>
-        </div>
-        </div>
-            
-            <div class="wrap-collabsible">
-        <input id="collapsible1" class="toggle" type="checkbox" name="chk">
-        <label for="collapsible1" class="lbl-toggle"><h3 class="summary-title-2"><span class="white-bubble-title">Newton's 2nd Law</span></h3>
-           <div class="circle-plus closed summary-title-2-plusminus">
-             <div class="pm-circle"> 
-            <div class="vertical"></div>
-            <div class="horizontal"></div>
-          </div>
-           </div></label>
-        <div class="collapsible-content">
-        <div class="content-inner">
-          
-          <p>Suppose we <i>do</i> have a force acting upon an object. How does the object behave?</p>
-          
-          
-          <div class="demo-wrapper">
-            <div class="line" style="display: flex;">
-              <div class="small shadow custom topic-background-color" style="height: 30px; width: 30px; position: relative; float: left; top:-4.5px; border-radius: 50%;"></div>
-              
-              <div style="display: flex; position: relative; bottom: 0px; right: 35px;" class="el2">
-                
-              <div class="small el2l" style="font-size: 20px; position: relative; bottom: 0px; right: 50px;">\(\textbf{F}\)</div>
-                
-              <div class="small el2l" style="font-size: 25px; position: relative; bottom: 5px; right: 40px;">\(\leftarrow\)</div>
-                
-              <div class="small topic-background-color" style="
-              z-index:2000; height: 30px; width: 30px; position: relative; float: left; top:-4.5px; left: -31px; border-radius: 50%;"></div>
-                
-              <div class="small el2r" style="font-size: 25px; position: relative; bottom: 5px; left: -32px;">\(\rightarrow\)</div>
-                
-              <div class="small el2r" style="font-size: 20px; position: relative; bottom: -0.5px; right: 15px;">\(\textbf{F}\)</div>
-                
-                </div>
-              
-              <div class="custom"></div>
-              
-            </div>
-            
-              <a class="playbutton pb2 play2Again topic-background-color"><div class="playicon"></div></a>
-          </div>
-          
-          <p> The acceleration \(\textbf{a}\) of an object is calculated from the net force \(\textbf{F}\) acting upon it using:
-            \[\textbf{F} = m\textbf{a}\]
-            You may have noticed that when \(\textbf{F} = 0\), then \(\textbf{a} = 0\). <br/> No acceleration means velocity stays the same, so Newton's 1st law is actually included in the 2nd law! 
-          </p>
-          
-          <!--
-          <div class="lvl1 wrap-collabsible">
-            <input id="2a" class="toggle" type="checkbox" name="chk">
-            <label for="2a" class="lbl-toggle" name="chk">What is <i>net</i> force?</label>
-            <div class="collapsible-content">
-            <div class="content-inner">
-              <p>
-                  
-              </p>
-            </div>
-            </div>
-            </div> -->
-          
-          
-        </div>
-        </div>
-        </div>
-            
-            <div class="wrap-collabsible">
-        <input id="collapsible2" class="toggle" type="checkbox" name="chk">
-        <label for="collapsible2" class="lbl-toggle"><h3 class="summary-title-2"><span class="white-bubble-title">Newton's 3rd Law</span></h3>
-           <div class="circle-plus closed summary-title-2-plusminus">
-             <div class="pm-circle"> 
-            <div class="vertical"></div>
-            <div class="horizontal"></div>
-          </div>
-           </div></label>
-        <div class="collapsible-content">
-        <div class="content-inner">
-          
-          <div class="demo-wrapper">
-            <div class="line" style="display: flex;">
-              <div class="small shadow topic-background-color" style="height: 30px; width: 30px; position: relative; float: left; top:-4.5px; border-radius: 50%;"></div>
-              
-              <div style="display: flex; position: relative; bottom: 0px; right: 35px;" class="el3L">
-                
-                <div class="small el3l" style="font-size: 20px; position: relative; bottom: 2px; right: 50px;">\(\textbf{F}_{1}\)</div>
-
-                
-              <div class="small el3l" style="font-size: 25px; position: relative; bottom: 6px; right: 40px;">\(\leftarrow\)</div>
-                
-              <div class="small topic-background-color" style="z-index:2000; height: 30px; width: 30px; position: relative; float: left; top:-4.5px; left: -31px;border-radius: 50%;"></div>
-                
-              </div>
-              
-              <div style="display: flex; position: relative; bottom: 0px; right: 35px;" class="el3R">
-                
-              <div class="small topic-background-color" style="z-index:2000; height: 30px; width: 30px; position: relative; float: left; top:-4.5px; left: -31px; border-radius: 50%;"></div>
-                
-              <div class="small el3r" style="font-size: 25px; position: relative; bottom: 6px; left: -32px; ">\(\rightarrow\)</div>
-
-                <div class="small el3r" style="font-size: 20px; position: relative; bottom: 2px; right: 15px;">\(\textbf{F}_{2}\)</div>
-                
-              </div>
-              
-            </div>
-            
-              <a class="playbutton pb3 play3Again topic-background-color"><div class="playicon"></div></a>
-          </div>
-          
-          <p>
-            This turns out to be a consequence of the Law of <a href="#">Conservation of Momentum</a>, which is the most important law of all physics.
-          </p>
-        </div>
-        </div>
-          </div>
-          
-          
-          <div class="wrap-collabsible">
-        <input id="collapsible3" class="toggle" type="checkbox" name="chk">
-        <label for="collapsible3" class="lbl-toggle"><h3 class="summary-title-2"><span class="white-bubble-title" style="background-color: #00004c; color: white;">Bio: Isaac Newton</span></h3>
-           <div class="circle-plus closed summary-title-2-plusminus">
-             <div class="pm-circle" style="background-color: #00004c;"> 
-            <div class="vertical" style="background-color: white;"></div>
-            <div class="horizontal" style="background-color: white;"></div>
-          </div>
-           </div></label>
-        <div class="collapsible-content">
-        <div class="content-inner">
-          
-          
-          <p>
-            Top bloke
-          </p>
-        </div>
-        </div>
-          </div>
-          
-          
-          
-          
-          
-
-          
-         
-          <div id="confetti">
-
-            <div id="app">
-              
-            
-              <div id="quiz-title-2">Quiz</div>
-              
-            <div id="people"></div>
-            
-            <div id="control">
-              <div class="button no">
-                <div href="#" class="trigger noSelect" style="background: no-repeat url('../img/PA_skip_4.svg'); width: 42px;"></div>
-              </div>
-              <div class="button yes">
-                <div href="#" class="trigger noSelect" style="background: no-repeat url('../img/PA_submit_2.svg'); width: 49px;"></div>
-              </div>  
-            </div>
-            
-            <div id="quiz-bg"> 
-              <img src="../img/Philip.svg" style="width: 150px;">
-              <h3> Congratulations!</h3>
-              <p> Quiz questions completed:  5 / 5</p>
-              <!-- 
-              <p>+ 8 <span><img src="PA_star_border.svg" style="width: 25px; position: relative; top: 4px"></span> acquired</p> -->
-              
-                <br>
-              <span style="display: inline; font-size: 25px; font-weight: 600; background-color: white; left: 14px; position: relative; top: 2px; border-radius: 3px;">+</span>
-              <p style="display: inline; width: 60px; border: 4px solid #00004c; padding: 6px; padding-left: 9px; margin-left: auto; margin-right: auto;font-weight: 600;">8 <span><img src="../img/question_stars_1_blue.svg" style="width: 25px; position: relative; top: 5px"></span></p>  
-              
-                <br><br>
-                <br>
-              <div style="border: 7px solid #f7f7f7; background-color: white; ; width: 200px;margin-left: auto; margin-right: auto; padding: 10px;"><p><b><a href="#">Sign up</a></b> (for free!) to <br> save your progress.</p></div>
-              
-              <br>
-              
-              <p style="font-size: 17px;"><b><a class="restart">Restart Quiz</a></b></p>
-              
-            </div>
-            
-         </div>
-          
-            
-            <!--
-            <h4 class="listy-footer">
-                <a href="#" style="champagne"><span><img src="PA-right-arrow.svg" class="left-arrow"></span> Previous </a>
-              
-              <span style="float:right;">
-        <a href="density_volume.html">Next • What is Physics? <span><img src="PA-right-arrow.svg" class="right-arrow"></span></a>
-              </span> 
-            </h4> -->
-            
-            
-            <h4 class="listy-footer">
-              <span class="next-page-left">
-              <a><span><img src="../img/PA-right-arrow-square-2.png" class="left-arrow right-arrow-square"></span></a>
-              </span>  
-              <!--
-              <span style="float:right;">s
-        <a href="density_volume.html"><span style="color: white; z-index: 9999;">Next • What is Physics? </span><span><img src="PA-right-arrow.svg" style="position: relative; top: -85px;"></span></a>
-              </span> -->
-              <span style="float:right;" class="next-page-right">
-        <a href="density_volume.html">Hooke's Law <span><img src="../img/PA-right-arrow-square-2.png" class="right-arrow right-arrow-square"></span></a>
-              </span> 
-            </h4>
-            
-            
-
-            
-        <footer>
-          <span>
-            <!--
-            <img src="PF-logo-10-alteyes3.svg" title="The Logo" style="width: 45px; position: relative; float: left; left: 12px; top: -4px;"> -->
-
-          </span>
-          <span style="position: relative; top: -3px; line-height: 22px;">
-            © 2020 <a href="index.html">Physics Fox</a> • 
-            <a href="#">about</a> • 
-            <a href="#">contact</a> <!-- • 
-            <a href="#">privacy policy</a> • 
-            <a href="#">send feedback</a> -->
-          <br> <span style="opacity: 0.4;">This page last updated: 9 August 2020</span>
-            </span>
-        </footer>
-            
-          </div>
-
-            <!-- <input type="submit" value="Submit Quiz" /> -->
-
-          
-          
-          
-          
-          
-          
-
-          
     <nav id="slide-menu-2">
     <ul>
       <span class="back-button next-page-left slide-menu-trigger noSelect"><img src="../img/PA-right-arrow-square-2.png" class="left-arrow-back" style=""><woof2>Tom</woof2></span>
@@ -1015,6 +396,640 @@
         </div>
       </ul>
     </nav>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <!-- Content panel -->
+    <canvas id="bubbles"></canvas>
+   <!-- <canvas id="morebubbles"></canvas> -->
+    
+    <div id="slide-content">
+      <div id="slide-content-darken" class="noSelect">
+      </div>
+      
+      <div class="slide-menu-trigger noSelect"></div>
+
+      
+      
+    <div class="wrap">
+        
+      
+      
+      <div class="menu slide-menu-trigger-0 noSelect"> <!-- Left menu -->
+      </div>
+      
+      <!-- When not logged in: -->
+      <!-- 
+      <div class="menuright">
+      <a href="#">Log In</a> • <br> <a href="#">Sign Up</a>
+      </div>
+        -->
+            
+        <div class="text">
+            <a href="#">
+            <img src="../img/PF-logo-10-alteyes3.svg" title="The Logo" class="small-logo">
+            </a>
+            <!--
+          <!-- <span>
+            <h3 style="font-size: 25px; color: #f4c248; padding-left: 20px; margin-top: -20px">
+            <img src="logo_nearly5_black.svg" title="The Logo" class="small-logo"> <span style="color: white">Level 0</span> <br>Fundamentals</h3>
+            </span> -->
+
+
+  <!-- <div style="display: flex;
+    align-items: center; padding-left: 25px">
+     <img src="logo_nearly5_blue.svg" title="The Logo" class="small-logo">
+     <h3 style="font-size: 25px; color: #f4c248; padding-left: 8px; margin-top: 30px; font-weight: 800; line-height: 25px"><span style="color: white;">Level 0</span> <br> Fundamentals</h3>
+  </div> -->
+          
+          <h3 class="topic-title"><a href="#slide-content" class="slide-menu-trigger-0-f noSelect topic-color"><span><img src="../img/PA-icon-foundations.svg" class="topic-icon"></span> Fundamentals</a></h3>
+          <!-- 
+          <h3 class="topic-title"><a href="#slide-content" class="slide-menu-trigger-0-f noSelect topic-color"><span><img src="../img/PA-motion-icon-8.svg" class="topic-icon"></span> Motion</a></h3> -->
+          <h3 class="article-title"><span style="display: inline-block;">Newton's Laws</span> <span style="display: inline-block;">of Motion</span></h3>
+          
+            <h4 class="listy">
+              <span class="next-page-left">
+              <a><span><img src="../img/PA-right-arrow-square-2.png" class="left-arrow right-arrow-square"></span></a>
+              </span>  
+              <!--
+              <span style="float:right;">s
+        <a href="density_volume.html"><span style="color: white; z-index: 9999;">Next • What is Physics? </span><span><img src="PA-right-arrow.svg" style="position: relative; top: -85px;"></span></a>
+              </span> -->
+              <span style="float:right;" class="next-page-right">
+        <a href="density_volume.html">Hooke's Law <span><img src="../img/PA-right-arrow-square-2.png" class="right-arrow right-arrow-square"></span></a>
+              </span> 
+            </h4>
+            
+          
+          
+          
+          
+          
+        <div class="summary wrap-collabsible" style="margin-top: 55px;">
+        <input class="toggle" type="checkbox" name="chk">
+         <!--  <h3 class="summary-behind">Summary</h3> -->
+        <h3 class="summary-title"><span class="white-bubble-title-summary">Summary</span></h3>
+        <div class="summary-insides">
+          
+          <p>
+            Newton's three laws of motion describe how any object moves when forces act upon on it, as well as giving some insight into the nature of forces themselves.
+              <br/>
+              <br/>
+              <span class="boxy">Newton's 1st Law:</span><span class="triangg"></span>
+            
+            
+              <br/>
+            </p>
+            <blockquote class="small-blockquote">An object in motion stays in motion</blockquote>
+          
+            
+          <div class="demo-wrapper">
+            <div class="line">
+              <div class="small shadow topic-background-color" style="height: 30px; width: 30px; position: relative; float: left; top:-4.5px; border-radius: 50%;"></div>
+              <div class="small el1 topic-background-color" style="height: 30px; width: 30px; position: relative; float: left; left: -30px; top:-4.5px; border-radius: 50%;"></div>
+            </div>
+            
+        <a class="playbutton pb1 play topic-background-color"><div class="playicon"></div></a>
+      <!--<button class="pause">Pause</button>
+      <button class="restart"><i class="fas fa-redo-alt"></i></button> -->
+      <!--
+      <input class="progress" step=".001" type="range" min="0" max="100" value="0"><span class="timelabel">time</span> -->
+          </div>
+
+
+          <p>  
+            When no force is acting upon an object, it continues to move at the same speed, in the same direction.
+              <br/>
+              <br/>
+            <span class="boxy">Newton's 2nd Law:</span>
+          </p>
+            
+
+          <div class="demo-wrapper">
+            <div class="line" style="display: flex;">
+              <div class="small shadow custom topic-background-color" style="height: 30px; width: 30px; position: relative; float: left; top:-4.5px; border-radius: 50%;"></div>
+              
+              <div style="display: flex; position: relative; bottom: 0px; right: 35px;" class="el2">
+                
+              <div class="small el2l" style="font-size: 20px; position: relative; bottom: 0px; right: 50px;">\(\textbf{F}\)</div>
+                
+              <div class="small el2l" style="font-size: 25px; position: relative; bottom: 5px; right: 40px;">\(\leftarrow\)</div>
+                
+              <div class="small topic-background-color" style="
+              z-index:2000; height: 30px; width: 30px; position: relative; float: left; top:-4.5px; left: -31px; border-radius: 50%;"></div>
+                
+              <div class="small el2r" style="font-size: 25px; position: relative; bottom: 5px; left: -32px;">\(\rightarrow\)</div>
+                
+              <div class="small el2r" style="font-size: 20px; position: relative; bottom: -0.5px; right: 15px;">\(\textbf{F}\)</div>
+                
+                </div>
+              
+              <div class="custom"></div>
+              
+            </div>
+            
+              <a class="playbutton pb2 play2 topic-background-color"><div class="playicon"></div></a>
+          </div>
+          
+          <p> The acceleration \(\textbf{a}\) of an object is calculated from the net force \(\textbf{F}\) acting upon it using: \[\textbf{F} = m\textbf{a}\]
+              where \(m\) is the mass of the object.
+              <br/>
+              <br/>
+            <span class="boxy">Newton's 3rd Law:</span>
+          </p>
+          <blockquote class="small-blockquote"> For every action there is an equal and opposite reaction </blockquote>
+          
+          
+          <div class="demo-wrapper">
+            <div class="line" style="display: flex;">
+              <div class="small shadow topic-background-color" style="height: 30px; width: 30px; position: relative; float: left; top:-4.5px; border-radius: 50%;"></div>
+              
+              <div style="display: flex; position: relative; bottom: 0px; right: 35px;" class="el3L">
+                
+                <div class="small el3l" style="font-size: 20px; position: relative; bottom: 2px; right: 50px;">\(\textbf{F}_{1}\)</div>
+
+                
+              <div class="small el3l" style="font-size: 25px; position: relative; bottom: 6px; right: 40px;">\(\leftarrow\)</div>
+                
+              <div class="small topic-background-color" style="z-index:2000; height: 30px; width: 30px; position: relative; float: left; top:-4.5px; left: -31px;border-radius: 50%;"></div>
+                
+              </div>
+              
+              <div style="display: flex; position: relative; bottom: 0px; right: 35px;" class="el3R">
+                
+              <div class="small topic-background-color" style="z-index:2000; height: 30px; width: 30px; position: relative; float: left; top:-4.5px; left: -31px; border-radius: 50%;"></div>
+                
+              <div class="small el3r" style="font-size: 25px; position: relative; bottom: 6px; left: -32px; ">\(\rightarrow\)</div>
+
+                <div class="small el3r" style="font-size: 20px; position: relative; bottom: 2px; right: 15px;">\(\textbf{F}_{2}\)</div>
+                
+              </div>
+              
+            </div>
+            
+              <a class="playbutton pb3 play3 topic-background-color"><div class="playicon"></div></a>
+          </div>
+          
+            <p>
+            \[\textbf{F}_{1} = - \textbf{F}_{2}\]
+            For any force, there must always be a corresponding force of the same strength in the opposite direction.
+          </p>
+        </div>
+        </div>  
+          
+          
+          <!-- <div class="faux-border-bottom-2"></div> -->
+          
+          
+          
+          <!-- <div style="height: 900px"></div> -->
+          
+          
+            <div class="wrap-collabsible ad">
+        <input id="advert" class="toggle" type="checkbox" checked>
+              <label for="advert" class="lbl-toggle ad-toggle">
+                <h3 class="summary-title-2-ad"><span class="white-bubble-title">Ad</span></h3>
+                <!--
+              <div class="circle-plus opened summary-title-2-plusminus">
+             <div class="pm-circle"> 
+            <div class="vertical"></div>
+            <div class="horizontal"></div>
+          </div>
+           </div> -->
+                </label>
+        <div class="collapsible-content">
+        <div class="content-inner">
+          <a href="#">
+          <img src="../img/meats_by_dre.png" style="width: 300px"></a>
+        </div>
+        </div>
+        </div>
+          
+          
+          <br><br>
+            
+            <div class="wrap-collabsible" style="margin-bottom: -43px;">
+              <div class="all-collabsible togallButton">
+              <input type="checkbox" onClick="toggle(this)" id="togall" class="toggle">
+              <label for="togall" class="lbl-toggle togall-box" style="border-bottom: 0px solid #00004c;">
+              <div class="circle-plus closed summary-title-2-plusminus" style="right: -1px; down: 10px;">
+                <div class="pm-circle"> 
+            <div class="vertical"></div>
+            <div class="horizontal"></div>
+           </div>
+                </div>
+              </label>
+                </div>
+            </div>
+          <br><br>
+          <br><br>
+          
+          
+          <div class="wrap-collabsible">
+        <input id="clpsIntro" class="toggle" type="checkbox" name="chk">
+        <label for="clpsIntro" class="lbl-toggle">
+          <h3 class="summary-title-2"><span class="white-bubble-title">Introduction</span></h3>
+           <div class="circle-plus closed summary-title-2-plusminus">
+             <div class="pm-circle"> 
+            <div class="vertical"></div>
+            <div class="horizontal"></div>
+          </div>
+           </div>
+        </label>
+        <div class="collapsible-content images-over-border">
+        <div class="content-inner">
+          <!--
+          <blockquote>WHAT!?<br/> <span>&mdash;  <a href="https://www.youtube.com/watch?v=K5tVbVu9Mkg" target="_blank">Lil Jon</a> </span></blockquote> -->
+          
+          <p> <!--
+            Movement is all around us; from people driving cars the wrong way down one-way streets, to the peaceful drifting of leaves on an autumn day, to your ice cream falling to the ground as a seagull knocks it out your hand. 
+            <br/> Yellow-beaked munter.
+            <br/><br/> -->
+            The role of Newton's laws of motion is to tell us <i><b>how</b></i> things move, i.e. how objects respond when something called a <b>force</b> acts on them. 
+            <br/> <br/>
+            The role of all other laws of physics is to tell us <i><b>why</b></i> things move, i.e. they tell us <i>what these forces are</i>.
+          </p>
+          
+          
+          <!-- Play youtube videos without suggested vids at end -->
+          <!-- https://maxl.us/hideyt 
+          <div class="hytPlayerWrapOuter"> 
+            <div class="hytPlayerWrap"> 
+              <iframe src="https://www.youtube.com/embed/-fC2oke5MFg?rel=0&enablejsapi=1" frameborder="0" ></iframe> 
+            </div>
+          </div>-->
+          
+          
+          
+          <!--
+          <div class="lvl1 wrap-collabsible">
+            <input id="0a" class="toggle" type="checkbox" name="chk">
+            <label for="0a" class="lbl-toggle" name="chk">What actually <i>is</i> a force?</label>
+            <div class="collapsible-content">
+            <div class="content-inner">
+              <p style="margin-top: 3px;"> A very important (yet often overlooked) point to make note of is that Newton's laws, as they have so far been described in the Summary section, are completely <i>meaningingless</i> &mdash; for the simple reason that we have never actually described what a force <i>is</i>. <br> (You could replace all instances of the word 'force' with <i>'gorce'</i> instead, and Newton's laws would be equally unhelpful.)
+                <br><br> So what is a force? In all the time I have studied physics, the best description of force I have come across is the intuitive, yet slightly dopey notion of force simply <i>being how hard you push or pull something</i>. <br> Therefore, from Newton's 2nd law, it would follow that if you push two objects equally hard, and one was half as heavy as the other, then the lighter one would accelerate twice as much as the lighter one.
+                <br><br> "But I thought physics was about being precise," you might point out, "yet you're describing force, one of the most fundamental ideas in physics, in a fundamentally vague way." <br> A very valid thing to notice. However, we are missing half of the story. We need other laws of physics to tell us <i>what these forces are</i>; famous examples including <a href="#">gravitation<sup>[-2]</sup></a>, <a href="#">electrostatic attraction<sup>[-2]</sup></a> and <a href="#">Hooke's spring law</a>. Because these laws are all precisely expressed, our vague notion of force isn't relevant.
+                
+                <div class="lvl1 wrap-collabsible">
+            <input id="0ai" class="toggle" type="checkbox" name="chk">
+            <label for="0ai" class="lbl-toggle" name="chk">Example: Hooke's Law</label>
+            <div class="collapsible-content">
+            <div class="content-inner">
+              <p style="margin-top: 3px;"> 
+                
+                <p> Using Hooke's Law as an example, when you pull the end of a spring by a distance \(x\), it pulls back with a force of \(kx\) (where \(k\) is simply a constant value, called the stiffness of the spring). Move the end of the spring twice as far, the spring pulls back with twice the force.
+                  <br> This precise expression for the force \(\textbf{F}\), namely
+                  \[\textbf{F} = k\textbf{x}\]
+                  gives the force when the spring is moves, and then newton's laws tell us <i>how</i> the spring moves.
+              </p>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div>
+            </div> -->
+        </div>
+        </div>
+        </div>
+          
+        <div class="wrap-collabsible max-height-400vh">
+        <input id="1" class="toggle" type="checkbox" name="chk">
+        <label for="1" class="lbl-toggle" name="chk"><h3 class="summary-title-2"><span class="white-bubble-title">Newton's 1st Law</span></h3>
+            <div class="circle-plus closed summary-title-2-plusminus">
+             <div class="pm-circle"> 
+            <div class="vertical"></div>
+            <div class="horizontal"></div>
+          </div>
+           </div></label>
+        <div class="collapsible-content images-over-border">
+        <div class="content-inner">
+          
+            <blockquote class="small-blockquote">An object in motion stays in motion</blockquote>
+          
+            
+          <div class="demo-wrapper">
+            <div class="line">
+              <div class="small shadow topic-background-color" style="height: 30px; width: 30px; position: relative; float: left; top:-4.5px; border-radius: 50%;"></div>
+              <div class="small el1 topic-background-color" style="height: 30px; width: 30px; position: relative; float: left; left: -30px; top:-4.5px; border-radius: 50%;"></div>
+            </div>
+            
+        <a class="playbutton pb1 playAgain topic-background-color"><div class="playicon"></div></a>
+          </div>
+          
+          
+          <p> Newton's first law of motion is as simple as it gets; <b>when there is no force on an object, it continues to move at the same speed, in the same direction. </b> 
+            <br><br> 
+            Therefore, if an object isn't moving at all (i.e. its speed \(=0 \:  m/s\)), then it will <i>continue</i> not moving &mdash; until a force acts upon it.
+            <br><br> 
+            <span style="">Philip the Physics Fox says...</span>
+            <br></p>
+            <div class="row">
+          <div class="column">
+            
+            <!-- 
+            <div class="sticker-wrapper">
+              <div class="sticker is-peeled philip">
+                <div class="sticker__face sticker__face--front">
+                  <div class="sticker__holder">
+                    <div class="sticker__content">
+                      <div class="sticker__shadow"></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="sticker__face sticker__face--back">
+                  <div class="sticker__holder">
+                    <div class="sticker__content">
+                      <div class="sticker__shadow"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+            
+            <img src="../img/Philip_sticker.svg" class="philip">
+              
+              
+              </div>
+          <div class="column"> <p style="font-size: 15px">You might also hear Newton's 1st Law referred to by the grandiose title "the law of inertia", but this doesn't tell you anything you didn't already know.</p> </div>
+            </div>
+              
+          
+              <!--
+            <div class="lvl1 wrap-collabsible">
+            <input id="1a" class="toggle" type="checkbox" name="chk">
+            <label for="1a" class="lbl-toggle" name="chk">What actually <i>is</i> inertia?</label>
+            <div class="collapsible-content">
+            <div class="content-inner">
+              <p>
+                  Despite being a scary 3-syllabled Latin-inspired word, interia is a concept you are very familiar with. It simply means the desire of something to continue doing what it's already doing.
+                <br> <br>
+                  Familiar examples include the horror or getting out of bed in the morning, the unwillingness of <i>people these days</i>™ to get off their phones, and the insistence of smart-arses to exclusively use the Oxford comma.
+              </p>
+            </div>
+            </div>
+            </div>  -->
+              
+        </div>
+        </div>
+        </div>
+            
+            <div class="wrap-collabsible">
+        <input id="collapsible1" class="toggle" type="checkbox" name="chk">
+        <label for="collapsible1" class="lbl-toggle"><h3 class="summary-title-2"><span class="white-bubble-title">Newton's 2nd Law</span></h3>
+           <div class="circle-plus closed summary-title-2-plusminus">
+             <div class="pm-circle"> 
+            <div class="vertical"></div>
+            <div class="horizontal"></div>
+          </div>
+           </div></label>
+        <div class="collapsible-content">
+        <div class="content-inner">
+          
+          <p>Suppose we <i>do</i> have a force acting upon an object. How does the object behave?</p>
+          
+          
+          <div class="demo-wrapper">
+            <div class="line" style="display: flex;">
+              <div class="small shadow custom topic-background-color" style="height: 30px; width: 30px; position: relative; float: left; top:-4.5px; border-radius: 50%;"></div>
+              
+              <div style="display: flex; position: relative; bottom: 0px; right: 35px;" class="el2">
+                
+              <div class="small el2l" style="font-size: 20px; position: relative; bottom: 0px; right: 50px;">\(\textbf{F}\)</div>
+                
+              <div class="small el2l" style="font-size: 25px; position: relative; bottom: 5px; right: 40px;">\(\leftarrow\)</div>
+                
+              <div class="small topic-background-color" style="
+              z-index:2000; height: 30px; width: 30px; position: relative; float: left; top:-4.5px; left: -31px; border-radius: 50%;"></div>
+                
+              <div class="small el2r" style="font-size: 25px; position: relative; bottom: 5px; left: -32px;">\(\rightarrow\)</div>
+                
+              <div class="small el2r" style="font-size: 20px; position: relative; bottom: -0.5px; right: 15px;">\(\textbf{F}\)</div>
+                
+                </div>
+              
+              <div class="custom"></div>
+              
+            </div>
+            
+              <a class="playbutton pb2 play2Again topic-background-color"><div class="playicon"></div></a>
+          </div>
+          
+          <p> The acceleration \(\textbf{a}\) of an object is calculated from the net force \(\textbf{F}\) acting upon it using:
+            \[\textbf{F} = m\textbf{a}\]
+            You may have noticed that when \(\textbf{F} = 0\), then \(\textbf{a} = 0\). <br/> No acceleration means velocity stays the same, so Newton's 1st law is actually included in the 2nd law! 
+          </p>
+          
+          <!--
+          <div class="lvl1 wrap-collabsible">
+            <input id="2a" class="toggle" type="checkbox" name="chk">
+            <label for="2a" class="lbl-toggle" name="chk">What is <i>net</i> force?</label>
+            <div class="collapsible-content">
+            <div class="content-inner">
+              <p>
+                  
+              </p>
+            </div>
+            </div>
+            </div> -->
+          
+          
+        </div>
+        </div>
+        </div>
+            
+            <div class="wrap-collabsible">
+        <input id="collapsible2" class="toggle" type="checkbox" name="chk">
+        <label for="collapsible2" class="lbl-toggle"><h3 class="summary-title-2"><span class="white-bubble-title">Newton's 3rd Law</span></h3>
+           <div class="circle-plus closed summary-title-2-plusminus">
+             <div class="pm-circle"> 
+            <div class="vertical"></div>
+            <div class="horizontal"></div>
+          </div>
+           </div></label>
+        <div class="collapsible-content">
+        <div class="content-inner">
+          
+          <div class="demo-wrapper">
+            <div class="line" style="display: flex;">
+              <div class="small shadow topic-background-color" style="height: 30px; width: 30px; position: relative; float: left; top:-4.5px; border-radius: 50%;"></div>
+              
+              <div style="display: flex; position: relative; bottom: 0px; right: 35px;" class="el3L">
+                
+                <div class="small el3l" style="font-size: 20px; position: relative; bottom: 2px; right: 50px;">\(\textbf{F}_{1}\)</div>
+
+                
+              <div class="small el3l" style="font-size: 25px; position: relative; bottom: 6px; right: 40px;">\(\leftarrow\)</div>
+                
+              <div class="small topic-background-color" style="z-index:2000; height: 30px; width: 30px; position: relative; float: left; top:-4.5px; left: -31px;border-radius: 50%;"></div>
+                
+              </div>
+              
+              <div style="display: flex; position: relative; bottom: 0px; right: 35px;" class="el3R">
+                
+              <div class="small topic-background-color" style="z-index:2000; height: 30px; width: 30px; position: relative; float: left; top:-4.5px; left: -31px; border-radius: 50%;"></div>
+                
+              <div class="small el3r" style="font-size: 25px; position: relative; bottom: 6px; left: -32px; ">\(\rightarrow\)</div>
+
+                <div class="small el3r" style="font-size: 20px; position: relative; bottom: 2px; right: 15px;">\(\textbf{F}_{2}\)</div>
+                
+              </div>
+              
+            </div>
+            
+              <a class="playbutton pb3 play3Again topic-background-color"><div class="playicon"></div></a>
+          </div>
+          
+          <p>
+            This turns out to be a consequence of the Law of <a href="#">Conservation of Momentum</a>, which is the most important law of all physics.
+          </p>
+        </div>
+        </div>
+          </div>
+          
+          
+          <div class="wrap-collabsible">
+        <input id="collapsible3" class="toggle" type="checkbox" name="chk">
+        <label for="collapsible3" class="lbl-toggle"><h3 class="summary-title-2"><span class="white-bubble-title" style="background-color: #00004c; color: white;">Bio: Isaac Newton</span></h3>
+           <div class="circle-plus closed summary-title-2-plusminus">
+             <div class="pm-circle" style="background-color: #00004c;"> 
+            <div class="vertical" style="background-color: white;"></div>
+            <div class="horizontal" style="background-color: white;"></div>
+          </div>
+           </div></label>
+        <div class="collapsible-content">
+        <div class="content-inner">
+          
+          
+          <p>
+            Top bloke
+          </p>
+        </div>
+        </div>
+          </div>
+          
+          
+          
+          
+          
+
+          
+         
+          <div id="confetti">
+
+            <div id="app">
+              
+            
+              <div id="quiz-title-2">Quiz</div>
+              
+            <div id="people"></div>
+            
+            <div id="control">
+              <div class="button no">
+                <div href="#" class="trigger noSelect" style="background: no-repeat url('../img/PA_skip_4.svg'); width: 42px;"></div>
+              </div>
+              <div class="button yes">
+                <div href="#" class="trigger noSelect" style="background: no-repeat url('../img/PA_submit_2.svg'); width: 49px;"></div>
+              </div>  
+            </div>
+            
+            <div id="quiz-bg"> 
+              <img src="../img/Philip.svg" style="width: 150px;">
+              <h3> Congratulations!</h3>
+              <p> Quiz questions completed:  5 / 5</p>
+              <!-- 
+              <p>+ 8 <span><img src="PA_star_border.svg" style="width: 25px; position: relative; top: 4px"></span> acquired</p> -->
+              
+                <br>
+              <span style="display: inline; font-size: 25px; font-weight: 600; background-color: white; left: 14px; position: relative; top: 2px; border-radius: 3px;">+</span>
+              <p style="display: inline; width: 60px; border: 4px solid #00004c; padding: 6px; padding-left: 9px; margin-left: auto; margin-right: auto;font-weight: 600;">8 <span><img src="../img/question_stars_1_blue.svg" style="width: 25px; position: relative; top: 5px"></span></p>  
+              
+                <br><br>
+                <br>
+              <div style="border: 7px solid #f7f7f7; background-color: white; ; width: 200px;margin-left: auto; margin-right: auto; padding: 10px;"><p><b><a href="#">Sign up</a></b> (for free!) to <br> save your progress.</p></div>
+              
+              <br>
+              
+              <p style="font-size: 17px;"><b><a class="restart">Restart Quiz</a></b></p>
+              
+            </div>
+            
+         </div>
+          
+            
+            <!--
+            <h4 class="listy-footer">
+                <a href="#" style="champagne"><span><img src="PA-right-arrow.svg" class="left-arrow"></span> Previous </a>
+              
+              <span style="float:right;">
+        <a href="density_volume.html">Next • What is Physics? <span><img src="PA-right-arrow.svg" class="right-arrow"></span></a>
+              </span> 
+            </h4> -->
+            
+            
+            <h4 class="listy-footer">
+              <span class="next-page-left">
+              <a><span><img src="../img/PA-right-arrow-square-2.png" class="left-arrow right-arrow-square"></span></a>
+              </span>  
+              <!--
+              <span style="float:right;">s
+        <a href="density_volume.html"><span style="color: white; z-index: 9999;">Next • What is Physics? </span><span><img src="PA-right-arrow.svg" style="position: relative; top: -85px;"></span></a>
+              </span> -->
+              <span style="float:right;" class="next-page-right">
+        <a href="density_volume.html">Hooke's Law <span><img src="../img/PA-right-arrow-square-2.png" class="right-arrow right-arrow-square"></span></a>
+              </span> 
+            </h4>
+            
+            
+
+            
+        <footer>
+          <span>
+            <!--
+            <img src="PF-logo-10-alteyes3.svg" title="The Logo" style="width: 45px; position: relative; float: left; left: 12px; top: -4px;"> -->
+
+          </span>
+          <span style="position: relative; top: -3px; line-height: 22px;">
+            © 2020 <a href="index.html">Physics Fox</a> • 
+            <a href="#">about</a> • 
+            <a href="#">contact</a> <!-- • 
+            <a href="#">privacy policy</a> • 
+            <a href="#">send feedback</a> -->
+          <br> <span style="opacity: 0.4;">This page last updated: 9 August 2020</span>
+            </span>
+        </footer>
+            
+          </div>
+
+            <!-- <input type="submit" value="Submit Quiz" /> -->
+
+          
+          
+          
+          
+          
+          
+
+          
+    
           
     </div> 
     </div>

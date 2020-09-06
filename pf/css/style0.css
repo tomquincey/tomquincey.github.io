@@ -426,8 +426,6 @@ blockquote::before {
 	margin: 0 0.075em 0 0;
   z-index: -1 !important;
   
-  
-  color: #e4525a; /* motion red */
 	opacity: 0.7;
 }
 
@@ -580,7 +578,6 @@ left:0;
   padding: 7px;
   padding-left: 8px;
   padding-right: 8px;
-  border: 3px solid #e4525a; /* motion red */
   transition: all .15s;
   
   transform: scale(0.88);
